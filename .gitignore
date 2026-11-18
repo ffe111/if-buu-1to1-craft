@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Downloaded 3rd-party reference media & raw scrapes (reproducible via scripts/)
+references/architects110/images/
+references/architects110/*.html
+references/architects110/*.pdf
+references/vr-tour/images/
+references/vr-tour/*.html
+data/osm/sat_tiles/
+data/osm/*.png
+
+# Minecraft Server runtime, JARs, worlds, and plugin caches (reproducible via server/setup_server.py)
+server/*.jar
+server/eula.txt
+server/libraries/
+server/cache/
+server/versions/
+server/logs/
+server/bluemap/
+server/config/
+server/plugins/
+server/world/
+server/world_nether/
+server/world_the_end/
+server/banned-*.json
+server/ops.json
+server/usercache.json
+server/whitelist.json
+server/version_history.json
+server/bukkit.yml
+server/commands.yml
+server/help.yml
+server/permissions.yml
+server/spigot.yml
+server/wepif.yml
+
+# OS
+.DS_Store
+Thumbs.db

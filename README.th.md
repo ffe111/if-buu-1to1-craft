@@ -1,0 +1,143 @@
+<div align="center">
+
+# 🏛️ อาคารคณะวิทยาการสารสนเทศ ม.บูรพา 1:1 ใน Minecraft (IF-BUU)
+
+**โปรเจกต์จำลองอาคารคณะวิทยาการสารสนเทศ มหาวิทยาลัยบูรพา แบบสเกล 1:1 — สำหรับงาน BUU Open House 2026 (BUU69)**
+
+[English](README.md) | [ภาษาไทย](README.th.md)
+
+[![Minecraft](https://img.shields.io/badge/Minecraft-1.21.11%20Java%20%26%20Bedrock-4E9A06?style=for-the-badge&logo=minecraft&logoColor=white)](https://www.minecraft.net/)
+[![PaperMC](https://img.shields.io/badge/Server-PaperMC%20%2B%20GeyserMC-2B7DE9?style=for-the-badge)](https://papermc.io/)
+[![BlueMap](https://img.shields.io/badge/3D%20Web%20Map-BlueMap-00B4D8?style=for-the-badge)](https://bluemap.bluecolored.io/)
+[![Scale](https://img.shields.io/badge/Scale-1%3A1%20(1%20%E0%B8%9A%E0%B8%A5%E0%B9%87%E0%B8%AD%E0%B8%81%20%3D%201%20%E0%B9%80%E0%B8%A1%E0%B8%95%E0%B8%A3)-F59E0B?style=for-the-badge)](#)
+[![Release](https://img.shields.io/badge/Version-v1.0%20Prototype-7C3AED?style=for-the-badge)](#แผนพัฒนาต่อใน-v20-roadmap)
+
+<br/>
+
+<img src="docs/images/v1-bluemap-preview.png" alt="ภาพเรนเดอร์ 3D อาคาร IF-BUU 1:1 เวอร์ชัน 1.0 บน BlueMap" width="760"/>
+
+*ภาพเรนเดอร์ 3D บน **BlueMap (v1.0)** — แสดงตัวอาคาร 11 ชั้น, Podium โค้งด้านหน้า, ส่วนถอยร่น (Step-back) ชั้น 8–11, แผงโซลาร์เซลล์บนดาดฟ้า และถนนเฟื้องฟ้า*
+
+</div>
+
+---
+
+## ✨ เกี่ยวกับโปรเจกต์
+
+**IF-BUU 1:1 in Minecraft** คือโปรเจกต์จำลอง **อาคารเรียนและสำนักงานคณบดี คณะวิทยาการสารสนเทศ มหาวิทยาลัยบูรพา (ตึก IF 11 ชั้น)** ลงในเกม Minecraft ด้วยสเกลจริง **1:1 (`1 บล็อก = 1 เมตร`)** เพื่อใช้ต้อนรับผู้เยี่ยมชมในงาน **BUU Open House 2026 (BUU69)**
+
+ผู้ชมสามารถเข้าสำรวจคณะได้จากทุกแพลตฟอร์ม ทั้ง **คอมพิวเตอร์ (Java Edition)**, **มือถือ/iPad (Bedrock Edition)** หรือเปิดดูโมเดล 3D ได้ทันทีผ่าน **เว็บเบราว์เซอร์ (BlueMap)** พร้อมเดินชมตั้งแต่โถงทางเข้าใต้หลังคาโค้งรูปตัว C กดลิฟต์ขึ้น-ลงได้จริงทั้ง **ชั้น B1 ถึงชั้น 11** ไปจนถึงห้องบรรยายใหญ่ ห้องแล็บคอมพิวเตอร์ FabLab และห้องนิทรรศการชั้น 11
+
+### 🎯 จุดเด่นของแนวทางการพัฒนา
+* **รองรับผู้ชมทุกแพลตฟอร์ม:** เปิดโลกเดียวกันให้เข้าชมพร้อมกันได้ทั้ง PC, มือถือ/แท็บเล็ต และหน้าเว็บ 3D
+* **อ้างอิงสัดส่วนจากข้อมูลจริง:** วัดขนาดจากภาพถ่ายดาวเทียม Zoom 19 (`0.2906 ม./พิกเซล`), ภาพถ่ายสถาปัตยกรรมจากผู้ออกแบบ และภาพพาโนรามา 360° จากระบบ VR Tour ของคณะครบ 28 จุด
+* **สร้างโครงสร้างด้วยโค้ด (Procedural Datapack):** โครงสร้าง 11 ชั้น บันได โถงลิฟต์ และห้องตัวอย่างถูกสร้างอัตโนมัติจากสคริปต์ Python ออกมาเป็น **Minecraft Datapack** (`if_buu_1to1`) ที่แก้ไขและทำซ้ำได้ทันที
+
+---
+
+## 📊 ข้อมูลอาคารที่สอบเทียบแล้ว (Verified Specifications)
+
+| รายการ | ข้อมูลจริง | สัดส่วนใน Minecraft 1:1 |
+| :--- | :--- | :--- |
+| **ชื่ออาคาร** | อาคารคณะวิทยาการสารสนเทศ ม.บูรพา (Architects 110, 2017) | Datapack `if_buu_1to1` |
+| **พิกัดที่ตั้ง** | `13.281348° N, 100.924111° E` (ถนนเฟื้องฟ้า) | จุดอ้างอิง `(0, 0, 0)` ที่บันไดหน้าตึก |
+| **ขนาดฐานอาคาร** | กว้าง ~52 ม. (เหนือ–ใต้) × ลึก ~60 ม. (รวม Podium) | `52 × 60` บล็อก (`48 × 44` Tower + `16` Podium) |
+| **จำนวนชั้นและพื้นที่** | 11 ชั้น + ชั้นใต้ดิน 1 ชั้น (พื้นที่ใช้สอยรวม ~18,309 ตร.ม.) | `B1` (`Y=-5`) ถึง `11F` (`Y=52`) + หลังคา (`Y=63`) |
+| **ดาดฟ้า** | แผงโซลาร์เซลล์ 3 แถว | แนว `minecraft:daylight_detector` 3 แถว |
+
+---
+
+## 🚀 ฟีเจอร์หลักในเวอร์ชัน 1.0 (v1.0)
+
+* **Datapack สร้างอาคาร 1:1 อัตโนมัติ (`world/datapacks/if_buu_1to1/`):**
+  * **พื้นที่รอบคณะ (`01_site_road`):** ถนนเฟื้องฟ้า, ทางม้าลาย, ทางเท้าลายอิฐ, ทางลาดผู้พิการ, ลานหน้าตึก และลานจอดรถจักรยานยนต์ด้านหลัง
+  * **โครงสร้าง 11 ชั้นและบันได (`02_basement_and_grid`, `03_slabs_and_core`):** ลานจอดรถใต้ดิน (`B1`), เสา Grid คอนกรีตขาว, บันไดหลักและบันไดหนีไฟเดินขึ้น-ลงได้จริงทุกชั้น พร้อมโถงลิฟต์ประตูกระจกและถังขยะแยก 4 สี
+  * **เปลือกอาคารซิกเนเจอร์ (`04_podium_and_arch`, `05_facade_shell`, `06_roof_and_solar`):** หลังคาโค้งรูปตัว C หน้าอาคารพร้อมเสา 6 ต้นใต้ Skylight, ส่วนถอยร่นชั้น 8–11, กล่องกระจกยื่นชั้น 6–8, แถบสีน้ำเงิน Cobalt และแผงโซลาร์เซลล์บนดาดฟ้า
+  * **ห้องตัวอย่างภายใน (`07_interiors`):**
+    * **ชั้น 1:** โต๊ะนั่งอ่านหนังสือ, ห้องสโมสรนิสิต (`SMO`) ผนังกระจก, โซฟารับรอง
+    * **ชั้น 2:** ห้องคณบดี (`IF-215`), ชั้นหนังสือห้องสมุดดิจิทัล, ระเบียงชมวิว
+    * **ชั้น 3–6:** ห้องบรรยายใหญ่ 210 ที่นั่ง (`IF-3M210`, `IF-5M210`) อัฒจันทร์เก้าอี้สีฟ้าคราม, ห้องแล็บคอมพิวเตอร์ (`IF-3C01`, `IF-4C01`) และห้อง Server ชั้น 4
+    * **ชั้น 7–10:** Co-Working Space & FabLab (ชั้น 7), Eastern Software Park BUU `IF-8R08` (ชั้น 8), ห้องพักอาจารย์ (ชั้น 9), Hall of Fame และห้องประชุม (ชั้น 10)
+    * **ชั้น 11:** ห้องนิทรรศการ Open House (`IF-11M280`) พร้อมบูธแสดงผลงานและตู้ดับเพลิง
+* **ระบบลิฟต์สำหรับผู้เยี่ยมชม (`08_interactive_openhouse`):**
+  * ใช้งานได้ทุกคนในโหมด Adventure โดยไม่ต้องมีสิทธิ์ OP ด้วยคำสั่ง `/trigger if_floor set <1..11>` (หรือ `99` สำหรับชั้น B1) และเมนูกดเลือกในแชท `/function if_buu:elevator_menu`
+* **ชุดเซิร์ฟเวอร์ Open-Source ข้ามแพลตฟอร์ม (`server/`):**
+  * ขับเคลื่อนด้วย **PaperMC 1.21.11**, **GeyserMC + Floodgate** (รองรับมือถือ/iPad), **FastAsyncWorldEdit (FAWE)** และ **BlueMap** (ดู 3D บนเว็บพอร์ต `8100`)
+
+---
+
+## 🛠️ วิธีเริ่มต้นใช้งาน (Quick Start)
+
+### วิธีที่ 1: นำ Datapack ไปวางในโลก Minecraft Java (1.21+)
+1. โคลน Repository นี้:
+   ```bash
+   git clone https://github.com/<your-username>/if-buu-1to1-minecraft.git
+   cd if-buu-1to1-minecraft
+   ```
+2. *(ไม่บังคับ)* รันสคริปต์สร้าง Datapack ใหม่จาก Python:
+   ```bash
+   python scripts/generate_datapack.py
+   ```
+3. คัดลอก `world/datapacks/if_buu_1to1/` ไปใส่ในโฟลเดอร์ `datapacks/` ของเซฟโลก พิมพ์ `/reload` แล้วมายืนที่ระดับพื้น (`Y=0`) จากนั้นรัน:
+   ```mcfunction
+   /function if_buu:build_all
+   ```
+
+### วิธีที่ 2: เปิดเซิร์ฟเวอร์ Open House แบบเต็มรูปแบบ (PC + มือถือ + เว็บ 3D)
+1. ดาวน์โหลด **PaperMC 1.21.11**, **GeyserMC**, **Floodgate**, **BlueMap** และ **FAWE** อัตโนมัติ:
+   ```bash
+   python server/setup_server.py
+   ```
+2. สร้างไฟล์ `server/eula.txt` แล้วใส่ข้อความ `eula=true`
+3. เปิดเซิร์ฟเวอร์ (`server/start_server.bat` บน Windows) แล้วพิมพ์คำสั่งใน Console ของเซิร์ฟเวอร์:
+   ```mcfunction
+   execute positioned 0 0 0 run function if_buu:build_all
+   setworldspawn 1 0 -1
+   ```
+4. ช่องทางเข้าชม:
+   * **PC (Java Edition):** `localhost:25565`
+   * **มือถือ / iPad (Bedrock Edition):** `<IP เครื่องเซิร์ฟเวอร์>:19132`
+   * **เว็บเบราว์เซอร์ 3D:** `http://localhost:8100`
+
+---
+
+## 📁 โครงสร้าง Repository
+
+```text
+if-buu-minecraft/
+├── README.md                    # คู่มือหลัก (ภาษาอังกฤษ)
+├── README.th.md                 # คู่มือภาษาไทย (ไฟล์นี้)
+├── docs/
+│   ├── 01-project-plan.md       # แผนการดำเนินงาน 5 เฟสและสถานะปัจจุบัน
+│   ├── 02-architectural-spec.md # ตารางความสูงแต่ละชั้นและ Block Palette
+│   ├── 03-floor-directory.md    # ทำเนียบห้องและจุด VR Tour (B1–11F)
+│   └── images/                  # ภาพเรนเดอร์และตัวอย่างผลงาน
+├── data/
+│   ├── building_spec.json       # ข้อมูลขนาด/พิกัดอาคารแบบ JSON
+│   └── osm/                     # ข้อมูล Overpass API และโน้ตพื้นที่
+├── scripts/
+│   ├── extract_vr_and_arch.py   # ดึง WPVR Scene Graph และลิงก์รูปภาพ
+│   ├── download_assets.py       # ดาวน์โหลดภาพอ้างอิงและพาโนรามา 360°
+│   ├── fetch_osm_footprint.py   # ดึงข้อมูลแผนที่อาคารรอบ ม.บูรพา จาก OSM
+│   └── generate_datapack.py     # สคริปต์สร้าง Minecraft Datapack 1:1
+├── world/datapacks/if_buu_1to1/ # Datapack พร้อมใช้งานสำหรับ Minecraft 1.21+
+└── server/                      # ชุดติดตั้ง PaperMC + GeyserMC + BlueMap และสคริปต์ทดสอบ
+```
+
+---
+
+## 🗺️ แผนพัฒนาต่อใน v2.0 (Roadmap)
+
+แม้ **v1.0** จะได้โครงสร้าง 1:1 ระบบลิฟต์ และเซิร์ฟเวอร์พร้อมทดสอบแล้ว แต่มีรายการปรับปรุงความเหมือนจริงสำหรับ **v2.0** ดังนี้:
+- [ ] **ปรับรูปทรงและสีของ Podium & โค้ง C-Arch:** เปลี่ยนผนัง Podium จากเทาเข้มเป็นเทาอ่อนให้ตรงกับภาพถ่ายจริง และทำให้หลังคาโค้งลาดเอียงเชื่อมต่อกับครีบด้านข้างได้เนียนขึ้น
+- [ ] **เก็บรายละเอียด Facade ตัว Tower:** เพิ่มผนังทึบด้านข้าง เฟรมกระจก และแผงระแนงกันแดดแนวตั้งให้เหมือนสัดส่วนจริงมากยิ่งขึ้น
+- [ ] **ป้ายชื่อคณะและอาคารข้างเคียง:** ปั้นป้าย `"คณะวิทยาการสารสนเทศ / FACULTY OF INFORMATICS"` ด้วย Block Display / Map Art และปิดโครงสร้างหมู่บ้านเริ่มต้น (`generate-structures=false`) เพื่อสร้างตึกสำนักคอมพิวเตอร์ ตึก CL และลานวงกลมแทน
+- [ ] **กั้นห้องภายในครบทุกห้อง:** ใช้ภาพถ่ายป้ายแผนผังหนีไฟจริงแต่ละชั้น (`references/floorplans/`) เป็นต้นแบบในการกั้นห้องทั้งหมด
+
+---
+
+## 🙏 แหล่งข้อมูลอ้างอิงและเครื่องมือ Open-Source
+
+* **แบบและภาพถ่ายสถาปัตยกรรม:** [Architects 110 — อาคารเรียนและสำนักงานคณบดี คณะวิทยาการสารสนเทศ มหาวิทยาลัยบูรพา](https://www.architects110.com/project/lecture-center-administrative-office-faculty-informatics-burapha-university/)
+* **ข้อมูลภายในอาคาร 360°:** [Informatics 360 VR Tour — คณะวิทยาการสารสนเทศ มหาวิทยาลัยบูรพา](https://www.informatics.buu.ac.th/?page_id=6718)
+* **ซอฟต์แวร์ Open-Source ที่ใช้:** [PaperMC](https://papermc.io/), [GeyserMC](https://geysermc.org/), [BlueMap](https://github.com/BlueMap-Minecraft/BlueMap), [FastAsyncWorldEdit](https://github.com/IntellectualSites/FastAsyncWorldEdit)

@@ -1,0 +1,12 @@
+{
+  "pack": {
+    "pack_format": 48,
+    "supported_formats": {
+      "min_inclusive": 26,
+      "max_inclusive": 120
+    },
+    "min_format": 26,
+    "max_format": 120,
+    "description": "Faculty of Informatics, Burapha University (1:1 Scale Builder + Open House Elevator)"
+  }
+}

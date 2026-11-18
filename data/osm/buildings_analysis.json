@@ -1,0 +1,33 @@
+{
+  "total_buildings_in_bbox": 35,
+  "named_nodes": [],
+  "highlighted_buildings": [],
+  "all_named_buildings": [
+    {
+      "osm_id": 263955753,
+      "name": "คณะแพทยศาสตร์ มหาวิทยาลัยบูรพา",
+      "centroid": {
+        "lat": 13.2851046,
+        "lon": 100.9222752
+      },
+      "bbox_meters": {
+        "east_west_x": 61.85,
+        "north_south_z": 78.42
+      },
+      "footprint_area_sqm": 3596.93
+    },
+    {
+      "osm_id": 351099048,
+      "name": "อาคารฉลองราช 50 ปี",
+      "centroid": {
+        "lat": 13.2784237,
+        "lon": 100.9227225
+      },
+      "bbox_meters": {
+        "east_west_x": 74.2,
+        "north_south_z": 62.47
+      },
+      "footprint_area_sqm": 2479.31
+    }
+  ]
+}

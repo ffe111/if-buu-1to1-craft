@@ -1,0 +1,40 @@
+{
+  "project": "Faculty of Informatics, Burapha University (1:1 Minecraft)",
+  "location": {
+    "address": "169 Longhad Bangsaen Rd / Fueang Fa Rd, Saen Suk, Mueang Chon Buri 20131",
+    "lat": 13.281348,
+    "lon": 100.924111,
+    "facing_direction": "East (+X toward Fueang Fa Rd)",
+    "esri_tile_z19": {
+      "x": 409125,
+      "y": 242626,
+      "meters_per_pixel": 0.2906
+    },
+    "osm_status": "Building footprint missing in OSM; verified via Longdo NuMAP and ESRI World Imagery"
+  },
+  "dimensions_blocks": {
+    "scale": "1 block = 1 meter",
+    "total_width_ns_z": 52,
+    "total_depth_ew_x": 60,
+    "tower_width_ns_z": 48,
+    "tower_depth_ew_x": 44,
+    "podium_depth_ew_x": 16,
+    "height_above_street": 63,
+    "basement_depth": 5
+  },
+  "floors": [
+    { "id": "B1", "name": "Basement Car Park", "y_floor": -5, "y_ceiling": 0, "clear_height": 4 },
+    { "id": "1F", "name": "Lobby, Undercroft, Student Union (SMO)", "y_floor": 0, "y_ceiling": 6, "clear_height": 5 },
+    { "id": "2F", "name": "Dean Office, Admin, Digital Library, Terrace", "y_floor": 6, "y_ceiling": 12, "clear_height": 5 },
+    { "id": "3F", "name": "Computer Labs & Lecture Hall (IF-3M210)", "y_floor": 12, "y_ceiling": 17, "clear_height": 4 },
+    { "id": "4F", "name": "Computer Labs, Lecture Hall & Server Room", "y_floor": 17, "y_ceiling": 22, "clear_height": 4 },
+    { "id": "5F", "name": "Lecture Rooms & Lecture Hall (IF-5M210)", "y_floor": 22, "y_ceiling": 27, "clear_height": 4 },
+    { "id": "6F", "name": "Lecture Rooms & Computer Rooms (IF-6T01..05)", "y_floor": 27, "y_ceiling": 32, "clear_height": 4 },
+    { "id": "7F", "name": "Co-Working Space, FabLab & Maker Space", "y_floor": 32, "y_ceiling": 37, "clear_height": 4 },
+    { "id": "8F", "name": "Research Labs & Eastern Software Park BUU", "y_floor": 37, "y_ceiling": 42, "clear_height": 4 },
+    { "id": "9F", "name": "Lecturer Offices (IF-908A..D)", "y_floor": 42, "y_ceiling": 47, "clear_height": 4 },
+    { "id": "10F", "name": "Hall of Fame & Conference Rooms (IF-10M56/60)", "y_floor": 47, "y_ceiling": 52, "clear_height": 4 },
+    { "id": "11F", "name": "Exhibition Hall (IF-11M280)", "y_floor": 52, "y_ceiling": 59, "clear_height": 6 },
+    { "id": "RF", "name": "Roof Overhang, Parapet & Solar Arrays", "y_floor": 59, "y_ceiling": 63, "clear_height": 3 }
+  ]
+}
