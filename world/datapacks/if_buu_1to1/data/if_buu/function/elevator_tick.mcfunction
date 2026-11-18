@@ -21,7 +21,7 @@ execute as @a[scores={if_floor=6}] at @e[type=minecraft:marker,tag=if_buu_origin
 execute as @a[scores={if_floor=6}] run title @s actionbar {"text":"ชั้น 6F — ห้องเรียนและห้องคอมพิวเตอร์ IF-6T01..05","color":"aqua"}
 scoreboard players reset @a[scores={if_floor=6}] if_floor
 execute as @a[scores={if_floor=7}] at @e[type=minecraft:marker,tag=if_buu_origin,limit=1] run tp @s ~-39 ~33 ~-1 -90 0
-execute as @a[scores={if_floor=7}] run title @s actionbar {"text":"ชั้น 7F — Co-Working Space / FabLab & Maker Space","color":"aqua"}
+execute as @a[scores={if_floor=7}] run title @s actionbar {"text":"ชั้น 7F — ★ BUU Open House Innovation Hub (Vision/DMI/FabLab)","color":"aqua"}
 scoreboard players reset @a[scores={if_floor=7}] if_floor
 execute as @a[scores={if_floor=8}] at @e[type=minecraft:marker,tag=if_buu_origin,limit=1] run tp @s ~-39 ~38 ~-1 -90 0
 execute as @a[scores={if_floor=8}] run title @s actionbar {"text":"ชั้น 8F — ห้องปฏิบัติการวิจัย / Eastern Software Park BUU","color":"aqua"}

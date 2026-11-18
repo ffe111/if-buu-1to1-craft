@@ -22,13 +22,13 @@ fill ~-72 ~-1 ~2 ~-63 ~-1 ~2 minecraft:white_concrete
 fill ~-72 ~-1 ~8 ~-63 ~-1 ~8 minecraft:white_concrete
 fill ~-72 ~-1 ~14 ~-63 ~-1 ~14 minecraft:white_concrete
 fill ~-72 ~-1 ~20 ~-63 ~-1 ~20 minecraft:white_concrete
-setblock ~4 ~0 ~-20 minecraft:oak_leaves[persistent=true]
-setblock ~4 ~0 ~-14 minecraft:oak_leaves[persistent=true]
-setblock ~4 ~0 ~16 minecraft:oak_leaves[persistent=true]
-setblock ~4 ~0 ~22 minecraft:oak_leaves[persistent=true]
 fill ~4 ~0 ~-22 ~4 ~2 ~-22 minecraft:oak_log
-fill ~4 ~0 ~18 ~4 ~2 ~18 minecraft:oak_log
+fill ~4 ~0 ~-14 ~4 ~2 ~-14 minecraft:oak_log
+fill ~4 ~0 ~16 ~4 ~2 ~16 minecraft:oak_log
+fill ~4 ~0 ~22 ~4 ~2 ~22 minecraft:oak_log
 fill ~3 ~3 ~-23 ~5 ~4 ~-21 minecraft:oak_leaves[persistent=true]
-fill ~3 ~3 ~17 ~5 ~4 ~19 minecraft:oak_leaves[persistent=true]
+fill ~3 ~3 ~-15 ~5 ~4 ~-13 minecraft:oak_leaves[persistent=true]
+fill ~3 ~3 ~15 ~5 ~4 ~17 minecraft:oak_leaves[persistent=true]
+fill ~3 ~3 ~21 ~5 ~4 ~23 minecraft:oak_leaves[persistent=true]
 setblock ~1 ~-1 ~-1 minecraft:sea_lantern
 setblock ~1 ~0 ~-1 minecraft:light_gray_carpet

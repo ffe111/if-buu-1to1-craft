@@ -11,7 +11,7 @@
 [![BlueMap](https://img.shields.io/badge/3D%20Web%20Map-BlueMap-00B4D8?style=for-the-badge)](https://bluemap.bluecolored.io/)
 [![Scale](https://img.shields.io/badge/Scale-1%3A1%20(1%20Block%20%3D%201%20Meter)-F59E0B?style=for-the-badge)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-10B981?style=for-the-badge)](LICENSE)
-[![Release](https://img.shields.io/badge/Release-v1.0.0-7C3AED?style=for-the-badge)](#roadmap--v20-improvements)
+[![Release](https://img.shields.io/badge/Release-v2.0.0-7C3AED?style=for-the-badge)](#roadmap--v20-improvements)
 
 <br/>
 
@@ -65,17 +65,18 @@ Whether visitors explore from **PC (Java Edition)**, **Mobile / iPad (Bedrock Ed
 
 ---
 
-## 🚀 Key Features (v1.0.0)
+## 🚀 Key Features (v2.0.0)
 
 * **Procedural 1:1 Datapack Builder (`world/datapacks/if_buu_1to1/`):**
-  * **Site & Surroundings (`01_site_road`):** Fueang Fa Road, pedestrian crosswalk, brick sidewalk, wheelchair ramp, front plaza, and west motorcycle parking.
-  * **11-Storey Core & Stairs (`02_basement_and_grid`, `03_slabs_and_core`):** Basement car park (`B1`), structural white-concrete grid, walkable main & fire staircases across all 12 levels, and glass-walled elevator lobbies with 4-color recycling bins.
-  * **Signature Massing (`04_podium_and_arch`, `05_facade_shell`, `06_roof_and_solar`):** Sweeping C-arch front canopy with 6 slender columns & oculus skylight, 8F–11F step-back wing, 6F–8F protruding glass corner box, cobalt-blue vertical accents, and rooftop solar arrays.
-  * **Representative Interiors (`07_interiors`):**
+  * **Site & Campus Context (`01_site_road`, `09_campus_context`):** Fueang Fa Road, pedestrian crosswalk, brick sidewalk, wheelchair ramp, west motorcycle parking, NW circular fountain plaza, adjacent 5-storey south building, and East Computer Center / Science CL frontage (with `generate-structures=false`).
+  * **11-Storey Core & Stairs (`02_basement_and_grid`, `03_slabs_and_core`):** Basement car park (`B1`), structural white-concrete grid, walkable main & fire staircases across all 12 levels, restrooms, ceiling downlights, and glass-walled elevator lobbies with 4-color recycling bins.
+  * **Refined Architecture (`04_podium_and_arch`, `05_facade_shell`, `06_roof_and_solar`):** Light-gray stone Podium with angled underside, curved front canopy with 5 parallel ribbed silver C-arch fins, flanking solid shear walls, dark window mullions & charcoal side louvers, 8F–11F step-back wing, 6F–8F protruding glass box, rooftop solar arrays, and 3D `text_display` Faculty signage.
+  * **7F Open House Innovation Hub & Full Interiors (`07_interiors`):**
     * **1F:** Undercroft study tables, glass-walled Student Union (`SMO`), lounge sofas.
     * **2F:** Dean's Office (`IF-215`), Digital Library bookshelves, outdoor terrace.
-    * **3F–6F:** 210-seat sloped Lecture Halls (`IF-3M210`, `IF-5M210`) with cyan/teal tiered seating, Computer Labs (`IF-3C01`, `IF-4C01`), and 4F Server Room.
-    * **7F–10F:** Co-Working Space & FabLab / Innovation Hub zone (7F), Eastern Software Park BUU `IF-8R08` (8F), Lecturer Offices (9F), Hall of Fame & Conference Rooms (10F).
+    * **3F–6F:** 210-seat sloped Lecture Halls (`IF-3M210`, `IF-5M210`) with cyan/teal tiered seating, Computer Labs (`IF-3C01`, `IF-4C01`, `IF-6T01`), Lecture Room (`IF-5T03`), and 4F Server Room.
+    * **7F (Open House 2026 Highlight):** **Vision Lab** (AI Vision display & articulated Robot Arm Controls), **DMI Lab** (AI/AR/VR Testing & Industry 5.0 Automation demo), and FabLab / Co-Working Space.
+    * **8F–10F:** Eastern Software Park BUU `IF-8R08` (8F), Lecturer Offices (9F), Hall of Fame & Conference Rooms (10F).
     * **11F:** Open House Exhibition Hall (`IF-11M280`) with showcase booths & fire-hose cabinets.
 * **Non-OP Open House Elevator (`08_interactive_openhouse`):**
   * Works for every guest in Adventure Mode via `/trigger if_floor set <1..11>` (or `99` for `B1`) and clickable chat directory `/function if_buu:elevator_menu`.
@@ -147,11 +148,12 @@ if-buu-1to1-craft/
 
 ## 🗺️ Roadmap & v2.0 Improvements
 
-While **v1.0.0** establishes the complete 1:1 structure, interactive elevator, and server stack, the following visual upgrades are planned for **v2.0**:
-- [ ] **Refined Podium & C-Arch Geometry:** Switch dark `gray_concrete` podium cladding to lighter stone/concrete tones matching real-world daylight photos, and smooth out the sloped curved canopy ribbon.
-- [ ] **Accurate Tower Facade Framing:** Add solid flanking concrete shear walls, dark horizontal window mullions, and vertical charcoal louvers on side corridors.
-- [ ] **3D Faculty Signage & Surroundings:** Add `"คณะวิทยาการสารสนเทศ / FACULTY OF INFORMATICS"` via Block Display / Map Art, disable vanilla structures (`generate-structures=false`), and add neighboring buildings (Computer Center, Science CL, circular plaza).
-- [ ] **Full 7th-Floor Innovation Hub & Room Partitions:** Detail the Vision Lab & DMI Lab showcases on 7F and map every room wall using on-site fire-escape floorplans (`references/floorplans/`).
+**v2.0.0** delivers the major architectural and Open House upgrades planned from v1.0.0:
+- [x] **Refined Podium & C-Arch Geometry:** Switched dark `gray_concrete` podium cladding to light-gray stone tones (`light_gray_concrete` + `polished_andesite`), carved the angled underside, curved the canopy overhang, and rebuilt the C-arch as 5 ribbed silver fins.
+- [x] **Accurate Tower Facade Framing:** Added flanking solid concrete shear walls, dark horizontal/vertical window mullions, projecting white floor ledges, and ribbed charcoal side louvers.
+- [x] **3D Faculty Signage & Surroundings:** Added `"คณะวิทยาการสารสนเทศ / FACULTY OF INFORMATICS"` via `text_display`, disabled vanilla structures (`generate-structures=false`), and added surrounding BUU landmarks (`09_campus_context`).
+- [x] **7th-Floor Innovation Hub Showcase:** Built interactive Vision Lab (AI Vision + Robot Arm) and DMI Lab (AI/AR/VR + Industry 5.0) booths on 7F.
+- [ ] **Full Room-by-Room Fire-Escape Partitions (v2.1):** Map every remaining secondary classroom wall once on-site fire-escape floorplans are added to `references/floorplans/`.
 
 ---
 

@@ -68,14 +68,19 @@ def main():
             print("\n=== Server Ready! Running integration checks ===")
             send("plugins")
             send("datapack list")
-            send("execute positioned 0 0 0 run function if_buu:build_all")
             send("setworldspawn 1 0 -1")
+            send("forceload add -105 -64 48 64")
+            send("execute positioned 0 0 0 run function if_buu:build_all")
             send("execute if block 11 -1 0 minecraft:yellow_concrete")
-            send("execute if block -44 64 0 minecraft:daylight_detector")
+            send("execute if block -44 65 0 minecraft:daylight_detector")
             send("execute if block -15 30 23 minecraft:blue_concrete")
+            send("execute if block -3 13 11 minecraft:light_gray_concrete")
+            send("execute if block -28 35 -14 minecraft:lightning_rod")
+            send("execute if block -85 -1 -43 minecraft:water")
             send("execute if block -50 13 -20 minecraft:warped_stairs")
             send("execute if block -58 53 -22 minecraft:red_concrete")
             send("execute if block -31 13 13 minecraft:quartz_slab")
+            send("execute if entity @e[type=minecraft:text_display,tag=if_buu_label]")
             send("scoreboard objectives list")
             send("save-all")
             commands_sent = True
@@ -99,10 +104,10 @@ def main():
 
     errors = [l for l in lines if "ERROR" in l]
     passed = sum(1 for l in lines if "Test passed" in l)
-    print(f"Summary: block_tests_passed={passed}/6, errors={len(errors)}")
+    print(f"Summary: block_tests_passed={passed}/10, errors={len(errors)}")
     for e in errors[:10]:
         print("  ERR:", e)
-    sys.exit(0 if (rc == 0 and passed == 6 and len(errors) == 0) else 1)
+    sys.exit(0 if (rc == 0 and passed == 10 and len(errors) == 0) else 1)
 
 
 if __name__ == "__main__":

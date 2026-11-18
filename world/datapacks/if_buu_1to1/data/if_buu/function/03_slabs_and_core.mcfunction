@@ -1,4 +1,4 @@
-# 03 - 11 Floor Slabs, Signature Tile Pattern, Walkable Stairs & Glass Elevator Lobbies
+# 03 - 11 Floor Slabs, Signature Tile Pattern, Walkable Stairs, Toilets & Glass Elevator Lobbies
 fill ~-60 ~0 ~-24 ~-16 ~0 ~23 minecraft:smooth_sandstone
 fill ~-61 ~0 ~-25 ~-15 ~0 ~-25 minecraft:smooth_quartz
 fill ~-61 ~0 ~24 ~-15 ~0 ~24 minecraft:smooth_quartz
@@ -75,6 +75,18 @@ setblock ~-23 ~0 ~3 minecraft:gray_concrete
 setblock ~-23 ~0 ~8 minecraft:light_gray_concrete
 setblock ~-23 ~0 ~13 minecraft:gray_concrete
 setblock ~-23 ~0 ~18 minecraft:light_gray_concrete
+setblock ~-34 ~5 ~-16 minecraft:sea_lantern
+setblock ~-34 ~5 ~-6 minecraft:sea_lantern
+setblock ~-34 ~5 ~4 minecraft:sea_lantern
+setblock ~-34 ~5 ~14 minecraft:sea_lantern
+setblock ~-28 ~5 ~-16 minecraft:sea_lantern
+setblock ~-28 ~5 ~-6 minecraft:sea_lantern
+setblock ~-28 ~5 ~4 minecraft:sea_lantern
+setblock ~-28 ~5 ~14 minecraft:sea_lantern
+setblock ~-22 ~5 ~-16 minecraft:sea_lantern
+setblock ~-22 ~5 ~-6 minecraft:sea_lantern
+setblock ~-22 ~5 ~4 minecraft:sea_lantern
+setblock ~-22 ~5 ~14 minecraft:sea_lantern
 fill ~-60 ~6 ~-24 ~-16 ~6 ~23 minecraft:smooth_sandstone
 fill ~-61 ~6 ~-25 ~-15 ~6 ~-25 minecraft:smooth_quartz
 fill ~-61 ~6 ~24 ~-15 ~6 ~24 minecraft:smooth_quartz
@@ -151,22 +163,82 @@ setblock ~-23 ~6 ~3 minecraft:gray_concrete
 setblock ~-23 ~6 ~8 minecraft:light_gray_concrete
 setblock ~-23 ~6 ~13 minecraft:gray_concrete
 setblock ~-23 ~6 ~18 minecraft:light_gray_concrete
+setblock ~-34 ~11 ~-16 minecraft:sea_lantern
+setblock ~-34 ~11 ~-6 minecraft:sea_lantern
+setblock ~-34 ~11 ~4 minecraft:sea_lantern
+setblock ~-34 ~11 ~14 minecraft:sea_lantern
+setblock ~-28 ~11 ~-16 minecraft:sea_lantern
+setblock ~-28 ~11 ~-6 minecraft:sea_lantern
+setblock ~-28 ~11 ~4 minecraft:sea_lantern
+setblock ~-28 ~11 ~14 minecraft:sea_lantern
+setblock ~-22 ~11 ~-16 minecraft:sea_lantern
+setblock ~-22 ~11 ~-6 minecraft:sea_lantern
+setblock ~-22 ~11 ~4 minecraft:sea_lantern
+setblock ~-22 ~11 ~14 minecraft:sea_lantern
 fill ~-60 ~12 ~-24 ~-16 ~12 ~23 minecraft:smooth_quartz
 fill ~-61 ~12 ~-25 ~-15 ~12 ~-25 minecraft:smooth_quartz
 fill ~-61 ~12 ~24 ~-15 ~12 ~24 minecraft:smooth_quartz
 fill ~-61 ~12 ~-25 ~-61 ~12 ~24 minecraft:smooth_quartz
+setblock ~-34 ~16 ~-16 minecraft:sea_lantern
+setblock ~-34 ~16 ~-6 minecraft:sea_lantern
+setblock ~-34 ~16 ~4 minecraft:sea_lantern
+setblock ~-34 ~16 ~14 minecraft:sea_lantern
+setblock ~-28 ~16 ~-16 minecraft:sea_lantern
+setblock ~-28 ~16 ~-6 minecraft:sea_lantern
+setblock ~-28 ~16 ~4 minecraft:sea_lantern
+setblock ~-28 ~16 ~14 minecraft:sea_lantern
+setblock ~-22 ~16 ~-16 minecraft:sea_lantern
+setblock ~-22 ~16 ~-6 minecraft:sea_lantern
+setblock ~-22 ~16 ~4 minecraft:sea_lantern
+setblock ~-22 ~16 ~14 minecraft:sea_lantern
 fill ~-60 ~17 ~-24 ~-16 ~17 ~23 minecraft:smooth_quartz
 fill ~-61 ~17 ~-25 ~-15 ~17 ~-25 minecraft:smooth_quartz
 fill ~-61 ~17 ~24 ~-15 ~17 ~24 minecraft:smooth_quartz
 fill ~-61 ~17 ~-25 ~-61 ~17 ~24 minecraft:smooth_quartz
+setblock ~-34 ~21 ~-16 minecraft:sea_lantern
+setblock ~-34 ~21 ~-6 minecraft:sea_lantern
+setblock ~-34 ~21 ~4 minecraft:sea_lantern
+setblock ~-34 ~21 ~14 minecraft:sea_lantern
+setblock ~-28 ~21 ~-16 minecraft:sea_lantern
+setblock ~-28 ~21 ~-6 minecraft:sea_lantern
+setblock ~-28 ~21 ~4 minecraft:sea_lantern
+setblock ~-28 ~21 ~14 minecraft:sea_lantern
+setblock ~-22 ~21 ~-16 minecraft:sea_lantern
+setblock ~-22 ~21 ~-6 minecraft:sea_lantern
+setblock ~-22 ~21 ~4 minecraft:sea_lantern
+setblock ~-22 ~21 ~14 minecraft:sea_lantern
 fill ~-60 ~22 ~-24 ~-16 ~22 ~23 minecraft:smooth_quartz
 fill ~-61 ~22 ~-25 ~-15 ~22 ~-25 minecraft:smooth_quartz
 fill ~-61 ~22 ~24 ~-15 ~22 ~24 minecraft:smooth_quartz
 fill ~-61 ~22 ~-25 ~-61 ~22 ~24 minecraft:smooth_quartz
+setblock ~-34 ~26 ~-16 minecraft:sea_lantern
+setblock ~-34 ~26 ~-6 minecraft:sea_lantern
+setblock ~-34 ~26 ~4 minecraft:sea_lantern
+setblock ~-34 ~26 ~14 minecraft:sea_lantern
+setblock ~-28 ~26 ~-16 minecraft:sea_lantern
+setblock ~-28 ~26 ~-6 minecraft:sea_lantern
+setblock ~-28 ~26 ~4 minecraft:sea_lantern
+setblock ~-28 ~26 ~14 minecraft:sea_lantern
+setblock ~-22 ~26 ~-16 minecraft:sea_lantern
+setblock ~-22 ~26 ~-6 minecraft:sea_lantern
+setblock ~-22 ~26 ~4 minecraft:sea_lantern
+setblock ~-22 ~26 ~14 minecraft:sea_lantern
 fill ~-60 ~27 ~-24 ~-16 ~27 ~23 minecraft:smooth_quartz
 fill ~-61 ~27 ~-25 ~-15 ~27 ~-25 minecraft:smooth_quartz
 fill ~-61 ~27 ~24 ~-15 ~27 ~24 minecraft:smooth_quartz
 fill ~-61 ~27 ~-25 ~-61 ~27 ~24 minecraft:smooth_quartz
+setblock ~-34 ~31 ~-16 minecraft:sea_lantern
+setblock ~-34 ~31 ~-6 minecraft:sea_lantern
+setblock ~-34 ~31 ~4 minecraft:sea_lantern
+setblock ~-34 ~31 ~14 minecraft:sea_lantern
+setblock ~-28 ~31 ~-16 minecraft:sea_lantern
+setblock ~-28 ~31 ~-6 minecraft:sea_lantern
+setblock ~-28 ~31 ~4 minecraft:sea_lantern
+setblock ~-28 ~31 ~14 minecraft:sea_lantern
+setblock ~-22 ~31 ~-16 minecraft:sea_lantern
+setblock ~-22 ~31 ~-6 minecraft:sea_lantern
+setblock ~-22 ~31 ~4 minecraft:sea_lantern
+setblock ~-22 ~31 ~14 minecraft:sea_lantern
 fill ~-60 ~32 ~-24 ~-16 ~32 ~23 minecraft:smooth_quartz
 fill ~-61 ~32 ~-25 ~-15 ~32 ~-25 minecraft:smooth_quartz
 fill ~-61 ~32 ~24 ~-15 ~32 ~24 minecraft:smooth_quartz
@@ -240,21 +312,66 @@ setblock ~-23 ~32 ~3 minecraft:gray_concrete
 setblock ~-23 ~32 ~8 minecraft:light_gray_concrete
 setblock ~-23 ~32 ~13 minecraft:gray_concrete
 setblock ~-23 ~32 ~18 minecraft:light_gray_concrete
+setblock ~-34 ~36 ~-16 minecraft:sea_lantern
+setblock ~-34 ~36 ~-6 minecraft:sea_lantern
+setblock ~-34 ~36 ~4 minecraft:sea_lantern
+setblock ~-34 ~36 ~14 minecraft:sea_lantern
+setblock ~-28 ~36 ~-16 minecraft:sea_lantern
+setblock ~-28 ~36 ~-6 minecraft:sea_lantern
+setblock ~-28 ~36 ~4 minecraft:sea_lantern
+setblock ~-28 ~36 ~14 minecraft:sea_lantern
+setblock ~-22 ~36 ~-16 minecraft:sea_lantern
+setblock ~-22 ~36 ~-6 minecraft:sea_lantern
+setblock ~-22 ~36 ~4 minecraft:sea_lantern
+setblock ~-22 ~36 ~14 minecraft:sea_lantern
 fill ~-60 ~37 ~-24 ~-26 ~37 ~23 minecraft:smooth_quartz
 fill ~-25 ~37 ~-8 ~-16 ~37 ~23 minecraft:smooth_quartz
 fill ~-61 ~37 ~-25 ~-26 ~37 ~-25 minecraft:smooth_quartz
 fill ~-61 ~37 ~24 ~-15 ~37 ~24 minecraft:smooth_quartz
 fill ~-61 ~37 ~-25 ~-61 ~37 ~24 minecraft:smooth_quartz
+setblock ~-34 ~41 ~-16 minecraft:sea_lantern
+setblock ~-34 ~41 ~-6 minecraft:sea_lantern
+setblock ~-34 ~41 ~4 minecraft:sea_lantern
+setblock ~-34 ~41 ~14 minecraft:sea_lantern
+setblock ~-28 ~41 ~-16 minecraft:sea_lantern
+setblock ~-28 ~41 ~-6 minecraft:sea_lantern
+setblock ~-28 ~41 ~4 minecraft:sea_lantern
+setblock ~-28 ~41 ~14 minecraft:sea_lantern
+setblock ~-22 ~41 ~-6 minecraft:sea_lantern
+setblock ~-22 ~41 ~4 minecraft:sea_lantern
+setblock ~-22 ~41 ~14 minecraft:sea_lantern
 fill ~-60 ~42 ~-24 ~-26 ~42 ~23 minecraft:smooth_quartz
 fill ~-25 ~42 ~-8 ~-16 ~42 ~23 minecraft:smooth_quartz
 fill ~-61 ~42 ~-25 ~-26 ~42 ~-25 minecraft:smooth_quartz
 fill ~-61 ~42 ~24 ~-15 ~42 ~24 minecraft:smooth_quartz
 fill ~-61 ~42 ~-25 ~-61 ~42 ~24 minecraft:smooth_quartz
+setblock ~-34 ~46 ~-16 minecraft:sea_lantern
+setblock ~-34 ~46 ~-6 minecraft:sea_lantern
+setblock ~-34 ~46 ~4 minecraft:sea_lantern
+setblock ~-34 ~46 ~14 minecraft:sea_lantern
+setblock ~-28 ~46 ~-16 minecraft:sea_lantern
+setblock ~-28 ~46 ~-6 minecraft:sea_lantern
+setblock ~-28 ~46 ~4 minecraft:sea_lantern
+setblock ~-28 ~46 ~14 minecraft:sea_lantern
+setblock ~-22 ~46 ~-6 minecraft:sea_lantern
+setblock ~-22 ~46 ~4 minecraft:sea_lantern
+setblock ~-22 ~46 ~14 minecraft:sea_lantern
 fill ~-60 ~47 ~-24 ~-26 ~47 ~23 minecraft:smooth_quartz
 fill ~-25 ~47 ~-8 ~-16 ~47 ~23 minecraft:smooth_quartz
 fill ~-61 ~47 ~-25 ~-26 ~47 ~-25 minecraft:smooth_quartz
 fill ~-61 ~47 ~24 ~-15 ~47 ~24 minecraft:smooth_quartz
 fill ~-61 ~47 ~-25 ~-61 ~47 ~24 minecraft:smooth_quartz
+setblock ~-34 ~51 ~-16 minecraft:sea_lantern
+setblock ~-34 ~51 ~-6 minecraft:sea_lantern
+setblock ~-34 ~51 ~4 minecraft:sea_lantern
+setblock ~-34 ~51 ~14 minecraft:sea_lantern
+setblock ~-28 ~51 ~-16 minecraft:sea_lantern
+setblock ~-28 ~51 ~-6 minecraft:sea_lantern
+setblock ~-28 ~51 ~4 minecraft:sea_lantern
+setblock ~-28 ~51 ~14 minecraft:sea_lantern
+setblock ~-22 ~51 ~-6 minecraft:sea_lantern
+setblock ~-22 ~51 ~4 minecraft:sea_lantern
+setblock ~-22 ~51 ~14 minecraft:sea_lantern
 fill ~-60 ~52 ~-24 ~-26 ~52 ~23 minecraft:smooth_sandstone
 fill ~-25 ~52 ~-8 ~-16 ~52 ~23 minecraft:smooth_sandstone
 fill ~-61 ~52 ~-25 ~-26 ~52 ~-25 minecraft:smooth_quartz
@@ -332,6 +449,17 @@ setblock ~-23 ~52 ~3 minecraft:gray_concrete
 setblock ~-23 ~52 ~8 minecraft:light_gray_concrete
 setblock ~-23 ~52 ~13 minecraft:gray_concrete
 setblock ~-23 ~52 ~18 minecraft:light_gray_concrete
+setblock ~-34 ~58 ~-16 minecraft:sea_lantern
+setblock ~-34 ~58 ~-6 minecraft:sea_lantern
+setblock ~-34 ~58 ~4 minecraft:sea_lantern
+setblock ~-34 ~58 ~14 minecraft:sea_lantern
+setblock ~-28 ~58 ~-16 minecraft:sea_lantern
+setblock ~-28 ~58 ~-6 minecraft:sea_lantern
+setblock ~-28 ~58 ~4 minecraft:sea_lantern
+setblock ~-28 ~58 ~14 minecraft:sea_lantern
+setblock ~-22 ~58 ~-6 minecraft:sea_lantern
+setblock ~-22 ~58 ~4 minecraft:sea_lantern
+setblock ~-22 ~58 ~14 minecraft:sea_lantern
 fill ~-48 ~-5 ~-6 ~-42 ~58 ~5 minecraft:light_gray_concrete hollow
 fill ~-42 ~-4 ~-4 ~-42 ~-2 ~-3 minecraft:air
 fill ~-42 ~-4 ~1 ~-42 ~-2 ~2 minecraft:air
@@ -369,6 +497,10 @@ setblock ~-34 ~1 ~3 minecraft:yellow_concrete
 setblock ~-34 ~1 ~4 minecraft:blue_concrete
 setblock ~-34 ~1 ~5 minecraft:green_concrete
 setblock ~-34 ~1 ~6 minecraft:red_concrete
+fill ~-58 ~1 ~-5 ~-50 ~5 ~4 minecraft:white_concrete hollow
+fill ~-50 ~1 ~-2 ~-50 ~3 ~-1 minecraft:air
+fill ~-50 ~1 ~2 ~-50 ~3 ~2 minecraft:air
+setblock ~-54 ~5 ~0 minecraft:sea_lantern
 setblock ~-41 ~2 ~-1 minecraft:oak_wall_sign[facing=east]{front_text:{messages:['{"text":"[ 1F ]"}','{"text":"Lobby, Undercro"}','{"text":"Use /trigger"}','{"text":"if_floor set 1..11"}']}}
 fill ~-48 ~6 ~9 ~-42 ~6 ~13 minecraft:air
 fill ~-49 ~1 ~8 ~-42 ~6 ~8 minecraft:white_concrete
@@ -403,6 +535,10 @@ setblock ~-34 ~7 ~3 minecraft:yellow_concrete
 setblock ~-34 ~7 ~4 minecraft:blue_concrete
 setblock ~-34 ~7 ~5 minecraft:green_concrete
 setblock ~-34 ~7 ~6 minecraft:red_concrete
+fill ~-58 ~7 ~-5 ~-50 ~11 ~4 minecraft:white_concrete hollow
+fill ~-50 ~7 ~-2 ~-50 ~9 ~-1 minecraft:air
+fill ~-50 ~7 ~2 ~-50 ~9 ~2 minecraft:air
+setblock ~-54 ~11 ~0 minecraft:sea_lantern
 setblock ~-41 ~8 ~-1 minecraft:oak_wall_sign[facing=east]{front_text:{messages:['{"text":"[ 2F ]"}','{"text":"Dean Office, Ad"}','{"text":"Use /trigger"}','{"text":"if_floor set 1..11"}']}}
 fill ~-48 ~12 ~9 ~-42 ~12 ~13 minecraft:air
 fill ~-49 ~7 ~8 ~-42 ~12 ~8 minecraft:white_concrete
@@ -437,6 +573,10 @@ setblock ~-34 ~13 ~3 minecraft:yellow_concrete
 setblock ~-34 ~13 ~4 minecraft:blue_concrete
 setblock ~-34 ~13 ~5 minecraft:green_concrete
 setblock ~-34 ~13 ~6 minecraft:red_concrete
+fill ~-58 ~13 ~-5 ~-50 ~16 ~4 minecraft:white_concrete hollow
+fill ~-50 ~13 ~-2 ~-50 ~15 ~-1 minecraft:air
+fill ~-50 ~13 ~2 ~-50 ~15 ~2 minecraft:air
+setblock ~-54 ~16 ~0 minecraft:sea_lantern
 setblock ~-41 ~14 ~-1 minecraft:oak_wall_sign[facing=east]{front_text:{messages:['{"text":"[ 3F ]"}','{"text":"Computer Labs &"}','{"text":"Use /trigger"}','{"text":"if_floor set 1..11"}']}}
 fill ~-48 ~17 ~9 ~-42 ~17 ~13 minecraft:air
 fill ~-49 ~13 ~8 ~-42 ~17 ~8 minecraft:white_concrete
@@ -469,6 +609,10 @@ setblock ~-34 ~18 ~3 minecraft:yellow_concrete
 setblock ~-34 ~18 ~4 minecraft:blue_concrete
 setblock ~-34 ~18 ~5 minecraft:green_concrete
 setblock ~-34 ~18 ~6 minecraft:red_concrete
+fill ~-58 ~18 ~-5 ~-50 ~21 ~4 minecraft:white_concrete hollow
+fill ~-50 ~18 ~-2 ~-50 ~20 ~-1 minecraft:air
+fill ~-50 ~18 ~2 ~-50 ~20 ~2 minecraft:air
+setblock ~-54 ~21 ~0 minecraft:sea_lantern
 setblock ~-41 ~19 ~-1 minecraft:oak_wall_sign[facing=east]{front_text:{messages:['{"text":"[ 4F ]"}','{"text":"Computer Labs, "}','{"text":"Use /trigger"}','{"text":"if_floor set 1..11"}']}}
 fill ~-48 ~22 ~9 ~-42 ~22 ~13 minecraft:air
 fill ~-49 ~18 ~8 ~-42 ~22 ~8 minecraft:white_concrete
@@ -501,6 +645,10 @@ setblock ~-34 ~23 ~3 minecraft:yellow_concrete
 setblock ~-34 ~23 ~4 minecraft:blue_concrete
 setblock ~-34 ~23 ~5 minecraft:green_concrete
 setblock ~-34 ~23 ~6 minecraft:red_concrete
+fill ~-58 ~23 ~-5 ~-50 ~26 ~4 minecraft:white_concrete hollow
+fill ~-50 ~23 ~-2 ~-50 ~25 ~-1 minecraft:air
+fill ~-50 ~23 ~2 ~-50 ~25 ~2 minecraft:air
+setblock ~-54 ~26 ~0 minecraft:sea_lantern
 setblock ~-41 ~24 ~-1 minecraft:oak_wall_sign[facing=east]{front_text:{messages:['{"text":"[ 5F ]"}','{"text":"Lecture Rooms &"}','{"text":"Use /trigger"}','{"text":"if_floor set 1..11"}']}}
 fill ~-48 ~27 ~9 ~-42 ~27 ~13 minecraft:air
 fill ~-49 ~23 ~8 ~-42 ~27 ~8 minecraft:white_concrete
@@ -533,6 +681,10 @@ setblock ~-34 ~28 ~3 minecraft:yellow_concrete
 setblock ~-34 ~28 ~4 minecraft:blue_concrete
 setblock ~-34 ~28 ~5 minecraft:green_concrete
 setblock ~-34 ~28 ~6 minecraft:red_concrete
+fill ~-58 ~28 ~-5 ~-50 ~31 ~4 minecraft:white_concrete hollow
+fill ~-50 ~28 ~-2 ~-50 ~30 ~-1 minecraft:air
+fill ~-50 ~28 ~2 ~-50 ~30 ~2 minecraft:air
+setblock ~-54 ~31 ~0 minecraft:sea_lantern
 setblock ~-41 ~29 ~-1 minecraft:oak_wall_sign[facing=east]{front_text:{messages:['{"text":"[ 6F ]"}','{"text":"Lecture Rooms &"}','{"text":"Use /trigger"}','{"text":"if_floor set 1..11"}']}}
 fill ~-48 ~32 ~9 ~-42 ~32 ~13 minecraft:air
 fill ~-49 ~28 ~8 ~-42 ~32 ~8 minecraft:white_concrete
@@ -565,6 +717,10 @@ setblock ~-34 ~33 ~3 minecraft:yellow_concrete
 setblock ~-34 ~33 ~4 minecraft:blue_concrete
 setblock ~-34 ~33 ~5 minecraft:green_concrete
 setblock ~-34 ~33 ~6 minecraft:red_concrete
+fill ~-58 ~33 ~-5 ~-50 ~36 ~4 minecraft:white_concrete hollow
+fill ~-50 ~33 ~-2 ~-50 ~35 ~-1 minecraft:air
+fill ~-50 ~33 ~2 ~-50 ~35 ~2 minecraft:air
+setblock ~-54 ~36 ~0 minecraft:sea_lantern
 setblock ~-41 ~34 ~-1 minecraft:oak_wall_sign[facing=east]{front_text:{messages:['{"text":"[ 7F ]"}','{"text":"Co-Working Spac"}','{"text":"Use /trigger"}','{"text":"if_floor set 1..11"}']}}
 fill ~-48 ~37 ~9 ~-42 ~37 ~13 minecraft:air
 fill ~-49 ~33 ~8 ~-42 ~37 ~8 minecraft:white_concrete
@@ -597,6 +753,10 @@ setblock ~-34 ~38 ~3 minecraft:yellow_concrete
 setblock ~-34 ~38 ~4 minecraft:blue_concrete
 setblock ~-34 ~38 ~5 minecraft:green_concrete
 setblock ~-34 ~38 ~6 minecraft:red_concrete
+fill ~-58 ~38 ~-5 ~-50 ~41 ~4 minecraft:white_concrete hollow
+fill ~-50 ~38 ~-2 ~-50 ~40 ~-1 minecraft:air
+fill ~-50 ~38 ~2 ~-50 ~40 ~2 minecraft:air
+setblock ~-54 ~41 ~0 minecraft:sea_lantern
 setblock ~-41 ~39 ~-1 minecraft:oak_wall_sign[facing=east]{front_text:{messages:['{"text":"[ 8F ]"}','{"text":"Research Labs &"}','{"text":"Use /trigger"}','{"text":"if_floor set 1..11"}']}}
 fill ~-48 ~42 ~9 ~-42 ~42 ~13 minecraft:air
 fill ~-49 ~38 ~8 ~-42 ~42 ~8 minecraft:white_concrete
@@ -629,6 +789,10 @@ setblock ~-34 ~43 ~3 minecraft:yellow_concrete
 setblock ~-34 ~43 ~4 minecraft:blue_concrete
 setblock ~-34 ~43 ~5 minecraft:green_concrete
 setblock ~-34 ~43 ~6 minecraft:red_concrete
+fill ~-58 ~43 ~-5 ~-50 ~46 ~4 minecraft:white_concrete hollow
+fill ~-50 ~43 ~-2 ~-50 ~45 ~-1 minecraft:air
+fill ~-50 ~43 ~2 ~-50 ~45 ~2 minecraft:air
+setblock ~-54 ~46 ~0 minecraft:sea_lantern
 setblock ~-41 ~44 ~-1 minecraft:oak_wall_sign[facing=east]{front_text:{messages:['{"text":"[ 9F ]"}','{"text":"Lecturer Office"}','{"text":"Use /trigger"}','{"text":"if_floor set 1..11"}']}}
 fill ~-48 ~47 ~9 ~-42 ~47 ~13 minecraft:air
 fill ~-49 ~43 ~8 ~-42 ~47 ~8 minecraft:white_concrete
@@ -661,6 +825,10 @@ setblock ~-34 ~48 ~3 minecraft:yellow_concrete
 setblock ~-34 ~48 ~4 minecraft:blue_concrete
 setblock ~-34 ~48 ~5 minecraft:green_concrete
 setblock ~-34 ~48 ~6 minecraft:red_concrete
+fill ~-58 ~48 ~-5 ~-50 ~51 ~4 minecraft:white_concrete hollow
+fill ~-50 ~48 ~-2 ~-50 ~50 ~-1 minecraft:air
+fill ~-50 ~48 ~2 ~-50 ~50 ~2 minecraft:air
+setblock ~-54 ~51 ~0 minecraft:sea_lantern
 setblock ~-41 ~49 ~-1 minecraft:oak_wall_sign[facing=east]{front_text:{messages:['{"text":"[ 10F ]"}','{"text":"Hall of Fame & "}','{"text":"Use /trigger"}','{"text":"if_floor set 1..11"}']}}
 fill ~-48 ~52 ~9 ~-42 ~52 ~13 minecraft:air
 fill ~-49 ~48 ~8 ~-42 ~52 ~8 minecraft:white_concrete
@@ -694,6 +862,6 @@ setblock ~-34 ~53 ~4 minecraft:blue_concrete
 setblock ~-34 ~53 ~5 minecraft:green_concrete
 setblock ~-34 ~53 ~6 minecraft:red_concrete
 setblock ~-41 ~54 ~-1 minecraft:oak_wall_sign[facing=east]{front_text:{messages:['{"text":"[ 11F ]"}','{"text":"Exhibition Hall"}','{"text":"Use /trigger"}','{"text":"if_floor set 1..11"}']}}
-fill ~-58 ~-5 ~17 ~-53 ~58 ~17 minecraft:gray_concrete
-fill ~-58 ~-5 ~22 ~-53 ~58 ~22 minecraft:gray_concrete
-fill ~-58 ~-5 ~17 ~-58 ~58 ~22 minecraft:gray_concrete
+fill ~-58 ~-5 ~17 ~-53 ~58 ~17 minecraft:light_gray_concrete
+fill ~-58 ~-5 ~22 ~-53 ~58 ~22 minecraft:light_gray_concrete
+fill ~-58 ~-5 ~17 ~-58 ~58 ~22 minecraft:light_gray_concrete
