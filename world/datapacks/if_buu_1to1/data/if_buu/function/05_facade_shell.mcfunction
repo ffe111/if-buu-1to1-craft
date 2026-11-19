@@ -90,3 +90,10 @@ fill ~-25 ~37 ~27 ~6 ~37 ~27 minecraft:smooth_quartz
 fill ~-25 ~42 ~24 ~6 ~42 ~24 minecraft:smooth_quartz
 fill ~-25 ~47 ~24 ~6 ~47 ~24 minecraft:smooth_quartz
 fill ~-25 ~52 ~24 ~6 ~52 ~24 minecraft:smooth_quartz
+fill ~9 ~33 ~-1 ~18 ~33 ~21 minecraft:grass_block
+fill ~13 ~34 ~3 ~15 ~35 ~5 minecraft:oak_leaves[persistent=true]
+fill ~13 ~34 ~11 ~15 ~35 ~13 minecraft:oak_leaves[persistent=true]
+fill ~13 ~34 ~17 ~15 ~35 ~19 minecraft:oak_leaves[persistent=true]
+fill ~8 ~42 ~-20 ~17 ~42 ~-6 minecraft:grass_block
+fill ~12 ~43 ~-18 ~14 ~44 ~-16 minecraft:oak_leaves[persistent=true]
+fill ~12 ~43 ~-11 ~14 ~44 ~-9 minecraft:oak_leaves[persistent=true]

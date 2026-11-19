@@ -220,12 +220,14 @@ def gen_slabs_and_core(spec: dict) -> list[str]:
 
 def gen_podium_and_arch() -> list[str]:
     cmds = [
-        "# 04 - Curved East Podium (1F-5F) & 6-Ribbed Sweeping South-East C-Arch (c_arch_closeup.jpg)",
+        "# 04 - v3.1 Refined East-Facing Podium, 6-Ribbed C-Arch (c_arch_closeup.jpg) & Flagpoles",
         fill_p(22, 0, -4, 52, 0, 4, "minecraft:smooth_sandstone"),
         # Cobalt Blue Entrance Core Wall on South-East side (c_arch_closeup.jpg!)
         fill_p(47, 0, 1, 52, 11, 4, "minecraft:blue_concrete"),
         # Basement ventilation louvers under SE gray shear wall (c_arch_closeup.jpg)
         fill_p(52, 0, 5, 52, 1, 18, "minecraft:blackstone_wall"),
+        # 3 Flagpoles on SE front planter (seen in 3rd street-view photo!)
+        *[fill(30, 0, z, 30, 8, z, "minecraft:iron_bars") for z in (16, 18, 20)],
 
         # 6 Slender White Columns under Oculus Skylight (Front.jpg & c_arch_closeup.jpg)
         fill_p(46, 0, -4, 46, 21, -4, "minecraft:quartz_pillar"),
@@ -244,31 +246,44 @@ def gen_podium_and_arch() -> list[str]:
         fill_p(40, 17, 1, 46, 17, 1, "minecraft:blue_concrete"),
         fill_p(34, 15, 1, 39, 15, 1, "minecraft:light_blue_stained_glass"),
         fill_p(28, 19, 1, 33, 19, 1, "minecraft:light_blue_stained_glass"),
+        # Recessed 2F glass curtain wall under Podium Box
+        fill_p(24, 7, 3, 46, 11, 3, "minecraft:cyan_stained_glass"),
+        fill_p(24, 9, 3, 46, 9, 3, "minecraft:gray_concrete"),
     ]
 
-    # Sweeping Curved East Canopy Roof (Y=22..23)
-    for px in range(21, 54):
-        pz_min = -6 if px <= 42 else round(-6 + (px - 42) * 0.5)
+    # Sweeping Curved East Canopy Roof (Y=22..23, facing Fueang Fa Road +X up to mc_x=29)
+    for px in range(21, 53):
+        pz_min = -5 if px <= 40 else round(-5 + (px - 40) * 0.45)
         cmds.append(fill_p(px, 22, pz_min, px, 22, 5, "minecraft:smooth_quartz"))
-        cmds.append(fill_p(px, 23, pz_min, px, 23, 5, "minecraft:light_gray_concrete"))
+        cmds.append(fill_p(px, 23, pz_min, px, 23, 5, "minecraft:smooth_quartz_slab"))
+        # Crisp bright white fascia edge on the East overhang
+        cmds.append(set_p(px, 23, pz_min, "minecraft:white_concrete"))
 
     # Oculus Skylight Cutout
     cmds.append(fill_p(47, 22, -4, 49, 23, -2, "minecraft:air"))
 
-    # 6 Parallel Ribbed Silver C-Arch Fins curving down on South-East side (c_arch_closeup.jpg!)
-    fin_pzs = [-5, -3, -1, 1, 3, 5]
+    # 6 Parallel Ribbed Silver C-Arch Fins curving smoothly on South-East side (c_arch_closeup.jpg!)
+    # Ribs sit at distinct East-West positions (pz = -4, -2, 0, 2, 4, 6 -> mc_x = 28, 26, 24, 22, 20, 18)
+    # and curve outward to the South (+Z, px=55) and back under Y=6!
+    fin_pzs = [-4, -2, 0, 2, 4, 6]
     seen_pts = set()
-    for deg in range(-70, 195, 2):
+    for deg in range(-15, 195, 2):
         rad = math.radians(deg)
-        cpx = round(47 + 7.5 * math.sin(rad))
+        cpx = round(47 + 8.5 * math.sin(rad))
         cy = round(14.5 + 8.0 * math.cos(rad))
         for cpz in fin_pzs:
-            for dz in (0, 1):
-                pt = (cpx, cy, cpz + dz)
-                if pt not in seen_pts:
-                    seen_pts.add(pt)
-                    mat = "minecraft:smooth_quartz" if dz == 0 else "minecraft:light_gray_concrete"
-                    cmds.append(set_p(cpx, cy, cpz + dz, mat))
+            pt = (cpx, cy, cpz)
+            if pt not in seen_pts:
+                seen_pts.add(pt)
+                cmds.append(set_p(cpx, cy, cpz, "minecraft:white_concrete"))
+                cmds.append(set_p(cpx, cy, cpz + 1, "minecraft:smooth_quartz"))
+
+    # Outer curved white ribbon connecting the outer edge (pz=-5 -> mc_x=+29)
+    for deg in range(-15, 195, 2):
+        rad = math.radians(deg)
+        cpx = round(47 + 8.5 * math.sin(rad))
+        cy = round(14.5 + 8.0 * math.cos(rad))
+        cmds.append(set_p(cpx, cy, -5, "minecraft:light_gray_concrete"))
 
     # Podium Front Sign facing East (+X -> mc_yaw = -90)
     cmds.append(text_p(38.0, 18.5, 0.2, "คณะวิทยาการสารสนเทศ\nFACULTY OF INFORMATICS", 180.0, 1.35))
@@ -322,6 +337,12 @@ def gen_facade_shell() -> list[str]:
         *[fill_p(5, y, 18, 51, y, 18, "minecraft:smooth_quartz") for y in (42, 47, 52)],
         *[fill_p(54, y, 18, 54, y, 49, "minecraft:smooth_quartz") for y in (12, 17, 22, 27, 32, 37)],
         *[fill_p(51, y, 18, 51, y, 49, "minecraft:smooth_quartz") for y in (42, 47, 52)],
+
+        # Green Rooftop Terrace Gardens on 7F & 9F step-backs (matching Scale Model!)
+        fill_p(26, 33, 6, 48, 33, 15, "minecraft:grass_block"),
+        *[fill_p(px, 34, 9, px + 2, 35, 11, "minecraft:oak_leaves[persistent=true]") for px in (30, 38, 44)],
+        fill_p(7, 42, 7, 21, 42, 16, "minecraft:grass_block"),
+        *[fill_p(px, 43, 10, px + 2, 44, 12, "minecraft:oak_leaves[persistent=true]") for px in (9, 16)],
     ]
     return cmds
 
@@ -360,39 +381,43 @@ def gen_interiors() -> list[str]:
 
 def gen_campus_context() -> list[str]:
     cmds = [
-        "# 09 - v3.0 Surrounding BUU Campus Landmarks (True Satellite Orientation)",
-        # NW Circular Fountain Plaza (X=-56..-32, Z=-50..-26)
-        fill(-56, -1, -50, -32, -1, -26, "minecraft:light_gray_concrete"),
+        "# 09 - v3.1 True Campus Surroundings (Science CL + Circular Pond East across Fueang Fa Rd, Yellow Bldg NE, 6F Bldg South)",
+        # 1) East Across Fueang Fa Rd (X = +44..+80): Science CL Gray Skylight Building + Circular Pond!
+        fill(44, -1, -36, 80, -1, 36, "minecraft:grass_block"),
+        fill(44, -1, -28, 48, -1, 28, "minecraft:light_gray_concrete"),
+        # Circular Pond in front of Science CL (X=+52, Z=+14, matches tile_19_409126_242626.jpg & 5426_View-2-1.jpg!)
     ]
-    for dx in range(-10, 11):
-        for dz in range(-10, 11):
+    for dx in range(-9, 10):
+        for dz in range(-9, 10):
             r = math.hypot(dx, dz)
-            px, pz = -44 + dx, -38 + dz
-            if r <= 6.5:
+            px, pz = 52 + dx, 14 + dz
+            if r <= 6.0:
                 cmds.append(setblock(px, -1, pz, "minecraft:water"))
-            elif r <= 8.5:
+            elif r <= 8.0:
                 cmds.append(setblock(px, 0, pz, "minecraft:smooth_quartz_slab"))
                 cmds.append(setblock(px, -1, pz, "minecraft:smooth_quartz"))
 
-    # South Adjacent 5-Storey Gray/Blue Building (Z = +34..+54, X = -22..+24)
+    # Science CL Gray Building with 5 skylight bays (East across road, X=+58..+78, Z=-6..+26)
+    cmds.extend([
+        fill(58, 0, -6, 78, 16, 26, "minecraft:light_gray_concrete", "hollow"),
+        *[fill(59, 17, z, 77, 17, z + 2, "minecraft:light_blue_stained_glass") for z in (-3, 3, 9, 15, 21)],
+        fill(58, 17, -6, 78, 17, 26, "minecraft:gray_concrete", "keep"),
+        # Yellow Science / Computer Center Building across Fueang Fa Rd to North-East (X=+49..+70, Z=-34..-10)
+        fill(49, 0, -34, 70, 16, -10, "minecraft:smooth_sandstone", "hollow"),
+        *[fill(49, y, -31, 49, y + 1, -13, "minecraft:black_stained_glass") for y in (3, 8, 12)],
+        fill(48, 17, -35, 71, 17, -9, "minecraft:gray_concrete"),
+        # White & Teal Curved Building front facing road at X=+48..+56, Z=-8..+4 (seen in Front.jpg!)
+        fill(48, 0, -8, 57, 14, 4, "minecraft:white_concrete", "hollow"),
+        fill(47, 15, -9, 58, 15, 5, "minecraft:cyan_concrete"),
+    ])
+
+    # 2) South Adjacent 6-Storey Gray/Blue Building (Z = +34..+54, X = -22..+24)
     cmds.extend([
         fill(-22, -1, 34, 24, -1, 54, "minecraft:light_gray_concrete"),
         fill(-22, 0, 34, 24, 24, 54, "minecraft:light_gray_concrete", "hollow"),
         fill(-4, 1, 34, 6, 23, 34, "minecraft:light_blue_concrete"),
         *[fill(x, y, 34, x + 2, y + 1, 34, "minecraft:black_stained_glass") for y in (4, 9, 14, 19) for x in range(-18, 20, 8)],
         fill(-23, 25, 33, 25, 25, 55, "minecraft:gray_concrete"),
-    ])
-
-    # East Across Fueang Fa Rd (X = +46..+66): Computer Center & Science CL
-    cmds.extend([
-        fill(44, -1, -34, 68, -1, 34, "minecraft:grass_block"),
-        fill(44, -1, -28, 47, -1, 28, "minecraft:light_gray_concrete"),
-        fill(48, 0, -2, 66, 18, 24, "minecraft:white_concrete", "hollow"),
-        *[fill(48, y, 0, 48, y, 22, "minecraft:cyan_stained_glass") for y in (3, 7, 11, 15)],
-        fill(46, 19, -4, 67, 19, 25, "minecraft:cyan_concrete"),
-        fill(48, 0, -28, 66, 16, -6, "minecraft:smooth_sandstone", "hollow"),
-        *[fill(48, y, -25, 48, y, -9, "minecraft:black_stained_glass") for y in (3, 8, 13)],
-        fill(47, 17, -29, 67, 17, -5, "minecraft:gray_concrete"),
     ])
     return cmds
 

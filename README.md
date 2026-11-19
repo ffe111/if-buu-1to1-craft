@@ -11,7 +11,7 @@
 [![BlueMap](https://img.shields.io/badge/3D%20Web%20Map-BlueMap-00B4D8?style=for-the-badge)](https://bluemap.bluecolored.io/)
 [![Scale](https://img.shields.io/badge/Scale-1%3A1%20(1%20Block%20%3D%201%20Meter)-F59E0B?style=for-the-badge)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-10B981?style=for-the-badge)](LICENSE)
-[![Release](https://img.shields.io/badge/Release-v3.0.0-7C3AED?style=for-the-badge)](#roadmap--v30-status)
+[![Release](https://img.shields.io/badge/Release-v3.1.0-7C3AED?style=for-the-badge)](#roadmap--v31-status)
 
 <br/>
 
@@ -65,7 +65,7 @@ Whether visitors explore from **PC (Java Edition)**, **Mobile / iPad (Bedrock Ed
 
 ---
 
-## 🚀 Key Features (v3.0.0 — Complete 1F–11F Floor Plans & True Satellite Orientation)
+## 🚀 Key Features (v3.1.0 — Verified C-Arch, Green Terraces & True Science CL Context)
 
 * **Full 1:1 Floor-Plan Generator (`scripts/floorplans_all.py` & `scripts/generate_datapack.py`):**
   * **True Google Maps / Satellite Orientation:** Aligned directly to real-world satellite imagery (`East +X` Fueang Fa Road & Front Canopy, `West -X` Elevator Spine & Moto Parking, `North -Z` 11F Solar Panels & Restrooms, `South +Z` 6-Ribbed SE C-Arch & `5M210` Wing).
@@ -78,7 +78,7 @@ Whether visitors explore from **PC (Java Edition)**, **Mobile / iPad (Bedrock Ed
     * **8F:** Working spaces `IF-8R01`–`IF-8R08` (including `IF-8R08` Eastern Software Park BUU).
     * **9F–11F (Upper Rectangular Crown):** Lecturer offices `IF-908A`–`D` (9F); `IF-1008`–`1011`, `IF-10M32`, and `IF-10M60` Conference Rooms (10F); `IF-1109` and the 280-seat **`IF-11M280` Exhibition Hall** (11F), topped by 3 solar panel arrays on the North roof.
   * **3 Passenger Elevators + 1 Fireman's Elevator + 3 Walkable Staircases (Main, NNW, SE)** connecting all levels.
-  * **Campus Context (`09_campus_context`):** Fueang Fa Rd, crosswalk, NW circular fountain, South 5F building, and East Computer Center / Science CL frontage (`generate-structures=false`).
+  * **Campus Context (`09_campus_context`):** Fueang Fa Rd, crosswalk, flagpoles, Science CL gray skylight building + Circular Pond directly East across Fueang Fa Rd, Yellow Science building NE, and South 6F gray/blue building (`generate-structures=false`).
 * **Non-OP Open House Elevator (`08_interactive_openhouse`):**
   * Works for every guest in Adventure Mode via `/trigger if_floor set <1..11>` (or `99` for `B1`) and clickable chat directory `/function if_buu:elevator_menu`.
 * **Cross-Platform Open-Source Server Stack (`server/`):**
@@ -147,12 +147,13 @@ if-buu-1to1-craft/
 
 ---
 
-## 🗺️ Roadmap & v3.0 Status
+## 🗺️ Roadmap & v3.1 Status
 
-**v3.0.0** completes the full 11-storey 1:1 digital twin from official floor plans and satellite verification:
-- [x] **True Satellite & Google Maps Orientation (`East = +X`, `West = -X`, `North = -Z`, `South = +Z`):** Aligned C-Arch, Fueang Fa Road, 6-ribbed SE canopy, and 11F solar arrays to ESRI/Google satellite imagery.
+**v3.1.0** refines the exterior accuracy from street-view photos, architectural scale model, and Google Maps:
+- [x] **True Satellite & Google Maps Orientation (`East = +X`, `West = -X`, `North = -Z`, `South = +Z`):** C-Arch (6 ribbed fins), 6 slender columns, flagpoles, and East Podium face Fueang Fa Road directly, with Science CL + Circular Pond + Yellow Science building across the road.
+- [x] **Scale Model Details:** Added green rooftop gardens on the 7F & 9F step-back terraces and refined the 6-ribbed SE C-Arch curve.
 - [x] **Complete Floor-Plan Interiors (`B1`–`11F`):** Mapped all rooms across `1F`–`8F`, `9F` (`IF-908A–D`), `10F` (`IF-1008..1011`, `IF-10M32`, `IF-10M60`), and `11F` (`IF-1109`, `IF-11M280`), plus real 1F shutter/booth details.
-- [ ] **Open House Polish (v3.1):** Add custom NPC tour guides, quiz stations, and high-res BlueMap preview renders.
+- [ ] **Open House Polish (v3.2):** Add custom NPC tour guides, quiz stations, and updated BlueMap screenshots.
 
 ---
 
