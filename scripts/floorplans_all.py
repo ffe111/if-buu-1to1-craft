@@ -363,7 +363,6 @@ def build_floor_6() -> list[str]:
 
         # Striped corrugated metal roof deck above 5M210 (matches satellite tile!)
         fill_p(23, yc, 3, 51, yc, 18, "minecraft:gray_concrete"),
-        *[fill_p(x, yc + 1, 4, x, yc + 1, 17, "minecraft:polished_andesite_slab") for x in range(24, 51, 2)],
 
         fill_p(23, yf + 1, 19, 27, yc - 1, 30, "minecraft:white_concrete", "hollow"),
         fill_p(27, yf + 1, 19, 37, yc - 1, 30, "minecraft:white_concrete", "hollow"),

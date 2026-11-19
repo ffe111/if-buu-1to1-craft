@@ -464,20 +464,6 @@ fill ~1 ~28 ~-19 ~1 ~28 ~-12 minecraft:oak_slab
 setblock ~6 ~31 ~-16 minecraft:sea_lantern
 setblock ~-1 ~29 ~-8 minecraft:oak_wall_sign[facing=south]{front_text:{messages:['{"text":"IF-6T05"}','{"text":"Lecture Room"}','{"text":""}','{"text":""}']}}
 fill ~6 ~32 ~-4 ~21 ~32 ~24 minecraft:gray_concrete
-fill ~7 ~33 ~-3 ~20 ~33 ~-3 minecraft:polished_andesite_slab
-fill ~7 ~33 ~-1 ~20 ~33 ~-1 minecraft:polished_andesite_slab
-fill ~7 ~33 ~1 ~20 ~33 ~1 minecraft:polished_andesite_slab
-fill ~7 ~33 ~3 ~20 ~33 ~3 minecraft:polished_andesite_slab
-fill ~7 ~33 ~5 ~20 ~33 ~5 minecraft:polished_andesite_slab
-fill ~7 ~33 ~7 ~20 ~33 ~7 minecraft:polished_andesite_slab
-fill ~7 ~33 ~9 ~20 ~33 ~9 minecraft:polished_andesite_slab
-fill ~7 ~33 ~11 ~20 ~33 ~11 minecraft:polished_andesite_slab
-fill ~7 ~33 ~13 ~20 ~33 ~13 minecraft:polished_andesite_slab
-fill ~7 ~33 ~15 ~20 ~33 ~15 minecraft:polished_andesite_slab
-fill ~7 ~33 ~17 ~20 ~33 ~17 minecraft:polished_andesite_slab
-fill ~7 ~33 ~19 ~20 ~33 ~19 minecraft:polished_andesite_slab
-fill ~7 ~33 ~21 ~20 ~33 ~21 minecraft:polished_andesite_slab
-fill ~7 ~33 ~23 ~20 ~33 ~23 minecraft:polished_andesite_slab
 fill ~-6 ~28 ~-4 ~5 ~31 ~0 minecraft:white_concrete hollow
 fill ~-6 ~28 ~0 ~5 ~31 ~10 minecraft:white_concrete hollow
 fill ~-6 ~28 ~4 ~-6 ~30 ~6 minecraft:air

@@ -81,6 +81,8 @@ def main():
             send("execute if block 12 38 -17 minecraft:quartz_slab")
             send("execute if block 0 53 -5 minecraft:red_concrete")
             send("execute if block 52 -1 14 minecraft:water")
+            send("execute if block -31 -3 18 minecraft:gray_concrete")
+            send("execute if block -20 0 -28 minecraft:iron_block")
             send("execute if entity @e[type=minecraft:text_display,tag=if_buu_label]")
             send("scoreboard objectives list")
             send("save-all")
@@ -105,10 +107,10 @@ def main():
 
     errors = [l for l in lines if "ERROR" in l]
     passed = sum(1 for l in lines if "Test passed" in l)
-    print(f"Summary: block_tests_passed={passed}/11, errors={len(errors)}")
+    print(f"Summary: block_tests_passed={passed}/13, errors={len(errors)}")
     for e in errors[:10]:
         print("  ERR:", e)
-    sys.exit(0 if (rc == 0 and passed == 11 and len(errors) == 0) else 1)
+    sys.exit(0 if (rc == 0 and passed == 13 and len(errors) == 0) else 1)
 
 
 if __name__ == "__main__":

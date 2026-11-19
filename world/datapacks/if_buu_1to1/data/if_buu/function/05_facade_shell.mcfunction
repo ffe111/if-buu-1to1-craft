@@ -24,12 +24,12 @@ fill ~-4 ~48 ~-22 ~4 ~50 ~-22 minecraft:cyan_stained_glass
 fill ~-4 ~53 ~-22 ~4 ~55 ~-22 minecraft:cyan_stained_glass
 fill ~-24 ~1 ~26 ~5 ~41 ~26 minecraft:light_gray_concrete keep
 fill ~-24 ~42 ~23 ~5 ~58 ~23 minecraft:light_gray_concrete keep
-fill ~-22 ~13 ~26 ~3 ~15 ~26 minecraft:light_blue_stained_glass
-fill ~-22 ~18 ~26 ~3 ~20 ~26 minecraft:light_blue_stained_glass
-fill ~-22 ~23 ~26 ~3 ~25 ~26 minecraft:light_blue_stained_glass
-fill ~-22 ~28 ~26 ~3 ~30 ~26 minecraft:light_blue_stained_glass
-fill ~-22 ~33 ~26 ~3 ~35 ~26 minecraft:light_blue_stained_glass
-fill ~-22 ~38 ~26 ~3 ~40 ~26 minecraft:light_blue_stained_glass
+fill ~-22 ~13 ~26 ~-7 ~15 ~26 minecraft:light_blue_stained_glass
+fill ~-22 ~18 ~26 ~-7 ~20 ~26 minecraft:light_blue_stained_glass
+fill ~-22 ~23 ~26 ~-7 ~25 ~26 minecraft:light_blue_stained_glass
+fill ~-22 ~28 ~26 ~-7 ~30 ~26 minecraft:light_blue_stained_glass
+fill ~-22 ~33 ~26 ~-7 ~35 ~26 minecraft:light_blue_stained_glass
+fill ~-22 ~38 ~26 ~-7 ~40 ~26 minecraft:light_blue_stained_glass
 fill ~-22 ~43 ~23 ~3 ~45 ~23 minecraft:light_blue_stained_glass
 fill ~-22 ~48 ~23 ~3 ~50 ~23 minecraft:light_blue_stained_glass
 fill ~-22 ~53 ~23 ~3 ~55 ~23 minecraft:light_blue_stained_glass
@@ -67,9 +67,10 @@ fill ~5 ~32 ~17 ~5 ~58 ~17 minecraft:gray_concrete
 fill ~5 ~32 ~22 ~5 ~58 ~22 minecraft:gray_concrete
 fill ~17 ~0 ~-23 ~18 ~41 ~-22 minecraft:blue_concrete
 fill ~5 ~42 ~-23 ~6 ~58 ~-22 minecraft:blue_concrete
-fill ~4 ~27 ~-6 ~10 ~41 ~0 minecraft:light_blue_stained_glass hollow
-fill ~4 ~32 ~-6 ~10 ~32 ~0 minecraft:white_concrete
-fill ~4 ~37 ~-6 ~10 ~37 ~0 minecraft:white_concrete
+fill ~17 ~33 ~-8 ~23 ~41 ~-2 minecraft:light_blue_stained_glass outline
+fill ~17 ~37 ~-8 ~23 ~37 ~-2 minecraft:white_concrete outline
+fill ~17 ~41 ~-8 ~23 ~41 ~-2 minecraft:white_concrete
+fill ~24 ~1 ~-16 ~24 ~41 ~-15 minecraft:blue_concrete
 fill ~19 ~12 ~-22 ~19 ~12 ~-3 minecraft:smooth_quartz
 fill ~19 ~17 ~-22 ~19 ~17 ~-3 minecraft:smooth_quartz
 fill ~19 ~22 ~-22 ~19 ~22 ~-3 minecraft:smooth_quartz
@@ -90,7 +91,7 @@ fill ~-25 ~37 ~27 ~6 ~37 ~27 minecraft:smooth_quartz
 fill ~-25 ~42 ~24 ~6 ~42 ~24 minecraft:smooth_quartz
 fill ~-25 ~47 ~24 ~6 ~47 ~24 minecraft:smooth_quartz
 fill ~-25 ~52 ~24 ~6 ~52 ~24 minecraft:smooth_quartz
-fill ~9 ~33 ~-1 ~18 ~33 ~21 minecraft:grass_block
+fill ~7 ~33 ~-3 ~18 ~33 ~23 minecraft:grass_block
 fill ~13 ~34 ~3 ~15 ~35 ~5 minecraft:oak_leaves[persistent=true]
 fill ~13 ~34 ~11 ~15 ~35 ~13 minecraft:oak_leaves[persistent=true]
 fill ~13 ~34 ~17 ~15 ~35 ~19 minecraft:oak_leaves[persistent=true]

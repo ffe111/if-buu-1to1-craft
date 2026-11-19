@@ -41,43 +41,107 @@ def write_func(name: str, lines: list[str]) -> Path:
     return path
 
 
+def car(x0: int, z0: int, color: str, along_x: bool = True, y0: int = 0) -> list[str]:
+    """Simple 4x2 block car prop (body + tinted cabin)."""
+    if along_x:
+        return [fill(x0, y0, z0, x0 + 3, y0, z0 + 1, f"minecraft:{color}_concrete"),
+                fill(x0 + 1, y0 + 1, z0, x0 + 2, y0 + 1, z0 + 1, "minecraft:black_stained_glass")]
+    return [fill(x0, y0, z0, x0 + 1, y0, z0 + 3, f"minecraft:{color}_concrete"),
+            fill(x0, y0 + 1, z0 + 1, x0 + 1, y0 + 1, z0 + 2, "minecraft:black_stained_glass")]
+
+
+def moto(x: int, z: int, y0: int = 0, seat: str = "blue") -> list[str]:
+    """Motorcycle prop: dark frame + coloured seat."""
+    return [setblock(x, y0, z, "minecraft:polished_blackstone_wall"),
+            setblock(x, y0 + 1, z, f"minecraft:{seat}_carpet")]
+
+
+def arrow_x(x: int, y: int, z: int, direction: int, block: str = "minecraft:white_concrete") -> list[str]:
+    """Painted road arrow along X. direction=-1 points West, +1 points East."""
+    tip = x if direction < 0 else x + 3
+    return [fill(x, y, z, x + 3, y, z, block),
+            setblock(tip - direction, y, z - 1, block),
+            setblock(tip - direction, y, z + 1, block)]
+
+
 def gen_site_and_road() -> list[str]:
     cmds = [
-        "# 01 - Fueang Fa Rd (East +X), Entrance Plaza, Crosswalk, Moto Parking (West -X & SE Bay)",
-        fill(-46, -1, -34, 46, -1, 34, "minecraft:grass_block"),
-        # Fueang Fa Road running North-South on East (+X = 33 .. 43)
-        fill(33, -1, -34, 43, -1, 34, "minecraft:gray_concrete"),
-        fill(38, -1, -34, 38, -1, 34, "minecraft:yellow_concrete"),
-        # Pedestrian Crosswalk North-East
-        *[fill(34, -1, z, 42, -1, z + 1, "minecraft:white_concrete") for z in range(-28, -21, 3)],
-        # Brick sidewalk (+X = 30 .. 32)
-        fill(30, -1, -34, 32, -1, 34, "minecraft:bricks"),
-        # East Front Plaza (+X = 24 .. 29, Z = -28 .. +28)
-        fill(24, -1, -28, 29, -1, 28, "minecraft:light_gray_concrete"),
+        "# 01 - v3.2 Site Plan: Fueang Fa Rd (East), official North drop-off loop & barrier gate,",
+        "#      West motorcycle parking, B1 car ramp, SE front motorcycle bay under the C-Arch",
+        fill(-50, -1, -50, 46, -1, 34, "minecraft:grass_block"),
+        # --- Fueang Fa Road (main road, North-South, East of building) ---
+        fill(33, -1, -50, 43, -1, 34, "minecraft:gray_concrete"),
+        fill(38, -1, -50, 38, -1, 34, "minecraft:yellow_concrete"),
+        fill(33, -1, -50, 33, -1, 34, "minecraft:white_concrete"),
+        fill(43, -1, -50, 43, -1, 34, "minecraft:white_concrete"),
+        # Pedestrian crosswalk just south of the drive-in
+        *[fill(34, -1, z, 42, -1, z + 1, "minecraft:white_concrete") for z in range(-24, -17, 3)],
+        # Brick sidewalk along East + front plaza + wide entrance steps
+        fill(30, -1, -50, 32, -1, 34, "minecraft:bricks"),
+        fill(24, -1, -26, 29, -1, 26, "minecraft:light_gray_concrete"),
         fill(24, -1, -12, 29, -1, -11, "minecraft:smooth_quartz"),
         fill(24, -1, 14, 29, -1, 15, "minecraft:smooth_quartz"),
-        # Front granite entrance steps on East face (px=25..42 -> Z=-2..15, X=24..26)
         fill(25, 0, -2, 26, 0, 15, "minecraft:smooth_quartz_slab"),
         fill(24, 0, -2, 24, 0, 15, "minecraft:smooth_quartz"),
-        # SE Under-Wall Motorcycle Parking Bay (seen in c_arch_closeup.jpg!)
-        fill(16, -1, 25, 29, -1, 31, "minecraft:gray_concrete"),
-        *[fill(x, -1, 26, x, -1, 30, "minecraft:white_concrete") for x in range(18, 29, 3)],
-        # Trees along East sidewalk & front plaza
-        *[fill(31, 0, z, 31, 2, z, "minecraft:oak_log") for z in (-18, -10, 6, 14)],
-        *[fill(30, 3, z - 1, 32, 4, z + 1, "minecraft:oak_leaves[persistent=true]") for z in (-18, -10, 6, 14)],
-        # West Motorcycle Parking lot (-44 .. -28, Z = -22 .. +22)
-        fill(-44, -1, -22, -28, -1, 22, "minecraft:gray_concrete"),
-        *[fill(-43, -1, z, -29, -1, z, "minecraft:white_concrete") for z in range(-18, 20, 6)],
-        # Guest Spawn Pad on East Plaza facing West into the entrance
+        # Trees + street lamps along East sidewalk
+        *[fill(31, 0, z, 31, 2, z, "minecraft:oak_log") for z in (-46, -18, -10, 6, 22)],
+        *[fill(30, 3, z - 1, 32, 4, z + 1, "minecraft:oak_leaves[persistent=true]") for z in (-46, -18, -10, 6, 22)],
+        *[fill(30, 0, z, 30, 5, z, "minecraft:iron_bars") for z in (-42, -2, 30)],
+        *[setblock(30, 6, z, "minecraft:sea_lantern") for z in (-42, -2, 30)],
+
+        # --- North drop-off loop (official IF traffic plan) ---
+        fill(-24, -1, -27, 29, -1, -26, "minecraft:light_gray_concrete"),
+        fill(-43, -1, -39, 32, -1, -28, "minecraft:gray_concrete"),
+        # Solid white line separating the motorcycle lane (north) from the car lane
+        fill(-30, -1, -37, 32, -1, -37, "minecraft:white_concrete"),
+        # Raised drop-off lane next to the building (cars drive UP to 1F level) + slab ramp
+        fill(-16, 0, -30, 26, 0, -28, "minecraft:smooth_stone"),
+        fill(27, 0, -30, 30, 0, -28, "minecraft:smooth_stone_slab"),
+        fill(-16, 0, -30, -16, 0, -28, "minecraft:red_concrete"),
+        # Central island with planting + quartz noses
+        fill(-12, 0, -32, 22, 0, -31, "minecraft:grass_block"),
+        fill(-13, 0, -32, -13, 0, -31, "minecraft:smooth_quartz"),
+        fill(23, 0, -32, 23, 0, -31, "minecraft:smooth_quartz"),
+        *[fill(x, 1, -32, x, 2, -32, "minecraft:oak_log") for x in (-6, 4, 14)],
+        *[fill(x - 1, 3, -33, x + 1, 3, -31, "minecraft:oak_leaves[persistent=true]") for x in (-6, 4, 14)],
+        *[setblock(x, 1, -31, "minecraft:flowering_azalea") for x in (-10, -1, 9, 19)],
+        # Contraflow warning zone (cars exiting East toward Fueang Fa Rd)
+        fill(-10, -1, -34, 29, -1, -34, "minecraft:orange_concrete"),
+        # Painted arrows
+        *arrow_x(-2, -1, -35, -1), *arrow_x(16, -1, -35, -1),
+        *arrow_x(-36, -1, -38, -1), *arrow_x(8, -1, -38, -1),
+        *arrow_x(2, 1, -29, -1),
+        # Barrier gate (yellow/black boom) across the west end of the car lanes
+        fill(-20, 0, -28, -20, 1, -28, "minecraft:iron_block"),
+        *[setblock(-20, 1, z, "minecraft:cut_sandstone_slab" if z % 2 == 0 else "minecraft:blackstone_slab") for z in range(-36, -28)],
+        # Cars: pickup waiting at drop-off + car on the loop
+        *car(6, -30, "white", y0=1),
+        *car(-4, -36, "light_gray"),
+
+        # --- West service lane -> West motorcycle parking -> B1 car ramp ---
+        fill(-43, -1, -39, -39, -1, 20, "minecraft:gray_concrete"),
+        *[fill(-41, -1, z, -41, -1, z + 1, "minecraft:white_concrete") for z in range(-30, 20, 4)],
+        fill(-38, -1, -24, -25, -1, 12, "minecraft:gray_concrete"),
+        *[fill(-38, -1, z, -34, -1, z, "minecraft:white_concrete") for z in range(-23, 12, 2)],
+        *[fill(-29, -1, z, -25, -1, z, "minecraft:white_concrete") for z in range(-23, 12, 2)],
+        *[c for z in range(-22, 12, 2) for c in moto(-36, z)],
+        *[c for z in range(-22, 12, 4) for c in moto(-27, z, seat="red")],
+
+        # --- South lane + SE front motorcycle bay under the C-Arch (c_arch_closeup.jpg) ---
+        fill(-24, -1, 27, 32, -1, 33, "minecraft:gray_concrete"),
+        *[fill(x, -1, 27, x, -1, 30, "minecraft:white_concrete") for x in range(6, 30, 2)],
+        *arrow_x(-12, -1, 32, 1, "minecraft:yellow_concrete"), *arrow_x(12, -1, 32, 1, "minecraft:yellow_concrete"),
+        *[c for x in range(7, 29, 2) for c in moto(x, 28)],
+
+        # Guest spawn pad on the East plaza
         setblock(30, -1, 5, "minecraft:sea_lantern"),
         setblock(30, 0, 5, "minecraft:light_gray_carpet"),
     ]
     return cmds
 
-
 def gen_basement_and_grid() -> list[str]:
     cmds = [
-        "# 02 - Basement Car Park (B1) & Structural Column Grid (True Satellite Orientation)",
+        "# 02 - v3.2 Basement Car Park (B1), West B1 car ramp & structural column grid",
         fill_p(5, -5, 18, 51, -1, 47, "minecraft:air"),
         fill_p(5, -6, 18, 51, -6, 47, "minecraft:gray_concrete"),
         *[fill_p(10, -6, z, 20, -6, z, "minecraft:yellow_concrete") for z in range(22, 44, 6)],
@@ -86,20 +150,31 @@ def gen_basement_and_grid() -> list[str]:
         fill_p(5, -5, 47, 51, -1, 47, "minecraft:stone_bricks"),
         fill_p(5, -5, 18, 5, -1, 47, "minecraft:stone_bricks"),
         fill_p(51, -5, 18, 51, -1, 47, "minecraft:stone_bricks"),
+        *[setblock(x, -1, z, "minecraft:sea_lantern") for x in range(-20, 6, 6) for z in range(-19, 23, 6)],
+        *car(-20, -18, "white", y0=-5), *car(-20, -12, "black", y0=-5), *car(-8, 6, "red", y0=-5),
+        *car(-2, 6, "blue", y0=-5), *car(-14, 18, "light_gray", y0=-5),
     ]
+    # West B1 ramp (X -38 -> -24, Z 16..20) from ground (Y=-1) down to the B1 floor (Y=-6)
+    for i, x in enumerate(range(-38, -23)):
+        y = -1 - round(i * 5 / 14)
+        cmds.append(fill(x, y, 16, x, y, 20, "minecraft:gray_concrete"))
+        if y < -1:
+            cmds.append(fill(x, y + 1, 16, x, -1, 20, "minecraft:air"))
+        cmds.append(fill(x, y, 15, x, 0, 15, "minecraft:stone_bricks"))
+        cmds.append(fill(x, y, 21, x, 0, 21, "minecraft:stone_bricks"))
+    cmds.append(fill(-24, -5, 16, -23, -1, 20, "minecraft:air"))
+    cmds.append(fill(-34, -1, 18, -31, -1, 18, "minecraft:yellow_concrete"))
+
     pxs = [5, 18, 23, 32, 41, 50]
     pzs = [3, 19, 30, 34, 48]
     for px in pxs:
         for pz in pzs:
-            if px >= 32 and pz == 3:
-                top_y = 26
-            elif px <= 18 and pz <= 18:
-                top_y = 41
+            if pz < 19:
+                top_y = 41 if px <= 23 else 31
             else:
                 top_y = 58
             cmds.append(fill_p(px, -5, pz, px, top_y, pz, "minecraft:white_concrete"))
     return cmds
-
 
 def gen_slabs_and_core(spec: dict) -> list[str]:
     cmds = ["# 03 - 11 Floor Slabs (exact footprints 1F-11F), Main/Fire Stairs & Glass Elevator Lobbies"]
@@ -207,7 +282,7 @@ def gen_slabs_and_core(spec: dict) -> list[str]:
                 sz = 37 + min(s, 6)
                 cmds.append(fill_p(51, yf + 1 + s, sz, 52, yf + 1 + s, sz, "minecraft:stone_brick_stairs[facing=south]"))
 
-    cmds.append(fill_p(11, -5, 0, 18, 41, 4, "minecraft:light_gray_concrete", "hollow"))
+    cmds.append(fill_p(11, -5, 0, 18, 41, 4, "minecraft:white_concrete", "outline"))
     for idx, fl in enumerate(floors):
         if fl["id"] == "RF":
             continue
@@ -220,75 +295,62 @@ def gen_slabs_and_core(spec: dict) -> list[str]:
 
 def gen_podium_and_arch() -> list[str]:
     cmds = [
-        "# 04 - v3.1 Refined East-Facing Podium, 6-Ribbed C-Arch (c_arch_closeup.jpg) & Flagpoles",
+        "# 04 - v3.2 Podium (photo-matched): undercroft + 2F glass band + gray panel box (3F-6F)",
+        "#      + floating cap roof + 6-rib C-Arch on the South end facing Fueang Fa Rd",
         fill_p(22, 0, -4, 52, 0, 4, "minecraft:smooth_sandstone"),
-        # Cobalt Blue Entrance Core Wall on South-East side (c_arch_closeup.jpg!)
         fill_p(47, 0, 1, 52, 11, 4, "minecraft:blue_concrete"),
-        # Basement ventilation louvers under SE gray shear wall (c_arch_closeup.jpg)
-        fill_p(52, 0, 5, 52, 1, 18, "minecraft:blackstone_wall"),
-        # 3 Flagpoles on SE front planter (seen in 3rd street-view photo!)
-        *[fill(30, 0, z, 30, 8, z, "minecraft:iron_bars") for z in (16, 18, 20)],
-
-        # 6 Slender White Columns under Oculus Skylight (Front.jpg & c_arch_closeup.jpg)
-        fill_p(46, 0, -4, 46, 21, -4, "minecraft:quartz_pillar"),
-        fill_p(48, 0, -5, 48, 21, -5, "minecraft:quartz_pillar"),
-        fill_p(50, 0, -4, 50, 21, -4, "minecraft:quartz_pillar"),
-        fill_p(47, 0, -2, 47, 21, -2, "minecraft:quartz_pillar"),
-        fill_p(49, 0, -2, 49, 21, -2, "minecraft:quartz_pillar"),
-        fill_p(23, 0, -3, 23, 21, -3, "minecraft:quartz_pillar"),
-
-        # Podium Upper Facade Box facing East (+X) toward Fueang Fa Rd (px=24..50, pz=1, Y=12..21)
-        fill_p(24, 12, 1, 50, 21, 1, "minecraft:light_gray_concrete"),
-        fill_p(24, 15, 1, 50, 15, 1, "minecraft:polished_andesite"),
-        fill_p(24, 18, 1, 50, 18, 1, "minecraft:polished_andesite"),
-        fill_p(24, 12, 1, 31, 13, 1, "minecraft:air"),
-        fill_p(27, 16, 1, 32, 16, 1, "minecraft:blue_concrete"),
-        fill_p(40, 17, 1, 46, 17, 1, "minecraft:blue_concrete"),
-        fill_p(34, 15, 1, 39, 15, 1, "minecraft:light_blue_stained_glass"),
-        fill_p(28, 19, 1, 33, 19, 1, "minecraft:light_blue_stained_glass"),
-        # Recessed 2F glass curtain wall under Podium Box
-        fill_p(24, 7, 3, 46, 11, 3, "minecraft:cyan_stained_glass"),
-        fill_p(24, 9, 3, 46, 9, 3, "minecraft:gray_concrete"),
+        fill_p(52, 0, 17, 54, 31, 18, "minecraft:blue_concrete"),
+        fill_p(53, 0, 3, 53, 0, 16, "minecraft:blackstone_wall"),
+        *[fill(28, 0, z, 28, 9, z, "minecraft:iron_bars") for z in (-8, -6, -4)],
+        setblock(28, 9, -8, "minecraft:red_wool"),
+        setblock(28, 9, -6, "minecraft:white_wool"),
+        setblock(28, 9, -4, "minecraft:blue_wool"),
+        *[fill_p(px, 0, pz, px, 31, pz, "minecraft:quartz_pillar") for px, pz in ((46, -4), (48, -5), (50, -4), (47, -2), (49, -2), (51, -2))],
+        fill_p(23, 0, -3, 23, 31, -3, "minecraft:quartz_pillar"),
+        fill_p(26, 6, -3, 53, 6, 2, "minecraft:smooth_quartz"),
+        fill_p(26, 6, -4, 53, 6, -4, "minecraft:white_concrete"),
+        fill_p(21, 7, 2, 53, 11, 2, "minecraft:gray_stained_glass"),
+        *[fill_p(px, 7, 2, px, 11, 2, "minecraft:gray_concrete") for px in range(21, 54, 4)],
+        fill_p(21, 12, 1, 53, 31, 1, "minecraft:light_gray_concrete"),
+        *[fill_p(21, y, 1, 53, y, 1, "minecraft:polished_andesite") for y in (16, 21, 26)],
+        fill_p(21, 13, 1, 27, 30, 1, "minecraft:light_blue_stained_glass"),
+        *[fill_p(px, 12, 1, px, 31, 1, "minecraft:gray_concrete") for px in (21, 24, 27)],
+        *[fill_p(21, y, 1, 27, y, 1, "minecraft:gray_concrete") for y in (16, 21, 26)],
+        fill_p(49, 13, 1, 52, 30, 1, "minecraft:light_blue_stained_glass"),
+        fill_p(49, 21, 1, 52, 21, 1, "minecraft:gray_concrete"),
+        *[fill_p(a, y, 1, b, y, 1, "minecraft:light_blue_stained_glass") for a, b, y in
+          ((30, 33, 28), (37, 40, 24), (31, 34, 19), (40, 44, 17), (33, 37, 14), (43, 46, 29), (44, 46, 22))],
+        *[fill_p(a, y, 1, b, y, 1, "minecraft:blue_concrete") for a, b, y in
+          ((29, 34, 27), (35, 39, 29), (41, 45, 25), (30, 36, 23), (38, 42, 18), (44, 47, 15), (29, 32, 13))],
+        fill_p(53, 8, 3, 53, 31, 16, "minecraft:light_gray_concrete"),
+        *[fill_p(53, y, 6, 53, y + 1, 12, "minecraft:light_blue_stained_glass") for y in (14, 20, 26)],
     ]
 
-    # Sweeping Curved East Canopy Roof (Y=22..23, facing Fueang Fa Road +X up to mc_x=29)
-    for px in range(21, 53):
-        pz_min = -5 if px <= 40 else round(-5 + (px - 40) * 0.45)
-        cmds.append(fill_p(px, 22, pz_min, px, 22, 5, "minecraft:smooth_quartz"))
-        cmds.append(fill_p(px, 23, pz_min, px, 23, 5, "minecraft:smooth_quartz_slab"))
-        # Crisp bright white fascia edge on the East overhang
-        cmds.append(set_p(px, 23, pz_min, "minecraft:white_concrete"))
+    for px in range(20, 56):
+        if px < 24:
+            pz_min = -5 + (24 - px)
+        elif px <= 44:
+            pz_min = -5
+        else:
+            pz_min = round(-5 + (px - 44) * 0.5)
+        cmds.append(fill_p(px, 32, pz_min, px, 32, 5, "minecraft:smooth_quartz"))
+        cmds.append(fill_p(px, 33, pz_min + 1, px, 33, 5, "minecraft:smooth_quartz_slab"))
+        cmds.append(set_p(px, 33, pz_min, "minecraft:white_concrete"))
+    cmds.append(fill_p(47, 32, -4, 49, 33, -2, "minecraft:air"))
 
-    # Oculus Skylight Cutout
-    cmds.append(fill_p(47, 22, -4, 49, 23, -2, "minecraft:air"))
+    rib_pzs = [-4, -2, 0, 2, 4, 6]
+    seen = set()
+    for t in range(0, 181, 2):
+        r = math.radians(t)
+        cpx = round(47 + 8.0 * math.sin(r))
+        cy = round(20 + 12.0 * math.cos(r))
+        for pz in rib_pzs:
+            if (cpx, cy, pz) not in seen:
+                seen.add((cpx, cy, pz))
+                cmds.append(set_p(cpx, cy, pz, "minecraft:white_concrete"))
 
-    # 6 Parallel Ribbed Silver C-Arch Fins curving smoothly on South-East side (c_arch_closeup.jpg!)
-    # Ribs sit at distinct East-West positions (pz = -4, -2, 0, 2, 4, 6 -> mc_x = 28, 26, 24, 22, 20, 18)
-    # and curve outward to the South (+Z, px=55) and back under Y=6!
-    fin_pzs = [-4, -2, 0, 2, 4, 6]
-    seen_pts = set()
-    for deg in range(-15, 195, 2):
-        rad = math.radians(deg)
-        cpx = round(47 + 8.5 * math.sin(rad))
-        cy = round(14.5 + 8.0 * math.cos(rad))
-        for cpz in fin_pzs:
-            pt = (cpx, cy, cpz)
-            if pt not in seen_pts:
-                seen_pts.add(pt)
-                cmds.append(set_p(cpx, cy, cpz, "minecraft:white_concrete"))
-                cmds.append(set_p(cpx, cy, cpz + 1, "minecraft:smooth_quartz"))
-
-    # Outer curved white ribbon connecting the outer edge (pz=-5 -> mc_x=+29)
-    for deg in range(-15, 195, 2):
-        rad = math.radians(deg)
-        cpx = round(47 + 8.5 * math.sin(rad))
-        cy = round(14.5 + 8.0 * math.cos(rad))
-        cmds.append(set_p(cpx, cy, -5, "minecraft:light_gray_concrete"))
-
-    # Podium Front Sign facing East (+X -> mc_yaw = -90)
-    cmds.append(text_p(38.0, 18.5, 0.2, "คณะวิทยาการสารสนเทศ\nFACULTY OF INFORMATICS", 180.0, 1.35))
+    cmds.append(text_p(38.0, 23.5, 0.2, "คณะวิทยาการสารสนเทศ\nFACULTY OF INFORMATICS", 180.0, 1.6))
     return cmds
-
 
 def gen_facade_shell() -> list[str]:
     cmds = [
@@ -308,7 +370,7 @@ def gen_facade_shell() -> list[str]:
         # South Facade (px=53 for 1F-8F, px=50 for 9F-11F) + SE Shear Wall & Cobalt Blue Corner (c_arch_closeup.jpg)
         fill_p(53, 1, 19, 53, 41, 48, "minecraft:light_gray_concrete", "keep"),
         fill_p(50, 42, 19, 50, 58, 48, "minecraft:light_gray_concrete", "keep"),
-        *[fill_p(53, y + 1, 21, 53, y + 3, 46, "minecraft:light_blue_stained_glass") for y in (12, 17, 22, 27, 32, 37)],
+        *[fill_p(53, y + 1, 31, 53, y + 3, 46, "minecraft:light_blue_stained_glass") for y in (12, 17, 22, 27, 32, 37)],
         *[fill_p(50, y + 1, 21, 50, y + 3, 46, "minecraft:light_blue_stained_glass") for y in (42, 47, 52)],
         # Dark louver screen along South-East shear wall
         *[fill_p(54, y, 22, 54, y, 36, "minecraft:deepslate_brick_wall") for y in range(13, 41, 2)],
@@ -327,9 +389,10 @@ def gen_facade_shell() -> list[str]:
         fill_p(4, 42, 18, 5, 58, 19, "minecraft:blue_concrete"),
 
         # Protruding 3-storey glass box at 6F-8F (px=21..27, pz=14..20)
-        fill_p(21, 27, 14, 27, 41, 20, "minecraft:light_blue_stained_glass", "hollow"),
-        fill_p(21, 32, 14, 27, 32, 20, "minecraft:white_concrete"),
-        fill_p(21, 37, 14, 27, 37, 20, "minecraft:white_concrete"),
+        fill_p(19, 33, 1, 25, 41, 7, "minecraft:light_blue_stained_glass", "outline"),
+        fill_p(19, 37, 1, 25, 37, 7, "minecraft:white_concrete", "outline"),
+        fill_p(19, 41, 1, 25, 41, 7, "minecraft:white_concrete"),
+        fill_p(11, 1, 0, 12, 41, 0, "minecraft:blue_concrete"),
 
         # White Projecting Floor Ledges
         *[fill_p(5, y, 5, 24, y, 5, "minecraft:smooth_quartz") for y in (12, 17, 22, 27, 32, 37)],
@@ -339,7 +402,7 @@ def gen_facade_shell() -> list[str]:
         *[fill_p(51, y, 18, 51, y, 49, "minecraft:smooth_quartz") for y in (42, 47, 52)],
 
         # Green Rooftop Terrace Gardens on 7F & 9F step-backs (matching Scale Model!)
-        fill_p(26, 33, 6, 48, 33, 15, "minecraft:grass_block"),
+        fill_p(24, 33, 6, 50, 33, 17, "minecraft:grass_block"),
         *[fill_p(px, 34, 9, px + 2, 35, 11, "minecraft:oak_leaves[persistent=true]") for px in (30, 38, 44)],
         fill_p(7, 42, 7, 21, 42, 16, "minecraft:grass_block"),
         *[fill_p(px, 43, 10, px + 2, 44, 12, "minecraft:oak_leaves[persistent=true]") for px in (9, 16)],

@@ -11,7 +11,7 @@
 [![BlueMap](https://img.shields.io/badge/3D%20Web%20Map-BlueMap-00B4D8?style=for-the-badge)](https://bluemap.bluecolored.io/)
 [![Scale](https://img.shields.io/badge/Scale-1%3A1%20(1%20Block%20%3D%201%20Meter)-F59E0B?style=for-the-badge)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-10B981?style=for-the-badge)](LICENSE)
-[![Release](https://img.shields.io/badge/Release-v3.1.0-7C3AED?style=for-the-badge)](#roadmap--v31-status)
+[![Release](https://img.shields.io/badge/Release-v3.2.0-7C3AED?style=for-the-badge)](#roadmap--v32-status)
 
 <br/>
 
@@ -147,7 +147,13 @@ if-buu-1to1-craft/
 
 ---
 
-## 🗺️ Roadmap & v3.1 Status
+## 🗺️ Roadmap & v3.2 Status
+
+**v3.2.0** rebuilds the site plan & podium from the official IF traffic plan, street-view, drone and Architects 110 photos:
+- [x] **Official Drop-off Loop (North side):** raised drop-off lane up to 1F level, planted island, stop point, contraflow warning zone, barrier gate, separate motorcycle lane and painted arrows.
+- [x] **Parking & Basement:** West motorcycle parking behind the building, SE front motorcycle bay under the C-Arch, West ramp down to the lit B1 car park (with parked cars).
+- [x] **Photo-matched Podium:** 2F dark glass band, 3F-6F gray panel box with cobalt stripes & strip windows, floating cap roof at the podium top, 6 slender columns with oculus, and the 6-rib C-Arch connecting cap to the 2F ledge; garden terrace on the podium roof.
+
 
 **v3.1.0** refines the exterior accuracy from street-view photos, architectural scale model, and Google Maps:
 - [x] **True Satellite & Google Maps Orientation (`East = +X`, `West = -X`, `North = -Z`, `South = +Z`):** C-Arch (6 ribbed fins), 6 slender columns, flagpoles, and East Podium face Fueang Fa Road directly, with Science CL + Circular Pond + Yellow Science building across the road.

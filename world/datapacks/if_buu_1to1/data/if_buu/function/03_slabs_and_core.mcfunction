@@ -641,7 +641,7 @@ setblock ~-13 ~53 ~-5 minecraft:blue_concrete
 setblock ~-12 ~53 ~-4 minecraft:green_concrete
 setblock ~-13 ~53 ~-4 minecraft:red_concrete
 setblock ~-13 ~54 ~-8 minecraft:oak_wall_sign[facing=south]{front_text:{messages:['{"text":"[ 11F ]"}','{"text":"Exhibition Hall"}','{"text":"/trigger"}','{"text":"if_floor set 1..11"}']}}
-fill ~20 ~-5 ~-16 ~24 ~41 ~-9 minecraft:light_gray_concrete hollow
+fill ~20 ~-5 ~-16 ~24 ~41 ~-9 minecraft:white_concrete outline
 fill ~21 ~-4 ~-9 ~22 ~-3 ~-9 minecraft:air
 fill ~-9 ~-4 ~23 ~-8 ~-3 ~23 minecraft:air
 fill ~21 ~1 ~-9 ~22 ~2 ~-9 minecraft:air
