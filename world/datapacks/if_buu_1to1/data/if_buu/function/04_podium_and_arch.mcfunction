@@ -1,532 +1,535 @@
-# 04 - v2.0 Refined Light-Gray Podium (1F-4F) & 5-Ribbed Sweeping C-Shaped Canopy Arch
-fill ~-15 ~0 ~-16 ~-2 ~0 ~14 minecraft:smooth_sandstone
-fill ~-15 ~6 ~-14 ~-3 ~6 ~12 minecraft:light_gray_concrete
-fill ~-15 ~12 ~-14 ~-3 ~12 ~12 minecraft:light_gray_concrete
-fill ~-15 ~17 ~-14 ~-3 ~17 ~12 minecraft:light_gray_concrete
-fill ~-15 ~7 ~-14 ~-3 ~7 ~-14 minecraft:light_blue_stained_glass_pane
-fill ~-3 ~7 ~-14 ~-3 ~7 ~-8 minecraft:light_blue_stained_glass_pane
-fill ~-3 ~12 ~-13 ~-3 ~20 ~11 minecraft:light_gray_concrete
-fill ~-3 ~14 ~-13 ~-3 ~14 ~11 minecraft:polished_andesite
-fill ~-3 ~17 ~-13 ~-3 ~17 ~11 minecraft:polished_andesite
-fill ~-3 ~12 ~-13 ~-3 ~13 ~-6 minecraft:air
-fill ~-3 ~12 ~-5 ~-3 ~12 ~0 minecraft:air
-fill ~-3 ~15 ~-11 ~-3 ~15 ~-7 minecraft:blue_concrete
-fill ~-3 ~16 ~4 ~-3 ~16 ~9 minecraft:blue_concrete
-fill ~-3 ~18 ~-3 ~-3 ~18 ~2 minecraft:blue_concrete
-fill ~-3 ~16 ~-10 ~-3 ~16 ~-6 minecraft:light_blue_stained_glass
-fill ~-3 ~15 ~1 ~-3 ~15 ~6 minecraft:light_blue_stained_glass
-fill ~-3 ~19 ~-11 ~-3 ~19 ~-7 minecraft:light_blue_stained_glass
-fill ~-14 ~7 ~-14 ~-4 ~20 ~-14 minecraft:cyan_stained_glass keep
-fill ~-14 ~12 ~12 ~-4 ~20 ~12 minecraft:cyan_stained_glass keep
-fill ~-5 ~7 ~-12 ~-5 ~11 ~10 minecraft:cyan_stained_glass
-fill ~-5 ~9 ~-12 ~-5 ~9 ~10 minecraft:gray_concrete
-fill ~-1 ~0 ~11 ~-1 ~21 ~11 minecraft:quartz_pillar
-fill ~1 ~0 ~13 ~1 ~21 ~13 minecraft:quartz_pillar
-fill ~-3 ~0 ~13 ~-3 ~21 ~13 minecraft:quartz_pillar
-fill ~0 ~0 ~15 ~0 ~21 ~15 minecraft:quartz_pillar
-fill ~-2 ~0 ~15 ~-2 ~21 ~15 minecraft:quartz_pillar
-fill ~-1 ~0 ~16 ~-1 ~21 ~16 minecraft:quartz_pillar
-fill ~-1 ~0 ~-13 ~-1 ~21 ~-13 minecraft:quartz_pillar
-fill ~-12 ~0 ~14 ~-6 ~11 ~15 minecraft:blue_concrete
-fill ~-15 ~22 ~-16 ~-15 ~22 ~16 minecraft:smooth_quartz
-fill ~-15 ~23 ~-16 ~-15 ~23 ~16 minecraft:light_gray_concrete
-fill ~-14 ~22 ~-16 ~-14 ~22 ~16 minecraft:smooth_quartz
-fill ~-14 ~23 ~-16 ~-14 ~23 ~16 minecraft:light_gray_concrete
-fill ~-13 ~22 ~-16 ~-13 ~22 ~16 minecraft:smooth_quartz
-fill ~-13 ~23 ~-16 ~-13 ~23 ~16 minecraft:light_gray_concrete
-fill ~-12 ~22 ~-16 ~-12 ~22 ~16 minecraft:smooth_quartz
-fill ~-12 ~23 ~-16 ~-12 ~23 ~16 minecraft:light_gray_concrete
-fill ~-11 ~22 ~-16 ~-11 ~22 ~16 minecraft:smooth_quartz
-fill ~-11 ~23 ~-16 ~-11 ~23 ~16 minecraft:light_gray_concrete
-fill ~-10 ~22 ~-16 ~-10 ~22 ~16 minecraft:smooth_quartz
-fill ~-10 ~23 ~-16 ~-10 ~23 ~16 minecraft:light_gray_concrete
-fill ~-9 ~22 ~-16 ~-9 ~22 ~16 minecraft:smooth_quartz
-fill ~-9 ~23 ~-16 ~-9 ~23 ~16 minecraft:light_gray_concrete
-fill ~-8 ~22 ~-16 ~-8 ~22 ~16 minecraft:smooth_quartz
-fill ~-8 ~23 ~-16 ~-8 ~23 ~16 minecraft:light_gray_concrete
-fill ~-7 ~22 ~-16 ~-7 ~22 ~16 minecraft:smooth_quartz
-fill ~-7 ~23 ~-16 ~-7 ~23 ~16 minecraft:light_gray_concrete
-fill ~-6 ~22 ~-16 ~-6 ~22 ~16 minecraft:smooth_quartz
-fill ~-6 ~23 ~-16 ~-6 ~23 ~16 minecraft:light_gray_concrete
-fill ~-5 ~22 ~-16 ~-5 ~22 ~16 minecraft:smooth_quartz
-fill ~-5 ~23 ~-16 ~-5 ~23 ~16 minecraft:light_gray_concrete
-fill ~-4 ~22 ~-16 ~-4 ~22 ~16 minecraft:smooth_quartz
-fill ~-4 ~23 ~-16 ~-4 ~23 ~16 minecraft:light_gray_concrete
-fill ~-3 ~22 ~-16 ~-3 ~22 ~16 minecraft:smooth_quartz
-fill ~-3 ~23 ~-16 ~-3 ~23 ~16 minecraft:light_gray_concrete
-fill ~-2 ~22 ~-16 ~-2 ~22 ~16 minecraft:smooth_quartz
-fill ~-2 ~23 ~-16 ~-2 ~23 ~16 minecraft:light_gray_concrete
-fill ~-1 ~22 ~-15 ~-1 ~22 ~16 minecraft:smooth_quartz
-fill ~-1 ~23 ~-15 ~-1 ~23 ~16 minecraft:light_gray_concrete
-fill ~0 ~22 ~-14 ~0 ~22 ~16 minecraft:smooth_quartz
-fill ~0 ~23 ~-14 ~0 ~23 ~16 minecraft:light_gray_concrete
-fill ~1 ~22 ~-13 ~1 ~22 ~16 minecraft:smooth_quartz
-fill ~1 ~23 ~-13 ~1 ~23 ~16 minecraft:light_gray_concrete
-fill ~2 ~22 ~-12 ~2 ~22 ~16 minecraft:smooth_quartz
-fill ~2 ~23 ~-12 ~2 ~23 ~16 minecraft:light_gray_concrete
-fill ~3 ~22 ~-10 ~3 ~22 ~16 minecraft:smooth_quartz
-fill ~3 ~23 ~-10 ~3 ~23 ~16 minecraft:light_gray_concrete
-fill ~4 ~22 ~-9 ~4 ~22 ~16 minecraft:smooth_quartz
-fill ~4 ~23 ~-9 ~4 ~23 ~16 minecraft:light_gray_concrete
-fill ~-2 ~22 ~12 ~0 ~23 ~14 minecraft:air
-setblock ~-12 ~17 ~3 minecraft:smooth_quartz
-setblock ~-11 ~17 ~3 minecraft:light_gray_concrete
-setblock ~-9 ~17 ~3 minecraft:smooth_quartz
-setblock ~-8 ~17 ~3 minecraft:light_gray_concrete
-setblock ~-6 ~17 ~3 minecraft:smooth_quartz
-setblock ~-5 ~17 ~3 minecraft:light_gray_concrete
-setblock ~-3 ~17 ~3 minecraft:smooth_quartz
-setblock ~-2 ~17 ~3 minecraft:light_gray_concrete
-setblock ~0 ~17 ~3 minecraft:smooth_quartz
-setblock ~1 ~17 ~3 minecraft:light_gray_concrete
-setblock ~-12 ~18 ~3 minecraft:smooth_quartz
-setblock ~-11 ~18 ~3 minecraft:light_gray_concrete
-setblock ~-9 ~18 ~3 minecraft:smooth_quartz
-setblock ~-8 ~18 ~3 minecraft:light_gray_concrete
-setblock ~-6 ~18 ~3 minecraft:smooth_quartz
-setblock ~-5 ~18 ~3 minecraft:light_gray_concrete
-setblock ~-3 ~18 ~3 minecraft:smooth_quartz
-setblock ~-2 ~18 ~3 minecraft:light_gray_concrete
-setblock ~0 ~18 ~3 minecraft:smooth_quartz
-setblock ~1 ~18 ~3 minecraft:light_gray_concrete
-setblock ~-12 ~18 ~4 minecraft:smooth_quartz
-setblock ~-11 ~18 ~4 minecraft:light_gray_concrete
-setblock ~-9 ~18 ~4 minecraft:smooth_quartz
-setblock ~-8 ~18 ~4 minecraft:light_gray_concrete
-setblock ~-6 ~18 ~4 minecraft:smooth_quartz
-setblock ~-5 ~18 ~4 minecraft:light_gray_concrete
-setblock ~-3 ~18 ~4 minecraft:smooth_quartz
-setblock ~-2 ~18 ~4 minecraft:light_gray_concrete
-setblock ~0 ~18 ~4 minecraft:smooth_quartz
-setblock ~1 ~18 ~4 minecraft:light_gray_concrete
-setblock ~-12 ~19 ~4 minecraft:smooth_quartz
-setblock ~-11 ~19 ~4 minecraft:light_gray_concrete
-setblock ~-9 ~19 ~4 minecraft:smooth_quartz
-setblock ~-8 ~19 ~4 minecraft:light_gray_concrete
-setblock ~-6 ~19 ~4 minecraft:smooth_quartz
-setblock ~-5 ~19 ~4 minecraft:light_gray_concrete
-setblock ~-3 ~19 ~4 minecraft:smooth_quartz
-setblock ~-2 ~19 ~4 minecraft:light_gray_concrete
-setblock ~0 ~19 ~4 minecraft:smooth_quartz
-setblock ~1 ~19 ~4 minecraft:light_gray_concrete
-setblock ~-12 ~20 ~4 minecraft:smooth_quartz
-setblock ~-11 ~20 ~4 minecraft:light_gray_concrete
-setblock ~-9 ~20 ~4 minecraft:smooth_quartz
-setblock ~-8 ~20 ~4 minecraft:light_gray_concrete
-setblock ~-6 ~20 ~4 minecraft:smooth_quartz
-setblock ~-5 ~20 ~4 minecraft:light_gray_concrete
-setblock ~-3 ~20 ~4 minecraft:smooth_quartz
-setblock ~-2 ~20 ~4 minecraft:light_gray_concrete
-setblock ~0 ~20 ~4 minecraft:smooth_quartz
-setblock ~1 ~20 ~4 minecraft:light_gray_concrete
-setblock ~-12 ~20 ~5 minecraft:smooth_quartz
-setblock ~-11 ~20 ~5 minecraft:light_gray_concrete
-setblock ~-9 ~20 ~5 minecraft:smooth_quartz
-setblock ~-8 ~20 ~5 minecraft:light_gray_concrete
-setblock ~-6 ~20 ~5 minecraft:smooth_quartz
-setblock ~-5 ~20 ~5 minecraft:light_gray_concrete
-setblock ~-3 ~20 ~5 minecraft:smooth_quartz
-setblock ~-2 ~20 ~5 minecraft:light_gray_concrete
-setblock ~0 ~20 ~5 minecraft:smooth_quartz
-setblock ~1 ~20 ~5 minecraft:light_gray_concrete
-setblock ~-12 ~21 ~6 minecraft:smooth_quartz
-setblock ~-11 ~21 ~6 minecraft:light_gray_concrete
-setblock ~-9 ~21 ~6 minecraft:smooth_quartz
-setblock ~-8 ~21 ~6 minecraft:light_gray_concrete
-setblock ~-6 ~21 ~6 minecraft:smooth_quartz
-setblock ~-5 ~21 ~6 minecraft:light_gray_concrete
-setblock ~-3 ~21 ~6 minecraft:smooth_quartz
-setblock ~-2 ~21 ~6 minecraft:light_gray_concrete
-setblock ~0 ~21 ~6 minecraft:smooth_quartz
-setblock ~1 ~21 ~6 minecraft:light_gray_concrete
-setblock ~-12 ~21 ~7 minecraft:smooth_quartz
-setblock ~-11 ~21 ~7 minecraft:light_gray_concrete
-setblock ~-9 ~21 ~7 minecraft:smooth_quartz
-setblock ~-8 ~21 ~7 minecraft:light_gray_concrete
-setblock ~-6 ~21 ~7 minecraft:smooth_quartz
-setblock ~-5 ~21 ~7 minecraft:light_gray_concrete
-setblock ~-3 ~21 ~7 minecraft:smooth_quartz
-setblock ~-2 ~21 ~7 minecraft:light_gray_concrete
-setblock ~0 ~21 ~7 minecraft:smooth_quartz
-setblock ~1 ~21 ~7 minecraft:light_gray_concrete
-setblock ~-12 ~22 ~7 minecraft:smooth_quartz
-setblock ~-11 ~22 ~7 minecraft:light_gray_concrete
-setblock ~-9 ~22 ~7 minecraft:smooth_quartz
-setblock ~-8 ~22 ~7 minecraft:light_gray_concrete
-setblock ~-6 ~22 ~7 minecraft:smooth_quartz
-setblock ~-5 ~22 ~7 minecraft:light_gray_concrete
-setblock ~-3 ~22 ~7 minecraft:smooth_quartz
-setblock ~-2 ~22 ~7 minecraft:light_gray_concrete
-setblock ~0 ~22 ~7 minecraft:smooth_quartz
-setblock ~1 ~22 ~7 minecraft:light_gray_concrete
-setblock ~-12 ~22 ~8 minecraft:smooth_quartz
-setblock ~-11 ~22 ~8 minecraft:light_gray_concrete
-setblock ~-9 ~22 ~8 minecraft:smooth_quartz
-setblock ~-8 ~22 ~8 minecraft:light_gray_concrete
-setblock ~-6 ~22 ~8 minecraft:smooth_quartz
-setblock ~-5 ~22 ~8 minecraft:light_gray_concrete
-setblock ~-3 ~22 ~8 minecraft:smooth_quartz
-setblock ~-2 ~22 ~8 minecraft:light_gray_concrete
-setblock ~0 ~22 ~8 minecraft:smooth_quartz
-setblock ~1 ~22 ~8 minecraft:light_gray_concrete
-setblock ~-12 ~22 ~9 minecraft:smooth_quartz
-setblock ~-11 ~22 ~9 minecraft:light_gray_concrete
-setblock ~-9 ~22 ~9 minecraft:smooth_quartz
-setblock ~-8 ~22 ~9 minecraft:light_gray_concrete
-setblock ~-6 ~22 ~9 minecraft:smooth_quartz
-setblock ~-5 ~22 ~9 minecraft:light_gray_concrete
-setblock ~-3 ~22 ~9 minecraft:smooth_quartz
-setblock ~-2 ~22 ~9 minecraft:light_gray_concrete
-setblock ~0 ~22 ~9 minecraft:smooth_quartz
-setblock ~1 ~22 ~9 minecraft:light_gray_concrete
-setblock ~-12 ~22 ~10 minecraft:smooth_quartz
-setblock ~-11 ~22 ~10 minecraft:light_gray_concrete
-setblock ~-9 ~22 ~10 minecraft:smooth_quartz
-setblock ~-8 ~22 ~10 minecraft:light_gray_concrete
-setblock ~-6 ~22 ~10 minecraft:smooth_quartz
-setblock ~-5 ~22 ~10 minecraft:light_gray_concrete
-setblock ~-3 ~22 ~10 minecraft:smooth_quartz
-setblock ~-2 ~22 ~10 minecraft:light_gray_concrete
-setblock ~0 ~22 ~10 minecraft:smooth_quartz
-setblock ~1 ~22 ~10 minecraft:light_gray_concrete
-setblock ~-12 ~22 ~11 minecraft:smooth_quartz
-setblock ~-11 ~22 ~11 minecraft:light_gray_concrete
-setblock ~-9 ~22 ~11 minecraft:smooth_quartz
-setblock ~-8 ~22 ~11 minecraft:light_gray_concrete
-setblock ~-6 ~22 ~11 minecraft:smooth_quartz
-setblock ~-5 ~22 ~11 minecraft:light_gray_concrete
-setblock ~-3 ~22 ~11 minecraft:smooth_quartz
-setblock ~-2 ~22 ~11 minecraft:light_gray_concrete
-setblock ~0 ~22 ~11 minecraft:smooth_quartz
-setblock ~1 ~22 ~11 minecraft:light_gray_concrete
-setblock ~-12 ~22 ~12 minecraft:smooth_quartz
-setblock ~-11 ~22 ~12 minecraft:light_gray_concrete
-setblock ~-9 ~22 ~12 minecraft:smooth_quartz
-setblock ~-8 ~22 ~12 minecraft:light_gray_concrete
-setblock ~-6 ~22 ~12 minecraft:smooth_quartz
-setblock ~-5 ~22 ~12 minecraft:light_gray_concrete
-setblock ~-3 ~22 ~12 minecraft:smooth_quartz
-setblock ~-2 ~22 ~12 minecraft:light_gray_concrete
-setblock ~0 ~22 ~12 minecraft:smooth_quartz
-setblock ~1 ~22 ~12 minecraft:light_gray_concrete
-setblock ~-12 ~22 ~13 minecraft:smooth_quartz
-setblock ~-11 ~22 ~13 minecraft:light_gray_concrete
-setblock ~-9 ~22 ~13 minecraft:smooth_quartz
-setblock ~-8 ~22 ~13 minecraft:light_gray_concrete
-setblock ~-6 ~22 ~13 minecraft:smooth_quartz
-setblock ~-5 ~22 ~13 minecraft:light_gray_concrete
-setblock ~-3 ~22 ~13 minecraft:smooth_quartz
-setblock ~-2 ~22 ~13 minecraft:light_gray_concrete
-setblock ~0 ~22 ~13 minecraft:smooth_quartz
-setblock ~1 ~22 ~13 minecraft:light_gray_concrete
-setblock ~-12 ~22 ~14 minecraft:smooth_quartz
-setblock ~-11 ~22 ~14 minecraft:light_gray_concrete
-setblock ~-9 ~22 ~14 minecraft:smooth_quartz
-setblock ~-8 ~22 ~14 minecraft:light_gray_concrete
-setblock ~-6 ~22 ~14 minecraft:smooth_quartz
-setblock ~-5 ~22 ~14 minecraft:light_gray_concrete
-setblock ~-3 ~22 ~14 minecraft:smooth_quartz
-setblock ~-2 ~22 ~14 minecraft:light_gray_concrete
-setblock ~0 ~22 ~14 minecraft:smooth_quartz
-setblock ~1 ~22 ~14 minecraft:light_gray_concrete
-setblock ~-12 ~22 ~15 minecraft:smooth_quartz
-setblock ~-11 ~22 ~15 minecraft:light_gray_concrete
-setblock ~-9 ~22 ~15 minecraft:smooth_quartz
-setblock ~-8 ~22 ~15 minecraft:light_gray_concrete
-setblock ~-6 ~22 ~15 minecraft:smooth_quartz
-setblock ~-5 ~22 ~15 minecraft:light_gray_concrete
-setblock ~-3 ~22 ~15 minecraft:smooth_quartz
-setblock ~-2 ~22 ~15 minecraft:light_gray_concrete
-setblock ~0 ~22 ~15 minecraft:smooth_quartz
-setblock ~1 ~22 ~15 minecraft:light_gray_concrete
-setblock ~-12 ~21 ~15 minecraft:smooth_quartz
-setblock ~-11 ~21 ~15 minecraft:light_gray_concrete
-setblock ~-9 ~21 ~15 minecraft:smooth_quartz
-setblock ~-8 ~21 ~15 minecraft:light_gray_concrete
-setblock ~-6 ~21 ~15 minecraft:smooth_quartz
-setblock ~-5 ~21 ~15 minecraft:light_gray_concrete
-setblock ~-3 ~21 ~15 minecraft:smooth_quartz
-setblock ~-2 ~21 ~15 minecraft:light_gray_concrete
-setblock ~0 ~21 ~15 minecraft:smooth_quartz
-setblock ~1 ~21 ~15 minecraft:light_gray_concrete
-setblock ~-12 ~21 ~16 minecraft:smooth_quartz
-setblock ~-11 ~21 ~16 minecraft:light_gray_concrete
-setblock ~-9 ~21 ~16 minecraft:smooth_quartz
-setblock ~-8 ~21 ~16 minecraft:light_gray_concrete
-setblock ~-6 ~21 ~16 minecraft:smooth_quartz
-setblock ~-5 ~21 ~16 minecraft:light_gray_concrete
-setblock ~-3 ~21 ~16 minecraft:smooth_quartz
-setblock ~-2 ~21 ~16 minecraft:light_gray_concrete
-setblock ~0 ~21 ~16 minecraft:smooth_quartz
-setblock ~1 ~21 ~16 minecraft:light_gray_concrete
-setblock ~-12 ~20 ~17 minecraft:smooth_quartz
-setblock ~-11 ~20 ~17 minecraft:light_gray_concrete
-setblock ~-9 ~20 ~17 minecraft:smooth_quartz
-setblock ~-8 ~20 ~17 minecraft:light_gray_concrete
-setblock ~-6 ~20 ~17 minecraft:smooth_quartz
-setblock ~-5 ~20 ~17 minecraft:light_gray_concrete
-setblock ~-3 ~20 ~17 minecraft:smooth_quartz
-setblock ~-2 ~20 ~17 minecraft:light_gray_concrete
-setblock ~0 ~20 ~17 minecraft:smooth_quartz
-setblock ~1 ~20 ~17 minecraft:light_gray_concrete
-setblock ~-12 ~20 ~18 minecraft:smooth_quartz
-setblock ~-11 ~20 ~18 minecraft:light_gray_concrete
-setblock ~-9 ~20 ~18 minecraft:smooth_quartz
-setblock ~-8 ~20 ~18 minecraft:light_gray_concrete
-setblock ~-6 ~20 ~18 minecraft:smooth_quartz
-setblock ~-5 ~20 ~18 minecraft:light_gray_concrete
-setblock ~-3 ~20 ~18 minecraft:smooth_quartz
-setblock ~-2 ~20 ~18 minecraft:light_gray_concrete
-setblock ~0 ~20 ~18 minecraft:smooth_quartz
-setblock ~1 ~20 ~18 minecraft:light_gray_concrete
-setblock ~-12 ~19 ~18 minecraft:smooth_quartz
-setblock ~-11 ~19 ~18 minecraft:light_gray_concrete
-setblock ~-9 ~19 ~18 minecraft:smooth_quartz
-setblock ~-8 ~19 ~18 minecraft:light_gray_concrete
-setblock ~-6 ~19 ~18 minecraft:smooth_quartz
-setblock ~-5 ~19 ~18 minecraft:light_gray_concrete
-setblock ~-3 ~19 ~18 minecraft:smooth_quartz
-setblock ~-2 ~19 ~18 minecraft:light_gray_concrete
-setblock ~0 ~19 ~18 minecraft:smooth_quartz
-setblock ~1 ~19 ~18 minecraft:light_gray_concrete
-setblock ~-12 ~18 ~18 minecraft:smooth_quartz
-setblock ~-11 ~18 ~18 minecraft:light_gray_concrete
-setblock ~-9 ~18 ~18 minecraft:smooth_quartz
-setblock ~-8 ~18 ~18 minecraft:light_gray_concrete
-setblock ~-6 ~18 ~18 minecraft:smooth_quartz
-setblock ~-5 ~18 ~18 minecraft:light_gray_concrete
-setblock ~-3 ~18 ~18 minecraft:smooth_quartz
-setblock ~-2 ~18 ~18 minecraft:light_gray_concrete
-setblock ~0 ~18 ~18 minecraft:smooth_quartz
-setblock ~1 ~18 ~18 minecraft:light_gray_concrete
-setblock ~-12 ~18 ~19 minecraft:smooth_quartz
-setblock ~-11 ~18 ~19 minecraft:light_gray_concrete
-setblock ~-9 ~18 ~19 minecraft:smooth_quartz
-setblock ~-8 ~18 ~19 minecraft:light_gray_concrete
-setblock ~-6 ~18 ~19 minecraft:smooth_quartz
-setblock ~-5 ~18 ~19 minecraft:light_gray_concrete
-setblock ~-3 ~18 ~19 minecraft:smooth_quartz
-setblock ~-2 ~18 ~19 minecraft:light_gray_concrete
-setblock ~0 ~18 ~19 minecraft:smooth_quartz
-setblock ~1 ~18 ~19 minecraft:light_gray_concrete
-setblock ~-12 ~17 ~19 minecraft:smooth_quartz
-setblock ~-11 ~17 ~19 minecraft:light_gray_concrete
-setblock ~-9 ~17 ~19 minecraft:smooth_quartz
-setblock ~-8 ~17 ~19 minecraft:light_gray_concrete
-setblock ~-6 ~17 ~19 minecraft:smooth_quartz
-setblock ~-5 ~17 ~19 minecraft:light_gray_concrete
-setblock ~-3 ~17 ~19 minecraft:smooth_quartz
-setblock ~-2 ~17 ~19 minecraft:light_gray_concrete
-setblock ~0 ~17 ~19 minecraft:smooth_quartz
-setblock ~1 ~17 ~19 minecraft:light_gray_concrete
-setblock ~-12 ~16 ~19 minecraft:smooth_quartz
-setblock ~-11 ~16 ~19 minecraft:light_gray_concrete
-setblock ~-9 ~16 ~19 minecraft:smooth_quartz
-setblock ~-8 ~16 ~19 minecraft:light_gray_concrete
-setblock ~-6 ~16 ~19 minecraft:smooth_quartz
-setblock ~-5 ~16 ~19 minecraft:light_gray_concrete
-setblock ~-3 ~16 ~19 minecraft:smooth_quartz
-setblock ~-2 ~16 ~19 minecraft:light_gray_concrete
-setblock ~0 ~16 ~19 minecraft:smooth_quartz
-setblock ~1 ~16 ~19 minecraft:light_gray_concrete
-setblock ~-12 ~15 ~19 minecraft:smooth_quartz
-setblock ~-11 ~15 ~19 minecraft:light_gray_concrete
-setblock ~-9 ~15 ~19 minecraft:smooth_quartz
-setblock ~-8 ~15 ~19 minecraft:light_gray_concrete
-setblock ~-6 ~15 ~19 minecraft:smooth_quartz
-setblock ~-5 ~15 ~19 minecraft:light_gray_concrete
-setblock ~-3 ~15 ~19 minecraft:smooth_quartz
-setblock ~-2 ~15 ~19 minecraft:light_gray_concrete
-setblock ~0 ~15 ~19 minecraft:smooth_quartz
-setblock ~1 ~15 ~19 minecraft:light_gray_concrete
-setblock ~-12 ~14 ~20 minecraft:smooth_quartz
-setblock ~-11 ~14 ~20 minecraft:light_gray_concrete
-setblock ~-9 ~14 ~20 minecraft:smooth_quartz
-setblock ~-8 ~14 ~20 minecraft:light_gray_concrete
-setblock ~-6 ~14 ~20 minecraft:smooth_quartz
-setblock ~-5 ~14 ~20 minecraft:light_gray_concrete
-setblock ~-3 ~14 ~20 minecraft:smooth_quartz
-setblock ~-2 ~14 ~20 minecraft:light_gray_concrete
-setblock ~0 ~14 ~20 minecraft:smooth_quartz
-setblock ~1 ~14 ~20 minecraft:light_gray_concrete
-setblock ~-12 ~14 ~19 minecraft:smooth_quartz
-setblock ~-11 ~14 ~19 minecraft:light_gray_concrete
-setblock ~-9 ~14 ~19 minecraft:smooth_quartz
-setblock ~-8 ~14 ~19 minecraft:light_gray_concrete
-setblock ~-6 ~14 ~19 minecraft:smooth_quartz
-setblock ~-5 ~14 ~19 minecraft:light_gray_concrete
-setblock ~-3 ~14 ~19 minecraft:smooth_quartz
-setblock ~-2 ~14 ~19 minecraft:light_gray_concrete
-setblock ~0 ~14 ~19 minecraft:smooth_quartz
-setblock ~1 ~14 ~19 minecraft:light_gray_concrete
-setblock ~-12 ~13 ~19 minecraft:smooth_quartz
-setblock ~-11 ~13 ~19 minecraft:light_gray_concrete
-setblock ~-9 ~13 ~19 minecraft:smooth_quartz
-setblock ~-8 ~13 ~19 minecraft:light_gray_concrete
-setblock ~-6 ~13 ~19 minecraft:smooth_quartz
-setblock ~-5 ~13 ~19 minecraft:light_gray_concrete
-setblock ~-3 ~13 ~19 minecraft:smooth_quartz
-setblock ~-2 ~13 ~19 minecraft:light_gray_concrete
-setblock ~0 ~13 ~19 minecraft:smooth_quartz
-setblock ~1 ~13 ~19 minecraft:light_gray_concrete
-setblock ~-12 ~12 ~19 minecraft:smooth_quartz
-setblock ~-11 ~12 ~19 minecraft:light_gray_concrete
-setblock ~-9 ~12 ~19 minecraft:smooth_quartz
-setblock ~-8 ~12 ~19 minecraft:light_gray_concrete
-setblock ~-6 ~12 ~19 minecraft:smooth_quartz
-setblock ~-5 ~12 ~19 minecraft:light_gray_concrete
-setblock ~-3 ~12 ~19 minecraft:smooth_quartz
-setblock ~-2 ~12 ~19 minecraft:light_gray_concrete
-setblock ~0 ~12 ~19 minecraft:smooth_quartz
-setblock ~1 ~12 ~19 minecraft:light_gray_concrete
-setblock ~-12 ~11 ~19 minecraft:smooth_quartz
-setblock ~-11 ~11 ~19 minecraft:light_gray_concrete
-setblock ~-9 ~11 ~19 minecraft:smooth_quartz
-setblock ~-8 ~11 ~19 minecraft:light_gray_concrete
-setblock ~-6 ~11 ~19 minecraft:smooth_quartz
-setblock ~-5 ~11 ~19 minecraft:light_gray_concrete
-setblock ~-3 ~11 ~19 minecraft:smooth_quartz
-setblock ~-2 ~11 ~19 minecraft:light_gray_concrete
-setblock ~0 ~11 ~19 minecraft:smooth_quartz
-setblock ~1 ~11 ~19 minecraft:light_gray_concrete
-setblock ~-12 ~11 ~18 minecraft:smooth_quartz
-setblock ~-11 ~11 ~18 minecraft:light_gray_concrete
-setblock ~-9 ~11 ~18 minecraft:smooth_quartz
-setblock ~-8 ~11 ~18 minecraft:light_gray_concrete
-setblock ~-6 ~11 ~18 minecraft:smooth_quartz
-setblock ~-5 ~11 ~18 minecraft:light_gray_concrete
-setblock ~-3 ~11 ~18 minecraft:smooth_quartz
-setblock ~-2 ~11 ~18 minecraft:light_gray_concrete
-setblock ~0 ~11 ~18 minecraft:smooth_quartz
-setblock ~1 ~11 ~18 minecraft:light_gray_concrete
-setblock ~-12 ~10 ~18 minecraft:smooth_quartz
-setblock ~-11 ~10 ~18 minecraft:light_gray_concrete
-setblock ~-9 ~10 ~18 minecraft:smooth_quartz
-setblock ~-8 ~10 ~18 minecraft:light_gray_concrete
-setblock ~-6 ~10 ~18 minecraft:smooth_quartz
-setblock ~-5 ~10 ~18 minecraft:light_gray_concrete
-setblock ~-3 ~10 ~18 minecraft:smooth_quartz
-setblock ~-2 ~10 ~18 minecraft:light_gray_concrete
-setblock ~0 ~10 ~18 minecraft:smooth_quartz
-setblock ~1 ~10 ~18 minecraft:light_gray_concrete
-setblock ~-12 ~9 ~18 minecraft:smooth_quartz
-setblock ~-11 ~9 ~18 minecraft:light_gray_concrete
-setblock ~-9 ~9 ~18 minecraft:smooth_quartz
-setblock ~-8 ~9 ~18 minecraft:light_gray_concrete
-setblock ~-6 ~9 ~18 minecraft:smooth_quartz
-setblock ~-5 ~9 ~18 minecraft:light_gray_concrete
-setblock ~-3 ~9 ~18 minecraft:smooth_quartz
-setblock ~-2 ~9 ~18 minecraft:light_gray_concrete
-setblock ~0 ~9 ~18 minecraft:smooth_quartz
-setblock ~1 ~9 ~18 minecraft:light_gray_concrete
-setblock ~-12 ~9 ~17 minecraft:smooth_quartz
-setblock ~-11 ~9 ~17 minecraft:light_gray_concrete
-setblock ~-9 ~9 ~17 minecraft:smooth_quartz
-setblock ~-8 ~9 ~17 minecraft:light_gray_concrete
-setblock ~-6 ~9 ~17 minecraft:smooth_quartz
-setblock ~-5 ~9 ~17 minecraft:light_gray_concrete
-setblock ~-3 ~9 ~17 minecraft:smooth_quartz
-setblock ~-2 ~9 ~17 minecraft:light_gray_concrete
-setblock ~0 ~9 ~17 minecraft:smooth_quartz
-setblock ~1 ~9 ~17 minecraft:light_gray_concrete
-setblock ~-12 ~8 ~16 minecraft:smooth_quartz
-setblock ~-11 ~8 ~16 minecraft:light_gray_concrete
-setblock ~-9 ~8 ~16 minecraft:smooth_quartz
-setblock ~-8 ~8 ~16 minecraft:light_gray_concrete
-setblock ~-6 ~8 ~16 minecraft:smooth_quartz
-setblock ~-5 ~8 ~16 minecraft:light_gray_concrete
-setblock ~-3 ~8 ~16 minecraft:smooth_quartz
-setblock ~-2 ~8 ~16 minecraft:light_gray_concrete
-setblock ~0 ~8 ~16 minecraft:smooth_quartz
-setblock ~1 ~8 ~16 minecraft:light_gray_concrete
-setblock ~-12 ~8 ~15 minecraft:smooth_quartz
-setblock ~-11 ~8 ~15 minecraft:light_gray_concrete
-setblock ~-9 ~8 ~15 minecraft:smooth_quartz
-setblock ~-8 ~8 ~15 minecraft:light_gray_concrete
-setblock ~-6 ~8 ~15 minecraft:smooth_quartz
-setblock ~-5 ~8 ~15 minecraft:light_gray_concrete
-setblock ~-3 ~8 ~15 minecraft:smooth_quartz
-setblock ~-2 ~8 ~15 minecraft:light_gray_concrete
-setblock ~0 ~8 ~15 minecraft:smooth_quartz
-setblock ~1 ~8 ~15 minecraft:light_gray_concrete
-setblock ~-12 ~7 ~15 minecraft:smooth_quartz
-setblock ~-11 ~7 ~15 minecraft:light_gray_concrete
-setblock ~-9 ~7 ~15 minecraft:smooth_quartz
-setblock ~-8 ~7 ~15 minecraft:light_gray_concrete
-setblock ~-6 ~7 ~15 minecraft:smooth_quartz
-setblock ~-5 ~7 ~15 minecraft:light_gray_concrete
-setblock ~-3 ~7 ~15 minecraft:smooth_quartz
-setblock ~-2 ~7 ~15 minecraft:light_gray_concrete
-setblock ~0 ~7 ~15 minecraft:smooth_quartz
-setblock ~1 ~7 ~15 minecraft:light_gray_concrete
-setblock ~-12 ~7 ~14 minecraft:smooth_quartz
-setblock ~-11 ~7 ~14 minecraft:light_gray_concrete
-setblock ~-9 ~7 ~14 minecraft:smooth_quartz
-setblock ~-8 ~7 ~14 minecraft:light_gray_concrete
-setblock ~-6 ~7 ~14 minecraft:smooth_quartz
-setblock ~-5 ~7 ~14 minecraft:light_gray_concrete
-setblock ~-3 ~7 ~14 minecraft:smooth_quartz
-setblock ~-2 ~7 ~14 minecraft:light_gray_concrete
-setblock ~0 ~7 ~14 minecraft:smooth_quartz
-setblock ~1 ~7 ~14 minecraft:light_gray_concrete
-setblock ~-12 ~7 ~13 minecraft:smooth_quartz
-setblock ~-11 ~7 ~13 minecraft:light_gray_concrete
-setblock ~-9 ~7 ~13 minecraft:smooth_quartz
-setblock ~-8 ~7 ~13 minecraft:light_gray_concrete
-setblock ~-6 ~7 ~13 minecraft:smooth_quartz
-setblock ~-5 ~7 ~13 minecraft:light_gray_concrete
-setblock ~-3 ~7 ~13 minecraft:smooth_quartz
-setblock ~-2 ~7 ~13 minecraft:light_gray_concrete
-setblock ~0 ~7 ~13 minecraft:smooth_quartz
-setblock ~1 ~7 ~13 minecraft:light_gray_concrete
-setblock ~-12 ~7 ~12 minecraft:smooth_quartz
-setblock ~-11 ~7 ~12 minecraft:light_gray_concrete
-setblock ~-9 ~7 ~12 minecraft:smooth_quartz
-setblock ~-8 ~7 ~12 minecraft:light_gray_concrete
-setblock ~-6 ~7 ~12 minecraft:smooth_quartz
-setblock ~-5 ~7 ~12 minecraft:light_gray_concrete
-setblock ~-3 ~7 ~12 minecraft:smooth_quartz
-setblock ~-2 ~7 ~12 minecraft:light_gray_concrete
-setblock ~0 ~7 ~12 minecraft:smooth_quartz
-setblock ~1 ~7 ~12 minecraft:light_gray_concrete
-setblock ~-12 ~7 ~11 minecraft:smooth_quartz
-setblock ~-11 ~7 ~11 minecraft:light_gray_concrete
-setblock ~-9 ~7 ~11 minecraft:smooth_quartz
-setblock ~-8 ~7 ~11 minecraft:light_gray_concrete
-setblock ~-6 ~7 ~11 minecraft:smooth_quartz
-setblock ~-5 ~7 ~11 minecraft:light_gray_concrete
-setblock ~-3 ~7 ~11 minecraft:smooth_quartz
-setblock ~-2 ~7 ~11 minecraft:light_gray_concrete
-setblock ~0 ~7 ~11 minecraft:smooth_quartz
-setblock ~1 ~7 ~11 minecraft:light_gray_concrete
-setblock ~-12 ~6 ~11 minecraft:smooth_quartz
-setblock ~-11 ~6 ~11 minecraft:light_gray_concrete
-setblock ~-9 ~6 ~11 minecraft:smooth_quartz
-setblock ~-8 ~6 ~11 minecraft:light_gray_concrete
-setblock ~-6 ~6 ~11 minecraft:smooth_quartz
-setblock ~-5 ~6 ~11 minecraft:light_gray_concrete
-setblock ~-3 ~6 ~11 minecraft:smooth_quartz
-setblock ~-2 ~6 ~11 minecraft:light_gray_concrete
-setblock ~0 ~6 ~11 minecraft:smooth_quartz
-setblock ~1 ~6 ~11 minecraft:light_gray_concrete
-setblock ~-12 ~7 ~10 minecraft:smooth_quartz
-setblock ~-11 ~7 ~10 minecraft:light_gray_concrete
-setblock ~-9 ~7 ~10 minecraft:smooth_quartz
-setblock ~-8 ~7 ~10 minecraft:light_gray_concrete
-setblock ~-6 ~7 ~10 minecraft:smooth_quartz
-setblock ~-5 ~7 ~10 minecraft:light_gray_concrete
-setblock ~-3 ~7 ~10 minecraft:smooth_quartz
-setblock ~-2 ~7 ~10 minecraft:light_gray_concrete
-setblock ~0 ~7 ~10 minecraft:smooth_quartz
-setblock ~1 ~7 ~10 minecraft:light_gray_concrete
-setblock ~-12 ~7 ~9 minecraft:smooth_quartz
-setblock ~-11 ~7 ~9 minecraft:light_gray_concrete
-setblock ~-9 ~7 ~9 minecraft:smooth_quartz
-setblock ~-8 ~7 ~9 minecraft:light_gray_concrete
-setblock ~-6 ~7 ~9 minecraft:smooth_quartz
-setblock ~-5 ~7 ~9 minecraft:light_gray_concrete
-setblock ~-3 ~7 ~9 minecraft:smooth_quartz
-setblock ~-2 ~7 ~9 minecraft:light_gray_concrete
-setblock ~0 ~7 ~9 minecraft:smooth_quartz
-setblock ~1 ~7 ~9 minecraft:light_gray_concrete
-summon minecraft:text_display ~-2.4 ~18.2 ~4.0 {Tags:["if_buu_label"],text:{text:"คณะวิทยาการสารสนเทศ\nFACULTY OF INFORMATICS",color:"white",bold:true},Rotation:[-90.0f,0f],billboard:"fixed",background:0,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.35f,1.35f,1.35f]}}
+# 04 - Curved North/NE Podium (1F-5F) & 5-Ribbed Sweeping C-Shaped Canopy Arch
+fill ~-5 ~0 ~-28 ~25 ~0 ~-20 minecraft:smooth_sandstone
+fill ~20 ~0 ~-23 ~25 ~11 ~-20 minecraft:blue_concrete
+fill ~19 ~0 ~-28 ~19 ~21 ~-28 minecraft:quartz_pillar
+fill ~21 ~0 ~-29 ~21 ~21 ~-29 minecraft:quartz_pillar
+fill ~23 ~0 ~-28 ~23 ~21 ~-28 minecraft:quartz_pillar
+fill ~20 ~0 ~-26 ~20 ~21 ~-26 minecraft:quartz_pillar
+fill ~22 ~0 ~-26 ~22 ~21 ~-26 minecraft:quartz_pillar
+fill ~-4 ~0 ~-27 ~-4 ~21 ~-27 minecraft:quartz_pillar
+fill ~-3 ~12 ~-23 ~23 ~21 ~-23 minecraft:light_gray_concrete
+fill ~-3 ~15 ~-23 ~23 ~15 ~-23 minecraft:polished_andesite
+fill ~-3 ~18 ~-23 ~23 ~18 ~-23 minecraft:polished_andesite
+fill ~-3 ~12 ~-23 ~4 ~13 ~-23 minecraft:air
+fill ~0 ~16 ~-23 ~5 ~16 ~-23 minecraft:blue_concrete
+fill ~13 ~17 ~-23 ~19 ~17 ~-23 minecraft:blue_concrete
+fill ~7 ~15 ~-23 ~12 ~15 ~-23 minecraft:light_blue_stained_glass
+fill ~1 ~19 ~-23 ~6 ~19 ~-23 minecraft:light_blue_stained_glass
+fill ~-6 ~22 ~-30 ~-6 ~22 ~-19 minecraft:smooth_quartz
+fill ~-6 ~23 ~-30 ~-6 ~23 ~-19 minecraft:light_gray_concrete
+fill ~-5 ~22 ~-30 ~-5 ~22 ~-19 minecraft:smooth_quartz
+fill ~-5 ~23 ~-30 ~-5 ~23 ~-19 minecraft:light_gray_concrete
+fill ~-4 ~22 ~-30 ~-4 ~22 ~-19 minecraft:smooth_quartz
+fill ~-4 ~23 ~-30 ~-4 ~23 ~-19 minecraft:light_gray_concrete
+fill ~-3 ~22 ~-30 ~-3 ~22 ~-19 minecraft:smooth_quartz
+fill ~-3 ~23 ~-30 ~-3 ~23 ~-19 minecraft:light_gray_concrete
+fill ~-2 ~22 ~-30 ~-2 ~22 ~-19 minecraft:smooth_quartz
+fill ~-2 ~23 ~-30 ~-2 ~23 ~-19 minecraft:light_gray_concrete
+fill ~-1 ~22 ~-30 ~-1 ~22 ~-19 minecraft:smooth_quartz
+fill ~-1 ~23 ~-30 ~-1 ~23 ~-19 minecraft:light_gray_concrete
+fill ~0 ~22 ~-30 ~0 ~22 ~-19 minecraft:smooth_quartz
+fill ~0 ~23 ~-30 ~0 ~23 ~-19 minecraft:light_gray_concrete
+fill ~1 ~22 ~-30 ~1 ~22 ~-19 minecraft:smooth_quartz
+fill ~1 ~23 ~-30 ~1 ~23 ~-19 minecraft:light_gray_concrete
+fill ~2 ~22 ~-30 ~2 ~22 ~-19 minecraft:smooth_quartz
+fill ~2 ~23 ~-30 ~2 ~23 ~-19 minecraft:light_gray_concrete
+fill ~3 ~22 ~-30 ~3 ~22 ~-19 minecraft:smooth_quartz
+fill ~3 ~23 ~-30 ~3 ~23 ~-19 minecraft:light_gray_concrete
+fill ~4 ~22 ~-30 ~4 ~22 ~-19 minecraft:smooth_quartz
+fill ~4 ~23 ~-30 ~4 ~23 ~-19 minecraft:light_gray_concrete
+fill ~5 ~22 ~-30 ~5 ~22 ~-19 minecraft:smooth_quartz
+fill ~5 ~23 ~-30 ~5 ~23 ~-19 minecraft:light_gray_concrete
+fill ~6 ~22 ~-30 ~6 ~22 ~-19 minecraft:smooth_quartz
+fill ~6 ~23 ~-30 ~6 ~23 ~-19 minecraft:light_gray_concrete
+fill ~7 ~22 ~-30 ~7 ~22 ~-19 minecraft:smooth_quartz
+fill ~7 ~23 ~-30 ~7 ~23 ~-19 minecraft:light_gray_concrete
+fill ~8 ~22 ~-30 ~8 ~22 ~-19 minecraft:smooth_quartz
+fill ~8 ~23 ~-30 ~8 ~23 ~-19 minecraft:light_gray_concrete
+fill ~9 ~22 ~-30 ~9 ~22 ~-19 minecraft:smooth_quartz
+fill ~9 ~23 ~-30 ~9 ~23 ~-19 minecraft:light_gray_concrete
+fill ~10 ~22 ~-30 ~10 ~22 ~-19 minecraft:smooth_quartz
+fill ~10 ~23 ~-30 ~10 ~23 ~-19 minecraft:light_gray_concrete
+fill ~11 ~22 ~-30 ~11 ~22 ~-19 minecraft:smooth_quartz
+fill ~11 ~23 ~-30 ~11 ~23 ~-19 minecraft:light_gray_concrete
+fill ~12 ~22 ~-30 ~12 ~22 ~-19 minecraft:smooth_quartz
+fill ~12 ~23 ~-30 ~12 ~23 ~-19 minecraft:light_gray_concrete
+fill ~13 ~22 ~-30 ~13 ~22 ~-19 minecraft:smooth_quartz
+fill ~13 ~23 ~-30 ~13 ~23 ~-19 minecraft:light_gray_concrete
+fill ~14 ~22 ~-30 ~14 ~22 ~-19 minecraft:smooth_quartz
+fill ~14 ~23 ~-30 ~14 ~23 ~-19 minecraft:light_gray_concrete
+fill ~15 ~22 ~-30 ~15 ~22 ~-19 minecraft:smooth_quartz
+fill ~15 ~23 ~-30 ~15 ~23 ~-19 minecraft:light_gray_concrete
+fill ~16 ~22 ~-30 ~16 ~22 ~-19 minecraft:smooth_quartz
+fill ~16 ~23 ~-30 ~16 ~23 ~-19 minecraft:light_gray_concrete
+fill ~17 ~22 ~-29 ~17 ~22 ~-19 minecraft:smooth_quartz
+fill ~17 ~23 ~-29 ~17 ~23 ~-19 minecraft:light_gray_concrete
+fill ~18 ~22 ~-28 ~18 ~22 ~-19 minecraft:smooth_quartz
+fill ~18 ~23 ~-28 ~18 ~23 ~-19 minecraft:light_gray_concrete
+fill ~19 ~22 ~-28 ~19 ~22 ~-19 minecraft:smooth_quartz
+fill ~19 ~23 ~-28 ~19 ~23 ~-19 minecraft:light_gray_concrete
+fill ~20 ~22 ~-28 ~20 ~22 ~-19 minecraft:smooth_quartz
+fill ~20 ~23 ~-28 ~20 ~23 ~-19 minecraft:light_gray_concrete
+fill ~21 ~22 ~-27 ~21 ~22 ~-19 minecraft:smooth_quartz
+fill ~21 ~23 ~-27 ~21 ~23 ~-19 minecraft:light_gray_concrete
+fill ~22 ~22 ~-26 ~22 ~22 ~-19 minecraft:smooth_quartz
+fill ~22 ~23 ~-26 ~22 ~23 ~-19 minecraft:light_gray_concrete
+fill ~23 ~22 ~-26 ~23 ~22 ~-19 minecraft:smooth_quartz
+fill ~23 ~23 ~-26 ~23 ~23 ~-19 minecraft:light_gray_concrete
+fill ~24 ~22 ~-26 ~24 ~22 ~-19 minecraft:smooth_quartz
+fill ~24 ~23 ~-26 ~24 ~23 ~-19 minecraft:light_gray_concrete
+fill ~25 ~22 ~-25 ~25 ~22 ~-19 minecraft:smooth_quartz
+fill ~25 ~23 ~-25 ~25 ~23 ~-19 minecraft:light_gray_concrete
+fill ~26 ~22 ~-24 ~26 ~22 ~-19 minecraft:smooth_quartz
+fill ~26 ~23 ~-24 ~26 ~23 ~-19 minecraft:light_gray_concrete
+fill ~20 ~22 ~-28 ~22 ~23 ~-26 minecraft:air
+setblock ~13 ~17 ~-27 minecraft:smooth_quartz
+setblock ~13 ~17 ~-26 minecraft:light_gray_concrete
+setblock ~13 ~17 ~-25 minecraft:smooth_quartz
+setblock ~13 ~17 ~-24 minecraft:light_gray_concrete
+setblock ~13 ~17 ~-23 minecraft:smooth_quartz
+setblock ~13 ~17 ~-22 minecraft:light_gray_concrete
+setblock ~13 ~17 ~-21 minecraft:smooth_quartz
+setblock ~13 ~17 ~-20 minecraft:light_gray_concrete
+setblock ~13 ~17 ~-19 minecraft:smooth_quartz
+setblock ~13 ~17 ~-18 minecraft:light_gray_concrete
+setblock ~13 ~18 ~-27 minecraft:smooth_quartz
+setblock ~13 ~18 ~-26 minecraft:light_gray_concrete
+setblock ~13 ~18 ~-25 minecraft:smooth_quartz
+setblock ~13 ~18 ~-24 minecraft:light_gray_concrete
+setblock ~13 ~18 ~-23 minecraft:smooth_quartz
+setblock ~13 ~18 ~-22 minecraft:light_gray_concrete
+setblock ~13 ~18 ~-21 minecraft:smooth_quartz
+setblock ~13 ~18 ~-20 minecraft:light_gray_concrete
+setblock ~13 ~18 ~-19 minecraft:smooth_quartz
+setblock ~13 ~18 ~-18 minecraft:light_gray_concrete
+setblock ~14 ~18 ~-27 minecraft:smooth_quartz
+setblock ~14 ~18 ~-26 minecraft:light_gray_concrete
+setblock ~14 ~18 ~-25 minecraft:smooth_quartz
+setblock ~14 ~18 ~-24 minecraft:light_gray_concrete
+setblock ~14 ~18 ~-23 minecraft:smooth_quartz
+setblock ~14 ~18 ~-22 minecraft:light_gray_concrete
+setblock ~14 ~18 ~-21 minecraft:smooth_quartz
+setblock ~14 ~18 ~-20 minecraft:light_gray_concrete
+setblock ~14 ~18 ~-19 minecraft:smooth_quartz
+setblock ~14 ~18 ~-18 minecraft:light_gray_concrete
+setblock ~14 ~19 ~-27 minecraft:smooth_quartz
+setblock ~14 ~19 ~-26 minecraft:light_gray_concrete
+setblock ~14 ~19 ~-25 minecraft:smooth_quartz
+setblock ~14 ~19 ~-24 minecraft:light_gray_concrete
+setblock ~14 ~19 ~-23 minecraft:smooth_quartz
+setblock ~14 ~19 ~-22 minecraft:light_gray_concrete
+setblock ~14 ~19 ~-21 minecraft:smooth_quartz
+setblock ~14 ~19 ~-20 minecraft:light_gray_concrete
+setblock ~14 ~19 ~-19 minecraft:smooth_quartz
+setblock ~14 ~19 ~-18 minecraft:light_gray_concrete
+setblock ~14 ~20 ~-27 minecraft:smooth_quartz
+setblock ~14 ~20 ~-26 minecraft:light_gray_concrete
+setblock ~14 ~20 ~-25 minecraft:smooth_quartz
+setblock ~14 ~20 ~-24 minecraft:light_gray_concrete
+setblock ~14 ~20 ~-23 minecraft:smooth_quartz
+setblock ~14 ~20 ~-22 minecraft:light_gray_concrete
+setblock ~14 ~20 ~-21 minecraft:smooth_quartz
+setblock ~14 ~20 ~-20 minecraft:light_gray_concrete
+setblock ~14 ~20 ~-19 minecraft:smooth_quartz
+setblock ~14 ~20 ~-18 minecraft:light_gray_concrete
+setblock ~15 ~20 ~-27 minecraft:smooth_quartz
+setblock ~15 ~20 ~-26 minecraft:light_gray_concrete
+setblock ~15 ~20 ~-25 minecraft:smooth_quartz
+setblock ~15 ~20 ~-24 minecraft:light_gray_concrete
+setblock ~15 ~20 ~-23 minecraft:smooth_quartz
+setblock ~15 ~20 ~-22 minecraft:light_gray_concrete
+setblock ~15 ~20 ~-21 minecraft:smooth_quartz
+setblock ~15 ~20 ~-20 minecraft:light_gray_concrete
+setblock ~15 ~20 ~-19 minecraft:smooth_quartz
+setblock ~15 ~20 ~-18 minecraft:light_gray_concrete
+setblock ~15 ~21 ~-27 minecraft:smooth_quartz
+setblock ~15 ~21 ~-26 minecraft:light_gray_concrete
+setblock ~15 ~21 ~-25 minecraft:smooth_quartz
+setblock ~15 ~21 ~-24 minecraft:light_gray_concrete
+setblock ~15 ~21 ~-23 minecraft:smooth_quartz
+setblock ~15 ~21 ~-22 minecraft:light_gray_concrete
+setblock ~15 ~21 ~-21 minecraft:smooth_quartz
+setblock ~15 ~21 ~-20 minecraft:light_gray_concrete
+setblock ~15 ~21 ~-19 minecraft:smooth_quartz
+setblock ~15 ~21 ~-18 minecraft:light_gray_concrete
+setblock ~16 ~21 ~-27 minecraft:smooth_quartz
+setblock ~16 ~21 ~-26 minecraft:light_gray_concrete
+setblock ~16 ~21 ~-25 minecraft:smooth_quartz
+setblock ~16 ~21 ~-24 minecraft:light_gray_concrete
+setblock ~16 ~21 ~-23 minecraft:smooth_quartz
+setblock ~16 ~21 ~-22 minecraft:light_gray_concrete
+setblock ~16 ~21 ~-21 minecraft:smooth_quartz
+setblock ~16 ~21 ~-20 minecraft:light_gray_concrete
+setblock ~16 ~21 ~-19 minecraft:smooth_quartz
+setblock ~16 ~21 ~-18 minecraft:light_gray_concrete
+setblock ~16 ~22 ~-27 minecraft:smooth_quartz
+setblock ~16 ~22 ~-26 minecraft:light_gray_concrete
+setblock ~16 ~22 ~-25 minecraft:smooth_quartz
+setblock ~16 ~22 ~-24 minecraft:light_gray_concrete
+setblock ~16 ~22 ~-23 minecraft:smooth_quartz
+setblock ~16 ~22 ~-22 minecraft:light_gray_concrete
+setblock ~16 ~22 ~-21 minecraft:smooth_quartz
+setblock ~16 ~22 ~-20 minecraft:light_gray_concrete
+setblock ~16 ~22 ~-19 minecraft:smooth_quartz
+setblock ~16 ~22 ~-18 minecraft:light_gray_concrete
+setblock ~17 ~22 ~-27 minecraft:smooth_quartz
+setblock ~17 ~22 ~-26 minecraft:light_gray_concrete
+setblock ~17 ~22 ~-25 minecraft:smooth_quartz
+setblock ~17 ~22 ~-24 minecraft:light_gray_concrete
+setblock ~17 ~22 ~-23 minecraft:smooth_quartz
+setblock ~17 ~22 ~-22 minecraft:light_gray_concrete
+setblock ~17 ~22 ~-21 minecraft:smooth_quartz
+setblock ~17 ~22 ~-20 minecraft:light_gray_concrete
+setblock ~17 ~22 ~-19 minecraft:smooth_quartz
+setblock ~17 ~22 ~-18 minecraft:light_gray_concrete
+setblock ~18 ~22 ~-27 minecraft:smooth_quartz
+setblock ~18 ~22 ~-26 minecraft:light_gray_concrete
+setblock ~18 ~22 ~-25 minecraft:smooth_quartz
+setblock ~18 ~22 ~-24 minecraft:light_gray_concrete
+setblock ~18 ~22 ~-23 minecraft:smooth_quartz
+setblock ~18 ~22 ~-22 minecraft:light_gray_concrete
+setblock ~18 ~22 ~-21 minecraft:smooth_quartz
+setblock ~18 ~22 ~-20 minecraft:light_gray_concrete
+setblock ~18 ~22 ~-19 minecraft:smooth_quartz
+setblock ~18 ~22 ~-18 minecraft:light_gray_concrete
+setblock ~19 ~22 ~-27 minecraft:smooth_quartz
+setblock ~19 ~22 ~-26 minecraft:light_gray_concrete
+setblock ~19 ~22 ~-25 minecraft:smooth_quartz
+setblock ~19 ~22 ~-24 minecraft:light_gray_concrete
+setblock ~19 ~22 ~-23 minecraft:smooth_quartz
+setblock ~19 ~22 ~-22 minecraft:light_gray_concrete
+setblock ~19 ~22 ~-21 minecraft:smooth_quartz
+setblock ~19 ~22 ~-20 minecraft:light_gray_concrete
+setblock ~19 ~22 ~-19 minecraft:smooth_quartz
+setblock ~19 ~22 ~-18 minecraft:light_gray_concrete
+setblock ~20 ~22 ~-27 minecraft:smooth_quartz
+setblock ~20 ~22 ~-26 minecraft:light_gray_concrete
+setblock ~20 ~22 ~-25 minecraft:smooth_quartz
+setblock ~20 ~22 ~-24 minecraft:light_gray_concrete
+setblock ~20 ~22 ~-23 minecraft:smooth_quartz
+setblock ~20 ~22 ~-22 minecraft:light_gray_concrete
+setblock ~20 ~22 ~-21 minecraft:smooth_quartz
+setblock ~20 ~22 ~-20 minecraft:light_gray_concrete
+setblock ~20 ~22 ~-19 minecraft:smooth_quartz
+setblock ~20 ~22 ~-18 minecraft:light_gray_concrete
+setblock ~21 ~22 ~-27 minecraft:smooth_quartz
+setblock ~21 ~22 ~-26 minecraft:light_gray_concrete
+setblock ~21 ~22 ~-25 minecraft:smooth_quartz
+setblock ~21 ~22 ~-24 minecraft:light_gray_concrete
+setblock ~21 ~22 ~-23 minecraft:smooth_quartz
+setblock ~21 ~22 ~-22 minecraft:light_gray_concrete
+setblock ~21 ~22 ~-21 minecraft:smooth_quartz
+setblock ~21 ~22 ~-20 minecraft:light_gray_concrete
+setblock ~21 ~22 ~-19 minecraft:smooth_quartz
+setblock ~21 ~22 ~-18 minecraft:light_gray_concrete
+setblock ~22 ~22 ~-27 minecraft:smooth_quartz
+setblock ~22 ~22 ~-26 minecraft:light_gray_concrete
+setblock ~22 ~22 ~-25 minecraft:smooth_quartz
+setblock ~22 ~22 ~-24 minecraft:light_gray_concrete
+setblock ~22 ~22 ~-23 minecraft:smooth_quartz
+setblock ~22 ~22 ~-22 minecraft:light_gray_concrete
+setblock ~22 ~22 ~-21 minecraft:smooth_quartz
+setblock ~22 ~22 ~-20 minecraft:light_gray_concrete
+setblock ~22 ~22 ~-19 minecraft:smooth_quartz
+setblock ~22 ~22 ~-18 minecraft:light_gray_concrete
+setblock ~23 ~22 ~-27 minecraft:smooth_quartz
+setblock ~23 ~22 ~-26 minecraft:light_gray_concrete
+setblock ~23 ~22 ~-25 minecraft:smooth_quartz
+setblock ~23 ~22 ~-24 minecraft:light_gray_concrete
+setblock ~23 ~22 ~-23 minecraft:smooth_quartz
+setblock ~23 ~22 ~-22 minecraft:light_gray_concrete
+setblock ~23 ~22 ~-21 minecraft:smooth_quartz
+setblock ~23 ~22 ~-20 minecraft:light_gray_concrete
+setblock ~23 ~22 ~-19 minecraft:smooth_quartz
+setblock ~23 ~22 ~-18 minecraft:light_gray_concrete
+setblock ~24 ~22 ~-27 minecraft:smooth_quartz
+setblock ~24 ~22 ~-26 minecraft:light_gray_concrete
+setblock ~24 ~22 ~-25 minecraft:smooth_quartz
+setblock ~24 ~22 ~-24 minecraft:light_gray_concrete
+setblock ~24 ~22 ~-23 minecraft:smooth_quartz
+setblock ~24 ~22 ~-22 minecraft:light_gray_concrete
+setblock ~24 ~22 ~-21 minecraft:smooth_quartz
+setblock ~24 ~22 ~-20 minecraft:light_gray_concrete
+setblock ~24 ~22 ~-19 minecraft:smooth_quartz
+setblock ~24 ~22 ~-18 minecraft:light_gray_concrete
+setblock ~24 ~21 ~-27 minecraft:smooth_quartz
+setblock ~24 ~21 ~-26 minecraft:light_gray_concrete
+setblock ~24 ~21 ~-25 minecraft:smooth_quartz
+setblock ~24 ~21 ~-24 minecraft:light_gray_concrete
+setblock ~24 ~21 ~-23 minecraft:smooth_quartz
+setblock ~24 ~21 ~-22 minecraft:light_gray_concrete
+setblock ~24 ~21 ~-21 minecraft:smooth_quartz
+setblock ~24 ~21 ~-20 minecraft:light_gray_concrete
+setblock ~24 ~21 ~-19 minecraft:smooth_quartz
+setblock ~24 ~21 ~-18 minecraft:light_gray_concrete
+setblock ~25 ~21 ~-27 minecraft:smooth_quartz
+setblock ~25 ~21 ~-26 minecraft:light_gray_concrete
+setblock ~25 ~21 ~-25 minecraft:smooth_quartz
+setblock ~25 ~21 ~-24 minecraft:light_gray_concrete
+setblock ~25 ~21 ~-23 minecraft:smooth_quartz
+setblock ~25 ~21 ~-22 minecraft:light_gray_concrete
+setblock ~25 ~21 ~-21 minecraft:smooth_quartz
+setblock ~25 ~21 ~-20 minecraft:light_gray_concrete
+setblock ~25 ~21 ~-19 minecraft:smooth_quartz
+setblock ~25 ~21 ~-18 minecraft:light_gray_concrete
+setblock ~25 ~20 ~-27 minecraft:smooth_quartz
+setblock ~25 ~20 ~-26 minecraft:light_gray_concrete
+setblock ~25 ~20 ~-25 minecraft:smooth_quartz
+setblock ~25 ~20 ~-24 minecraft:light_gray_concrete
+setblock ~25 ~20 ~-23 minecraft:smooth_quartz
+setblock ~25 ~20 ~-22 minecraft:light_gray_concrete
+setblock ~25 ~20 ~-21 minecraft:smooth_quartz
+setblock ~25 ~20 ~-20 minecraft:light_gray_concrete
+setblock ~25 ~20 ~-19 minecraft:smooth_quartz
+setblock ~25 ~20 ~-18 minecraft:light_gray_concrete
+setblock ~26 ~20 ~-27 minecraft:smooth_quartz
+setblock ~26 ~20 ~-26 minecraft:light_gray_concrete
+setblock ~26 ~20 ~-25 minecraft:smooth_quartz
+setblock ~26 ~20 ~-24 minecraft:light_gray_concrete
+setblock ~26 ~20 ~-23 minecraft:smooth_quartz
+setblock ~26 ~20 ~-22 minecraft:light_gray_concrete
+setblock ~26 ~20 ~-21 minecraft:smooth_quartz
+setblock ~26 ~20 ~-20 minecraft:light_gray_concrete
+setblock ~26 ~20 ~-19 minecraft:smooth_quartz
+setblock ~26 ~20 ~-18 minecraft:light_gray_concrete
+setblock ~26 ~19 ~-27 minecraft:smooth_quartz
+setblock ~26 ~19 ~-26 minecraft:light_gray_concrete
+setblock ~26 ~19 ~-25 minecraft:smooth_quartz
+setblock ~26 ~19 ~-24 minecraft:light_gray_concrete
+setblock ~26 ~19 ~-23 minecraft:smooth_quartz
+setblock ~26 ~19 ~-22 minecraft:light_gray_concrete
+setblock ~26 ~19 ~-21 minecraft:smooth_quartz
+setblock ~26 ~19 ~-20 minecraft:light_gray_concrete
+setblock ~26 ~19 ~-19 minecraft:smooth_quartz
+setblock ~26 ~19 ~-18 minecraft:light_gray_concrete
+setblock ~26 ~18 ~-27 minecraft:smooth_quartz
+setblock ~26 ~18 ~-26 minecraft:light_gray_concrete
+setblock ~26 ~18 ~-25 minecraft:smooth_quartz
+setblock ~26 ~18 ~-24 minecraft:light_gray_concrete
+setblock ~26 ~18 ~-23 minecraft:smooth_quartz
+setblock ~26 ~18 ~-22 minecraft:light_gray_concrete
+setblock ~26 ~18 ~-21 minecraft:smooth_quartz
+setblock ~26 ~18 ~-20 minecraft:light_gray_concrete
+setblock ~26 ~18 ~-19 minecraft:smooth_quartz
+setblock ~26 ~18 ~-18 minecraft:light_gray_concrete
+setblock ~27 ~18 ~-27 minecraft:smooth_quartz
+setblock ~27 ~18 ~-26 minecraft:light_gray_concrete
+setblock ~27 ~18 ~-25 minecraft:smooth_quartz
+setblock ~27 ~18 ~-24 minecraft:light_gray_concrete
+setblock ~27 ~18 ~-23 minecraft:smooth_quartz
+setblock ~27 ~18 ~-22 minecraft:light_gray_concrete
+setblock ~27 ~18 ~-21 minecraft:smooth_quartz
+setblock ~27 ~18 ~-20 minecraft:light_gray_concrete
+setblock ~27 ~18 ~-19 minecraft:smooth_quartz
+setblock ~27 ~18 ~-18 minecraft:light_gray_concrete
+setblock ~27 ~17 ~-27 minecraft:smooth_quartz
+setblock ~27 ~17 ~-26 minecraft:light_gray_concrete
+setblock ~27 ~17 ~-25 minecraft:smooth_quartz
+setblock ~27 ~17 ~-24 minecraft:light_gray_concrete
+setblock ~27 ~17 ~-23 minecraft:smooth_quartz
+setblock ~27 ~17 ~-22 minecraft:light_gray_concrete
+setblock ~27 ~17 ~-21 minecraft:smooth_quartz
+setblock ~27 ~17 ~-20 minecraft:light_gray_concrete
+setblock ~27 ~17 ~-19 minecraft:smooth_quartz
+setblock ~27 ~17 ~-18 minecraft:light_gray_concrete
+setblock ~27 ~16 ~-27 minecraft:smooth_quartz
+setblock ~27 ~16 ~-26 minecraft:light_gray_concrete
+setblock ~27 ~16 ~-25 minecraft:smooth_quartz
+setblock ~27 ~16 ~-24 minecraft:light_gray_concrete
+setblock ~27 ~16 ~-23 minecraft:smooth_quartz
+setblock ~27 ~16 ~-22 minecraft:light_gray_concrete
+setblock ~27 ~16 ~-21 minecraft:smooth_quartz
+setblock ~27 ~16 ~-20 minecraft:light_gray_concrete
+setblock ~27 ~16 ~-19 minecraft:smooth_quartz
+setblock ~27 ~16 ~-18 minecraft:light_gray_concrete
+setblock ~27 ~15 ~-27 minecraft:smooth_quartz
+setblock ~27 ~15 ~-26 minecraft:light_gray_concrete
+setblock ~27 ~15 ~-25 minecraft:smooth_quartz
+setblock ~27 ~15 ~-24 minecraft:light_gray_concrete
+setblock ~27 ~15 ~-23 minecraft:smooth_quartz
+setblock ~27 ~15 ~-22 minecraft:light_gray_concrete
+setblock ~27 ~15 ~-21 minecraft:smooth_quartz
+setblock ~27 ~15 ~-20 minecraft:light_gray_concrete
+setblock ~27 ~15 ~-19 minecraft:smooth_quartz
+setblock ~27 ~15 ~-18 minecraft:light_gray_concrete
+setblock ~27 ~14 ~-27 minecraft:smooth_quartz
+setblock ~27 ~14 ~-26 minecraft:light_gray_concrete
+setblock ~27 ~14 ~-25 minecraft:smooth_quartz
+setblock ~27 ~14 ~-24 minecraft:light_gray_concrete
+setblock ~27 ~14 ~-23 minecraft:smooth_quartz
+setblock ~27 ~14 ~-22 minecraft:light_gray_concrete
+setblock ~27 ~14 ~-21 minecraft:smooth_quartz
+setblock ~27 ~14 ~-20 minecraft:light_gray_concrete
+setblock ~27 ~14 ~-19 minecraft:smooth_quartz
+setblock ~27 ~14 ~-18 minecraft:light_gray_concrete
+setblock ~27 ~13 ~-27 minecraft:smooth_quartz
+setblock ~27 ~13 ~-26 minecraft:light_gray_concrete
+setblock ~27 ~13 ~-25 minecraft:smooth_quartz
+setblock ~27 ~13 ~-24 minecraft:light_gray_concrete
+setblock ~27 ~13 ~-23 minecraft:smooth_quartz
+setblock ~27 ~13 ~-22 minecraft:light_gray_concrete
+setblock ~27 ~13 ~-21 minecraft:smooth_quartz
+setblock ~27 ~13 ~-20 minecraft:light_gray_concrete
+setblock ~27 ~13 ~-19 minecraft:smooth_quartz
+setblock ~27 ~13 ~-18 minecraft:light_gray_concrete
+setblock ~27 ~12 ~-27 minecraft:smooth_quartz
+setblock ~27 ~12 ~-26 minecraft:light_gray_concrete
+setblock ~27 ~12 ~-25 minecraft:smooth_quartz
+setblock ~27 ~12 ~-24 minecraft:light_gray_concrete
+setblock ~27 ~12 ~-23 minecraft:smooth_quartz
+setblock ~27 ~12 ~-22 minecraft:light_gray_concrete
+setblock ~27 ~12 ~-21 minecraft:smooth_quartz
+setblock ~27 ~12 ~-20 minecraft:light_gray_concrete
+setblock ~27 ~12 ~-19 minecraft:smooth_quartz
+setblock ~27 ~12 ~-18 minecraft:light_gray_concrete
+setblock ~27 ~11 ~-27 minecraft:smooth_quartz
+setblock ~27 ~11 ~-26 minecraft:light_gray_concrete
+setblock ~27 ~11 ~-25 minecraft:smooth_quartz
+setblock ~27 ~11 ~-24 minecraft:light_gray_concrete
+setblock ~27 ~11 ~-23 minecraft:smooth_quartz
+setblock ~27 ~11 ~-22 minecraft:light_gray_concrete
+setblock ~27 ~11 ~-21 minecraft:smooth_quartz
+setblock ~27 ~11 ~-20 minecraft:light_gray_concrete
+setblock ~27 ~11 ~-19 minecraft:smooth_quartz
+setblock ~27 ~11 ~-18 minecraft:light_gray_concrete
+setblock ~26 ~11 ~-27 minecraft:smooth_quartz
+setblock ~26 ~11 ~-26 minecraft:light_gray_concrete
+setblock ~26 ~11 ~-25 minecraft:smooth_quartz
+setblock ~26 ~11 ~-24 minecraft:light_gray_concrete
+setblock ~26 ~11 ~-23 minecraft:smooth_quartz
+setblock ~26 ~11 ~-22 minecraft:light_gray_concrete
+setblock ~26 ~11 ~-21 minecraft:smooth_quartz
+setblock ~26 ~11 ~-20 minecraft:light_gray_concrete
+setblock ~26 ~11 ~-19 minecraft:smooth_quartz
+setblock ~26 ~11 ~-18 minecraft:light_gray_concrete
+setblock ~26 ~10 ~-27 minecraft:smooth_quartz
+setblock ~26 ~10 ~-26 minecraft:light_gray_concrete
+setblock ~26 ~10 ~-25 minecraft:smooth_quartz
+setblock ~26 ~10 ~-24 minecraft:light_gray_concrete
+setblock ~26 ~10 ~-23 minecraft:smooth_quartz
+setblock ~26 ~10 ~-22 minecraft:light_gray_concrete
+setblock ~26 ~10 ~-21 minecraft:smooth_quartz
+setblock ~26 ~10 ~-20 minecraft:light_gray_concrete
+setblock ~26 ~10 ~-19 minecraft:smooth_quartz
+setblock ~26 ~10 ~-18 minecraft:light_gray_concrete
+setblock ~26 ~9 ~-27 minecraft:smooth_quartz
+setblock ~26 ~9 ~-26 minecraft:light_gray_concrete
+setblock ~26 ~9 ~-25 minecraft:smooth_quartz
+setblock ~26 ~9 ~-24 minecraft:light_gray_concrete
+setblock ~26 ~9 ~-23 minecraft:smooth_quartz
+setblock ~26 ~9 ~-22 minecraft:light_gray_concrete
+setblock ~26 ~9 ~-21 minecraft:smooth_quartz
+setblock ~26 ~9 ~-20 minecraft:light_gray_concrete
+setblock ~26 ~9 ~-19 minecraft:smooth_quartz
+setblock ~26 ~9 ~-18 minecraft:light_gray_concrete
+setblock ~25 ~9 ~-27 minecraft:smooth_quartz
+setblock ~25 ~9 ~-26 minecraft:light_gray_concrete
+setblock ~25 ~9 ~-25 minecraft:smooth_quartz
+setblock ~25 ~9 ~-24 minecraft:light_gray_concrete
+setblock ~25 ~9 ~-23 minecraft:smooth_quartz
+setblock ~25 ~9 ~-22 minecraft:light_gray_concrete
+setblock ~25 ~9 ~-21 minecraft:smooth_quartz
+setblock ~25 ~9 ~-20 minecraft:light_gray_concrete
+setblock ~25 ~9 ~-19 minecraft:smooth_quartz
+setblock ~25 ~9 ~-18 minecraft:light_gray_concrete
+setblock ~25 ~8 ~-27 minecraft:smooth_quartz
+setblock ~25 ~8 ~-26 minecraft:light_gray_concrete
+setblock ~25 ~8 ~-25 minecraft:smooth_quartz
+setblock ~25 ~8 ~-24 minecraft:light_gray_concrete
+setblock ~25 ~8 ~-23 minecraft:smooth_quartz
+setblock ~25 ~8 ~-22 minecraft:light_gray_concrete
+setblock ~25 ~8 ~-21 minecraft:smooth_quartz
+setblock ~25 ~8 ~-20 minecraft:light_gray_concrete
+setblock ~25 ~8 ~-19 minecraft:smooth_quartz
+setblock ~25 ~8 ~-18 minecraft:light_gray_concrete
+setblock ~24 ~8 ~-27 minecraft:smooth_quartz
+setblock ~24 ~8 ~-26 minecraft:light_gray_concrete
+setblock ~24 ~8 ~-25 minecraft:smooth_quartz
+setblock ~24 ~8 ~-24 minecraft:light_gray_concrete
+setblock ~24 ~8 ~-23 minecraft:smooth_quartz
+setblock ~24 ~8 ~-22 minecraft:light_gray_concrete
+setblock ~24 ~8 ~-21 minecraft:smooth_quartz
+setblock ~24 ~8 ~-20 minecraft:light_gray_concrete
+setblock ~24 ~8 ~-19 minecraft:smooth_quartz
+setblock ~24 ~8 ~-18 minecraft:light_gray_concrete
+setblock ~24 ~7 ~-27 minecraft:smooth_quartz
+setblock ~24 ~7 ~-26 minecraft:light_gray_concrete
+setblock ~24 ~7 ~-25 minecraft:smooth_quartz
+setblock ~24 ~7 ~-24 minecraft:light_gray_concrete
+setblock ~24 ~7 ~-23 minecraft:smooth_quartz
+setblock ~24 ~7 ~-22 minecraft:light_gray_concrete
+setblock ~24 ~7 ~-21 minecraft:smooth_quartz
+setblock ~24 ~7 ~-20 minecraft:light_gray_concrete
+setblock ~24 ~7 ~-19 minecraft:smooth_quartz
+setblock ~24 ~7 ~-18 minecraft:light_gray_concrete
+setblock ~23 ~7 ~-27 minecraft:smooth_quartz
+setblock ~23 ~7 ~-26 minecraft:light_gray_concrete
+setblock ~23 ~7 ~-25 minecraft:smooth_quartz
+setblock ~23 ~7 ~-24 minecraft:light_gray_concrete
+setblock ~23 ~7 ~-23 minecraft:smooth_quartz
+setblock ~23 ~7 ~-22 minecraft:light_gray_concrete
+setblock ~23 ~7 ~-21 minecraft:smooth_quartz
+setblock ~23 ~7 ~-20 minecraft:light_gray_concrete
+setblock ~23 ~7 ~-19 minecraft:smooth_quartz
+setblock ~23 ~7 ~-18 minecraft:light_gray_concrete
+setblock ~22 ~7 ~-27 minecraft:smooth_quartz
+setblock ~22 ~7 ~-26 minecraft:light_gray_concrete
+setblock ~22 ~7 ~-25 minecraft:smooth_quartz
+setblock ~22 ~7 ~-24 minecraft:light_gray_concrete
+setblock ~22 ~7 ~-23 minecraft:smooth_quartz
+setblock ~22 ~7 ~-22 minecraft:light_gray_concrete
+setblock ~22 ~7 ~-21 minecraft:smooth_quartz
+setblock ~22 ~7 ~-20 minecraft:light_gray_concrete
+setblock ~22 ~7 ~-19 minecraft:smooth_quartz
+setblock ~22 ~7 ~-18 minecraft:light_gray_concrete
+setblock ~21 ~7 ~-27 minecraft:smooth_quartz
+setblock ~21 ~7 ~-26 minecraft:light_gray_concrete
+setblock ~21 ~7 ~-25 minecraft:smooth_quartz
+setblock ~21 ~7 ~-24 minecraft:light_gray_concrete
+setblock ~21 ~7 ~-23 minecraft:smooth_quartz
+setblock ~21 ~7 ~-22 minecraft:light_gray_concrete
+setblock ~21 ~7 ~-21 minecraft:smooth_quartz
+setblock ~21 ~7 ~-20 minecraft:light_gray_concrete
+setblock ~21 ~7 ~-19 minecraft:smooth_quartz
+setblock ~21 ~7 ~-18 minecraft:light_gray_concrete
+setblock ~20 ~7 ~-27 minecraft:smooth_quartz
+setblock ~20 ~7 ~-26 minecraft:light_gray_concrete
+setblock ~20 ~7 ~-25 minecraft:smooth_quartz
+setblock ~20 ~7 ~-24 minecraft:light_gray_concrete
+setblock ~20 ~7 ~-23 minecraft:smooth_quartz
+setblock ~20 ~7 ~-22 minecraft:light_gray_concrete
+setblock ~20 ~7 ~-21 minecraft:smooth_quartz
+setblock ~20 ~7 ~-20 minecraft:light_gray_concrete
+setblock ~20 ~7 ~-19 minecraft:smooth_quartz
+setblock ~20 ~7 ~-18 minecraft:light_gray_concrete
+setblock ~20 ~6 ~-27 minecraft:smooth_quartz
+setblock ~20 ~6 ~-26 minecraft:light_gray_concrete
+setblock ~20 ~6 ~-25 minecraft:smooth_quartz
+setblock ~20 ~6 ~-24 minecraft:light_gray_concrete
+setblock ~20 ~6 ~-23 minecraft:smooth_quartz
+setblock ~20 ~6 ~-22 minecraft:light_gray_concrete
+setblock ~20 ~6 ~-21 minecraft:smooth_quartz
+setblock ~20 ~6 ~-20 minecraft:light_gray_concrete
+setblock ~20 ~6 ~-19 minecraft:smooth_quartz
+setblock ~20 ~6 ~-18 minecraft:light_gray_concrete
+setblock ~19 ~7 ~-27 minecraft:smooth_quartz
+setblock ~19 ~7 ~-26 minecraft:light_gray_concrete
+setblock ~19 ~7 ~-25 minecraft:smooth_quartz
+setblock ~19 ~7 ~-24 minecraft:light_gray_concrete
+setblock ~19 ~7 ~-23 minecraft:smooth_quartz
+setblock ~19 ~7 ~-22 minecraft:light_gray_concrete
+setblock ~19 ~7 ~-21 minecraft:smooth_quartz
+setblock ~19 ~7 ~-20 minecraft:light_gray_concrete
+setblock ~19 ~7 ~-19 minecraft:smooth_quartz
+setblock ~19 ~7 ~-18 minecraft:light_gray_concrete
+setblock ~18 ~7 ~-27 minecraft:smooth_quartz
+setblock ~18 ~7 ~-26 minecraft:light_gray_concrete
+setblock ~18 ~7 ~-25 minecraft:smooth_quartz
+setblock ~18 ~7 ~-24 minecraft:light_gray_concrete
+setblock ~18 ~7 ~-23 minecraft:smooth_quartz
+setblock ~18 ~7 ~-22 minecraft:light_gray_concrete
+setblock ~18 ~7 ~-21 minecraft:smooth_quartz
+setblock ~18 ~7 ~-20 minecraft:light_gray_concrete
+setblock ~18 ~7 ~-19 minecraft:smooth_quartz
+setblock ~18 ~7 ~-18 minecraft:light_gray_concrete
+summon minecraft:text_display ~11.0 ~18.5 ~-23.7 {Tags:["if_buu_label"],text:{text:"คณะวิทยาการสารสนเทศ\nFACULTY OF INFORMATICS",color:"white",bold:true},Rotation:[180.0f,0f],billboard:"fixed",background:0,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.35f,1.35f,1.35f]}}

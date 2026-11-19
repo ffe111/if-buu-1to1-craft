@@ -1,16 +1,15 @@
-# 06 - v2.0 Roof Crown, Corrugated Attic Band, 3D Faculty Sign & 3 Solar Panel Arrays
-fill ~-60 ~59 ~-24 ~-26 ~59 ~23 minecraft:gray_concrete
-fill ~-25 ~59 ~-8 ~-16 ~59 ~23 minecraft:gray_concrete
-fill ~-15 ~59 ~-8 ~-15 ~61 ~23 minecraft:light_gray_concrete
-fill ~-15 ~60 ~-8 ~-15 ~60 ~23 minecraft:smooth_stone
-fill ~-25 ~59 ~-24 ~-25 ~61 ~-9 minecraft:light_gray_concrete
-fill ~-15 ~62 ~-8 ~-15 ~62 ~23 minecraft:gray_concrete
-fill ~-62 ~63 ~-26 ~-24 ~63 ~25 minecraft:light_gray_concrete
-fill ~-24 ~63 ~-10 ~-13 ~63 ~25 minecraft:light_gray_concrete
-fill ~-62 ~64 ~-26 ~-24 ~64 ~25 minecraft:polished_deepslate
-fill ~-24 ~64 ~-10 ~-13 ~64 ~25 minecraft:polished_deepslate
-fill ~-14 ~60 ~-2 ~-14 ~61 ~-1 minecraft:gold_block
-summon minecraft:text_display ~-13.8 ~60.6 ~8.5 {Tags:["if_buu_label"],text:{text:"คณะวิทยาการสารสนเทศ\nFACULTY OF INFORMATICS",color:"white",bold:true},Rotation:[-90.0f,0f],billboard:"fixed",background:0,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[2.1f,2.1f,2.1f]}}
-fill ~-54 ~65 ~-18 ~-50 ~65 ~16 minecraft:daylight_detector
-fill ~-44 ~65 ~-18 ~-40 ~65 ~16 minecraft:daylight_detector
-fill ~-34 ~65 ~-18 ~-30 ~65 ~16 minecraft:daylight_detector
+# 06 - v3.0 Roof Overhang, Attic Band, 3D Faculty Sign & 3 Solar Panel Arrays
+fill ~-27 ~59 ~-5 ~26 ~59 ~24 minecraft:gray_concrete
+fill ~-22 ~59 ~-18 ~-4 ~59 ~-6 minecraft:gray_concrete
+fill ~-3 ~59 ~-6 ~26 ~61 ~-6 minecraft:light_gray_concrete
+fill ~27 ~59 ~-6 ~27 ~61 ~24 minecraft:light_gray_concrete
+fill ~-28 ~63 ~-7 ~28 ~63 ~25 minecraft:light_gray_concrete
+fill ~-23 ~63 ~-20 ~-2 ~63 ~-7 minecraft:light_gray_concrete
+fill ~-28 ~64 ~-7 ~28 ~64 ~25 minecraft:polished_deepslate
+fill ~-23 ~64 ~-20 ~-2 ~64 ~-7 minecraft:polished_deepslate
+fill ~6 ~60 ~-7 ~7 ~61 ~-7 minecraft:gold_block
+summon minecraft:text_display ~15.0 ~60.6 ~-7.199999999999999 {Tags:["if_buu_label"],text:{text:"คณะวิทยาการสารสนเทศ\nFACULTY OF INFORMATICS",color:"white",bold:true},Rotation:[180.0f,0f],billboard:"fixed",background:0,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[2.0f,2.0f,2.0f]}}
+summon minecraft:text_display ~28.200000000000003 ~60.6 ~9.0 {Tags:["if_buu_label"],text:{text:"คณะวิทยาการสารสนเทศ\nFACULTY OF INFORMATICS",color:"white",bold:true},Rotation:[-90.0f,0f],billboard:"fixed",background:0,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[2.0f,2.0f,2.0f]}}
+fill ~-19 ~65 ~0 ~19 ~65 ~3 minecraft:daylight_detector
+fill ~-19 ~65 ~7 ~19 ~65 ~10 minecraft:daylight_detector
+fill ~-19 ~65 ~14 ~19 ~65 ~17 minecraft:daylight_detector
