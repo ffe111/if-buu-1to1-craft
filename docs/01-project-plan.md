@@ -24,13 +24,12 @@
 - [x] ก่อผนังทึบ Shear Wall สีเทาอ่อนด้านข้าง, เฟรมกระจก Curtain Wall สีเทาเข้ม, กล่องกระจกยื่นชั้น 6–8, แถบสีน้ำเงิน Cobalt และแผงระแนงกันแดดแนวตั้ง
 - [x] ปั้นป้ายชื่อ `"คณะวิทยาการสารสนเทศ / FACULTY OF INFORMATICS"` ด้วย `minecraft:text_display` ทั้งบนชั้น 11 และหน้า Podium พร้อมตราทอง BUU
 
-### Phase 4: ตกแต่งภายในแบบแบ่งกลุ่มชั้น (Modular Interior) *(อัปเดต v2.0 แล้ว)*
-- [x] **ชั้น 1–2:** โต๊ะนั่งอ่านหนังสือ, ห้องสโมสรนิสิต (`SMO`) ผนังกระจก, โซฟารับรอง, ห้องคณบดี (`IF-215`), ชั้นวางหนังสือห้องสมุดดิจิทัล, ระเบียงชั้น 2 และห้องน้ำใกล้แกนกลาง
-- [x] **ชั้น 3–6:** ห้องบรรยายใหญ่ Slope 210 ที่นั่ง (`IF-3M210`, `IF-5M210`), ห้องแล็บคอมพิวเตอร์ (`IF-3C01`, `IF-4C01`, `IF-6T01`), ห้องเรียน (`IF-5T03`) และห้อง Server ชั้น 4
-- [x] **ชั้น 7 (BUU Open House 2026 Innovation Hub):** บูธ **Vision Lab** (AI Vision in Action + Robot Arm Controls), **DMI Lab** (AI/AR/VR Testing + Industry 5.0 Demo) และโซน FabLab / Co-Working Space
-- [x] **ชั้น 8–11:** Eastern Software Park BUU (`IF-8R08`), ห้องพักอาจารย์ (`IF-908A–D`), Hall of Fame & ห้องประชุม (`IF-10M56/60`) และ Exhibition Hall (`IF-11M280`) พร้อมไฟฝ้าเพดานทุกชั้น
-- [ ] กั้นผนังห้องย่อยครบทุกห้องตามป้ายแผนผังหนีไฟจริง (`references/floorplans/` เมื่อเก็บภาพหน้างานเพิ่มเติม)
+### Phase 4: ตกแต่งภายในแบบแบ่งกลุ่มชั้น (Modular Interior) *(v3.0 ครบทุกชั้น 1F–11F จากแปลนจริงแล้ว)*
+- [x] **ชั้น 1–2:** สโมสรนิสิต `IF-109`, Co-Working, ป้อมกระจก & ประตูม้วน `IF-104`, `IF-111`–`115`, ระเบียงหญ้าเทียม 2F, ห้องสมุด `IF-208`, สำนักงาน `IF-210`–`212` และห้องผู้บริหาร `IF-215`–`223`
+- [x] **ชั้น 3–6:** ห้องบรรยายใหญ่ `IF-3M210`/`4M210` และ `IF-5M210` (ทะลุ 2 ชั้นถึง 6F), แล็บคอมฯ `IF-3C01`–`04`/`4C01`–`04`, ห้องเรียน `IF-5T01`–`05`/`6T01`–`05`
+- [x] **ชั้น 7 (BUU Open House 2026 Innovation Hub):** `IF-7T03` **Vision Lab** (AI Vision + Robot Arm), `IF-7T04` **DMI Lab** (AI/AR/VR + Industry 5.0), `IF-7T05` **FabLab** และ `IF-7T01`–`7T02`
+- [x] **ชั้น 8–11:** ถอดแบบจากแปลนจริงครบทั้ง **`IF-8R01`–`8R08`** (ชั้น 8), **`IF-908A`–`D`** (ชั้น 9), **`IF-1008`–`1011` / `IF-10M32` / `IF-10M60`** (ชั้น 10) และ **`IF-1109` / `IF-11M280`** (ชั้น 11)
 
-### Phase 5: ระบบ Interactive และเตรียมเซิร์ฟเวอร์ Open House *(ทดสอบ v2.0 ผ่าน 10/10)*
+### Phase 5: ระบบ Interactive และเตรียมเซิร์ฟเวอร์ Open House *(v3.0 ทดสอบผ่าน 11/11)*
 - [x] ระบบลิฟต์เลือกชั้น B1–11F (`/trigger if_floor set 1..11` และ `99` สำหรับ B1) พร้อมปุ่มทางลัดไป 7F Innovation Hub
-- [x] ทดสอบรันจริงบน PaperMC 1.21.11 + GeyserMC + Floodgate + BlueMap + FAWE (`block_tests_passed=10/10, errors=0`)
+- [x] ทดสอบรันจริงบน PaperMC 1.21.11 + GeyserMC + Floodgate + BlueMap + FAWE (`block_tests_passed=11/11, errors=0`)

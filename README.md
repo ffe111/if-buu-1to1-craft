@@ -11,7 +11,7 @@
 [![BlueMap](https://img.shields.io/badge/3D%20Web%20Map-BlueMap-00B4D8?style=for-the-badge)](https://bluemap.bluecolored.io/)
 [![Scale](https://img.shields.io/badge/Scale-1%3A1%20(1%20Block%20%3D%201%20Meter)-F59E0B?style=for-the-badge)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-10B981?style=for-the-badge)](LICENSE)
-[![Release](https://img.shields.io/badge/Release-v2.1.0-7C3AED?style=for-the-badge)](#roadmap--v21-improvements)
+[![Release](https://img.shields.io/badge/Release-v3.0.0-7C3AED?style=for-the-badge)](#roadmap--v30-status)
 
 <br/>
 
@@ -65,17 +65,19 @@ Whether visitors explore from **PC (Java Edition)**, **Mobile / iPad (Bedrock Ed
 
 ---
 
-## 🚀 Key Features (v2.1.0 — Exact Floor Plans 1F–7F)
+## 🚀 Key Features (v3.0.0 — Complete 1F–11F Floor Plans & True Satellite Orientation)
 
-* **Floor-Plan-Accurate 1:1 Generator (`scripts/floorplans_1_to_7.py` & `scripts/generate_datapack.py`):**
-  * **True Compass Alignment:** Re-aligned the entire building to the official map compass (`N = -Z` Front Entrance, `E = +X` Fueang Fa Rd, `S = +Z` Elevator & Main Stair Spine, `W = -X` Restrooms & NW Wing).
-  * **Floors 1–7 Built Room-by-Room:**
-    * **1F:** `IF-109` Student Union (`SMO`), Co-Working Space, indoor wheelchair ramp, East study tables, security post, `IF-115` Control Room, `IF-112`, `IF-111`, Garbage Room, SW restrooms.
-    * **2F:** NW green astroturf Outdoor Terrace with light-blue tables, `IF-208` Informatics Library, `IF-212` curved Conference Room, glass-walled `IF-210` & `IF-211` offices, `IF-215`–`IF-219` Executive wing, `IF-223`, and `IF-220` Dining/Pantry.
+* **Full 1:1 Floor-Plan Generator (`scripts/floorplans_all.py` & `scripts/generate_datapack.py`):**
+  * **True Google Maps / Satellite Orientation:** Aligned directly to real-world satellite imagery (`East +X` Fueang Fa Road & Front Canopy, `West -X` Elevator Spine & Moto Parking, `North -Z` 11F Solar Panels & Restrooms, `South +Z` 6-Ribbed SE C-Arch & `5M210` Wing).
+  * **All 11 Storeys Built Room-by-Room from Official Floor Plans:**
+    * **1F:** `IF-109` Student Union (`SMO`), Co-Working Space, glass Info Booth & automatic doors, rolling metal shutter + `IF-104`, indoor wheelchair ramp, East study tables, `IF-115`, `IF-112`, `IF-111`, Garbage Room, and SE under-wall motorcycle bay.
+    * **2F:** NW green astroturf Outdoor Terrace, `IF-208` Informatics Library, `IF-212` Conference Room, glass-walled `IF-210` & `IF-211` offices, `IF-215`–`IF-219` Executive wing, `IF-223`, `IF-220` Dining/Pantry.
     * **3F & 4F:** Deep computer labs `IF-3C01`–`3C04` / `IF-4C01`–`4C04` and 210-seat Lecture Halls `IF-3M210` / `IF-4M210`.
-    * **5F & 6F:** Lecture rooms `IF-5T01`–`5T05` & `IF-6T01`–`6T05`, plus the authentic **2-storey tall `IF-5M210`** hall rising into the 6F sloped roof void.
-    * **7F (Open House 2026 Highlight):** Stepped-back NE terrace, `IF-7T03` **Vision Lab** (AI Vision & Robot Arm Controls), `IF-7T04` **DMI Lab** (AI/AR/VR & Industry 5.0 Demo), `IF-7T05` **FabLab**, and `IF-7T01`–`7T02` Co-Working showcase.
-  * **3 Passenger Elevators + 1 Fireman's Elevator + 3 Walkable Staircases (Main, NNW, SE)** connecting every level cleanly.
+    * **5F & 6F:** Lecture rooms `IF-5T01`–`5T05` & `IF-6T01`–`6T05`, plus the **2-storey tall `IF-5M210`** hall and 6F striped roof deck.
+    * **7F (Open House 2026 Highlight):** Stepped-back terrace, `IF-7T03` **Vision Lab** (AI Vision & Robot Arm Controls), `IF-7T04` **DMI Lab** (AI/AR/VR & Industry 5.0 Demo), `IF-7T05` **FabLab**, and `IF-7T01`–`7T02`.
+    * **8F:** Working spaces `IF-8R01`–`IF-8R08` (including `IF-8R08` Eastern Software Park BUU).
+    * **9F–11F (Upper Rectangular Crown):** Lecturer offices `IF-908A`–`D` (9F); `IF-1008`–`1011`, `IF-10M32`, and `IF-10M60` Conference Rooms (10F); `IF-1109` and the 280-seat **`IF-11M280` Exhibition Hall** (11F), topped by 3 solar panel arrays on the North roof.
+  * **3 Passenger Elevators + 1 Fireman's Elevator + 3 Walkable Staircases (Main, NNW, SE)** connecting all levels.
   * **Campus Context (`09_campus_context`):** Fueang Fa Rd, crosswalk, NW circular fountain, South 5F building, and East Computer Center / Science CL frontage (`generate-structures=false`).
 * **Non-OP Open House Elevator (`08_interactive_openhouse`):**
   * Works for every guest in Adventure Mode via `/trigger if_floor set <1..11>` (or `99` for `B1`) and clickable chat directory `/function if_buu:elevator_menu`.
@@ -145,12 +147,12 @@ if-buu-1to1-craft/
 
 ---
 
-## 🗺️ Roadmap & v2.1 Improvements
+## 🗺️ Roadmap & v3.0 Status
 
-**v2.1.0** maps Floors 1–7 directly from the official building fire-escape floor plans:
-- [x] **Exact Compass Re-Alignment (`N = -Z`, `E = +X`, `S = +Z`, `W = -X`):** Aligned elevator core, staircases, curved podium, and NE step-back to reality.
-- [x] **Room-by-Room Interiors (1F–7F):** Added `IF-109`–`IF-115`, `IF-208`–`IF-223`, 2F astroturf terrace, `IF-3C01`–`04` & `3M210`, `IF-4C01`–`04` & `4M210`, 2-storey `IF-5M210`, `IF-5T01`–`05`, `IF-6T01`–`05`, and `IF-7T01`–`05` (with 7F Vision Lab & DMI Lab showcases).
-- [ ] **Floors 8–11 Exact Floor Plans (Next):** Map `8F`–`11F` room-by-room once floor plans 8–11 are provided.
+**v3.0.0** completes the full 11-storey 1:1 digital twin from official floor plans and satellite verification:
+- [x] **True Satellite & Google Maps Orientation (`East = +X`, `West = -X`, `North = -Z`, `South = +Z`):** Aligned C-Arch, Fueang Fa Road, 6-ribbed SE canopy, and 11F solar arrays to ESRI/Google satellite imagery.
+- [x] **Complete Floor-Plan Interiors (`B1`–`11F`):** Mapped all rooms across `1F`–`8F`, `9F` (`IF-908A–D`), `10F` (`IF-1008..1011`, `IF-10M32`, `IF-10M60`), and `11F` (`IF-1109`, `IF-11M280`), plus real 1F shutter/booth details.
+- [ ] **Open House Polish (v3.1):** Add custom NPC tour guides, quiz stations, and high-res BlueMap preview renders.
 
 ---
 

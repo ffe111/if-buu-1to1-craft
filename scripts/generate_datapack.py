@@ -1,19 +1,19 @@
 """
-Generate a Minecraft Java 1.21+ Datapack (world/datapacks/if_buu_1to1) — v3.0 (Floor-Plan Accurate)
-Aligns the entire building directly to the official Informatics Map compass rose (floor_01..07):
-  North (-Z, lz=0)  = Main Entrance Plaza, Wheelchair Ramp, Curved Podium & Trees
-  East  (+X, lx=54) = Fueang Fa Road side
-  South (+Z, lz=48) = Elevator Core, Main Staircase, Back Spine
-  West  (-X, lx=0)  = Restrooms Wing & NW Wing (SMO / 2F Terrace / C04 / T05)
+Generate a Minecraft Java 1.21+ Datapack (world/datapacks/if_buu_1to1) — v3.0
+True Google Maps / Satellite Orientation (90 deg Clockwise from Fire-Escape Maps):
+  East  (+X, pz=0)  = Fueang Fa Road, Main Entrance Plaza, Curved Podium & C-Arch
+  West  (-X, pz=48) = Elevator/Main Stair Spine & West Motorcycle Parking
+  North (-Z, px=0)  = Restrooms Wing, 11F Solar Roof & 8F NW Wing
+  South (+Z, px=54) = SE C-Arch Fins (6 ribs), IF-5M210 Striped Roof & South 5F Bldg
 
-Local coordinates (lx=0..54, lz=0..48) -> Minecraft (X = lx - 27, Z = lz - 24).
+All 11 floors (B1, 1F-8F, 9F, 10F, 11F) mapped from official floor plans + site photos.
 """
 
 import json
 import math
 from pathlib import Path
 
-from floorplans_1_to_7 import build_all_floors_1_to_7, fill_l, set_l, sign_l, text_l, to_mc
+from floorplans_all import build_all_floors, fill_p, set_p, sign_p, text_p, to_mc
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 SPEC_PATH = BASE_DIR / "data" / "building_spec.json"
@@ -43,63 +43,66 @@ def write_func(name: str, lines: list[str]) -> Path:
 
 def gen_site_and_road() -> list[str]:
     cmds = [
-        "# 01 - Site Plaza (North), Fueang Fa Road (East), Crosswalk & West Moto Parking",
-        fill(-46, -1, -38, 44, -1, 34, "minecraft:grass_block"),
-        # Fueang Fa Road on East (+X = 32 .. 42, Z = -38 .. 34)
-        fill(32, -1, -38, 42, -1, 34, "minecraft:gray_concrete"),
-        fill(37, -1, -38, 37, -1, 34, "minecraft:yellow_concrete"),
-        # Pedestrian Crosswalk NE near entrance
-        *[fill(33, -1, z, 41, -1, z + 1, "minecraft:white_concrete") for z in range(-32, -25, 3)],
-        # Brick sidewalk along East (+X = 29 .. 31) & North entrance plaza
-        fill(29, -1, -38, 31, -1, 34, "minecraft:bricks"),
-        fill(-28, -1, -36, 28, -1, -24, "minecraft:light_gray_concrete"),
-        # Cream concrete plaza strips (Front.jpg)
-        fill(-12, -1, -36, -11, -1, -24, "minecraft:smooth_quartz"),
-        fill(14, -1, -36, 15, -1, -24, "minecraft:smooth_quartz"),
-        # Front granite entrance steps on North side (lx=25..42 -> X=-2..15, Z=-26..-24)
-        fill(-2, 0, -26, 15, 0, -25, "minecraft:smooth_quartz_slab"),
-        fill(-2, 0, -24, 15, 0, -24, "minecraft:smooth_quartz"),
-        # Trees along North curve & East sidewalk (from floor_01.jpg!)
-        *[fill(x, 0, -26, x, 2, -26, "minecraft:oak_log") for x in (6, 12, 18, 24)],
-        *[fill(x - 1, 3, -27, x + 1, 4, -25, "minecraft:oak_leaves[persistent=true]") for x in (6, 12, 18, 24)],
-        # West Motorcycle Parking lot (-44 .. -31, Z = -20 .. +22)
-        fill(-44, -1, -20, -31, -1, 22, "minecraft:gray_concrete"),
-        *[fill(-43, -1, z, -32, -1, z, "minecraft:white_concrete") for z in range(-16, 20, 6)],
-        # Guest Spawn Pad on North Plaza looking South into entrance
-        setblock(4, -1, -30, "minecraft:sea_lantern"),
-        setblock(4, 0, -30, "minecraft:light_gray_carpet"),
+        "# 01 - Fueang Fa Rd (East +X), Entrance Plaza, Crosswalk, Moto Parking (West -X & SE Bay)",
+        fill(-46, -1, -34, 46, -1, 34, "minecraft:grass_block"),
+        # Fueang Fa Road running North-South on East (+X = 33 .. 43)
+        fill(33, -1, -34, 43, -1, 34, "minecraft:gray_concrete"),
+        fill(38, -1, -34, 38, -1, 34, "minecraft:yellow_concrete"),
+        # Pedestrian Crosswalk North-East
+        *[fill(34, -1, z, 42, -1, z + 1, "minecraft:white_concrete") for z in range(-28, -21, 3)],
+        # Brick sidewalk (+X = 30 .. 32)
+        fill(30, -1, -34, 32, -1, 34, "minecraft:bricks"),
+        # East Front Plaza (+X = 24 .. 29, Z = -28 .. +28)
+        fill(24, -1, -28, 29, -1, 28, "minecraft:light_gray_concrete"),
+        fill(24, -1, -12, 29, -1, -11, "minecraft:smooth_quartz"),
+        fill(24, -1, 14, 29, -1, 15, "minecraft:smooth_quartz"),
+        # Front granite entrance steps on East face (px=25..42 -> Z=-2..15, X=24..26)
+        fill(25, 0, -2, 26, 0, 15, "minecraft:smooth_quartz_slab"),
+        fill(24, 0, -2, 24, 0, 15, "minecraft:smooth_quartz"),
+        # SE Under-Wall Motorcycle Parking Bay (seen in c_arch_closeup.jpg!)
+        fill(16, -1, 25, 29, -1, 31, "minecraft:gray_concrete"),
+        *[fill(x, -1, 26, x, -1, 30, "minecraft:white_concrete") for x in range(18, 29, 3)],
+        # Trees along East sidewalk & front plaza
+        *[fill(31, 0, z, 31, 2, z, "minecraft:oak_log") for z in (-18, -10, 6, 14)],
+        *[fill(30, 3, z - 1, 32, 4, z + 1, "minecraft:oak_leaves[persistent=true]") for z in (-18, -10, 6, 14)],
+        # West Motorcycle Parking lot (-44 .. -28, Z = -22 .. +22)
+        fill(-44, -1, -22, -28, -1, 22, "minecraft:gray_concrete"),
+        *[fill(-43, -1, z, -29, -1, z, "minecraft:white_concrete") for z in range(-18, 20, 6)],
+        # Guest Spawn Pad on East Plaza facing West into the entrance
+        setblock(30, -1, 5, "minecraft:sea_lantern"),
+        setblock(30, 0, 5, "minecraft:light_gray_carpet"),
     ]
     return cmds
 
 
 def gen_basement_and_grid() -> list[str]:
     cmds = [
-        "# 02 - Basement Car Park (B1) & Structural Column Grid (aligned to floor plans)",
-        fill_l(5, -5, 18, 51, -1, 47, "minecraft:air"),
-        fill_l(5, -6, 18, 51, -6, 47, "minecraft:gray_concrete"),
-        *[fill_l(10, -6, z, 20, -6, z, "minecraft:yellow_concrete") for z in range(22, 44, 6)],
-        *[fill_l(30, -6, z, 46, -6, z, "minecraft:yellow_concrete") for z in range(22, 44, 6)],
-        fill_l(5, -5, 18, 51, -1, 18, "minecraft:stone_bricks"),
-        fill_l(5, -5, 47, 51, -1, 47, "minecraft:stone_bricks"),
-        fill_l(5, -5, 18, 5, -1, 47, "minecraft:stone_bricks"),
-        fill_l(51, -5, 18, 51, -1, 47, "minecraft:stone_bricks"),
+        "# 02 - Basement Car Park (B1) & Structural Column Grid (True Satellite Orientation)",
+        fill_p(5, -5, 18, 51, -1, 47, "minecraft:air"),
+        fill_p(5, -6, 18, 51, -6, 47, "minecraft:gray_concrete"),
+        *[fill_p(10, -6, z, 20, -6, z, "minecraft:yellow_concrete") for z in range(22, 44, 6)],
+        *[fill_p(30, -6, z, 46, -6, z, "minecraft:yellow_concrete") for z in range(22, 44, 6)],
+        fill_p(5, -5, 18, 51, -1, 18, "minecraft:stone_bricks"),
+        fill_p(5, -5, 47, 51, -1, 47, "minecraft:stone_bricks"),
+        fill_p(5, -5, 18, 5, -1, 47, "minecraft:stone_bricks"),
+        fill_p(51, -5, 18, 51, -1, 47, "minecraft:stone_bricks"),
     ]
-    # Structural columns from official floor plans
-    lxs = [5, 18, 23, 32, 41, 50]
-    lzs = [3, 19, 30, 34, 48]
-    for lx in lxs:
-        for lz in lzs:
-            # Skip NE stepped-back columns above 5F (Y=26) or 6F (Y=31)
-            if lx >= 32 and lz == 3:
+    pxs = [5, 18, 23, 32, 41, 50]
+    pzs = [3, 19, 30, 34, 48]
+    for px in pxs:
+        for pz in pzs:
+            if px >= 32 and pz == 3:
                 top_y = 26
+            elif px <= 18 and pz <= 18:
+                top_y = 41
             else:
                 top_y = 58
-            cmds.append(fill_l(lx, -5, lz, lx, top_y, lz, "minecraft:white_concrete"))
+            cmds.append(fill_p(px, -5, pz, px, top_y, pz, "minecraft:white_concrete"))
     return cmds
 
 
 def gen_slabs_and_core(spec: dict) -> list[str]:
-    cmds = ["# 03 - 11 Floor Slabs (exact floor footprints), Main/Fire Stairs & Glass Elevator Lobbies"]
+    cmds = ["# 03 - 11 Floor Slabs (exact footprints 1F-11F), Main/Fire Stairs & Glass Elevator Lobbies"]
     floors = spec["floors"]
 
     for fl in floors:
@@ -112,43 +115,46 @@ def gen_slabs_and_core(spec: dict) -> list[str]:
         mat = "minecraft:smooth_sandstone" if fid in ("1F", "2F", "11F") else "minecraft:smooth_quartz"
 
         if fid in ("1F", "2F"):
-            # Full footprint with SW restrooms + NW wing + curved NE front
-            cmds.append(fill_l(0, yf, 34, 53, yf, 48, mat))
-            cmds.append(fill_l(2, yf, 3, 52, yf, 33, mat))
+            cmds.append(fill_p(0, yf, 34, 53, yf, 48, mat))
+            cmds.append(fill_p(2, yf, 3, 52, yf, 33, mat))
             if fid == "1F":
-                cmds.append(fill_l(22, yf, 0, 52, yf, 3, mat))
+                cmds.append(fill_p(22, yf, 0, 52, yf, 3, mat))
         elif fid in ("3F", "4F", "5F"):
-            # Main tower + NE Podium hall (3M210 / 4M210 / 5M210)
-            cmds.append(fill_l(0, yf, 19, 53, yf, 48, mat))
-            cmds.append(fill_l(5, yf, 6, 51, yf, 18, mat))
-            cmds.append(fill_l(11, yf, 0, 51, yf, 5, mat))
+            cmds.append(fill_p(0, yf, 19, 53, yf, 48, mat))
+            cmds.append(fill_p(5, yf, 6, 51, yf, 18, mat))
+            cmds.append(fill_p(11, yf, 0, 51, yf, 5, mat))
         elif fid == "6F":
-            # Skip 6F floor slab inside 2-storey void above IF-5M210 (lx=24..50, lz=4..17)!
-            cmds.append(fill_l(0, yf, 19, 53, yf, 48, mat))
-            cmds.append(fill_l(5, yf, 6, 22, yf, 18, mat))
-            cmds.append(fill_l(11, yf, 0, 22, yf, 5, mat))
+            # Skip 6F slab inside 2-storey void above IF-5M210 (px=24..50, pz=4..17)
+            cmds.append(fill_p(0, yf, 19, 53, yf, 48, mat))
+            cmds.append(fill_p(5, yf, 6, 22, yf, 18, mat))
+            cmds.append(fill_p(11, yf, 0, 22, yf, 5, mat))
+        elif fid in ("7F", "8F"):
+            # SE Podium wing stepped back
+            cmds.append(fill_p(0, yf, 19, 53, yf, 48, mat))
+            cmds.append(fill_p(5, yf, 6, 23, yf, 18, mat))
+            cmds.append(fill_p(11, yf, 0, 23, yf, 5, mat))
         else:
-            # 7F - 11F: NE corner stepped back completely (open air above 5M210!)
-            cmds.append(fill_l(0, yf, 19, 53, yf, 48, mat))
-            cmds.append(fill_l(5, yf, 6, 23, yf, 18, mat))
-            cmds.append(fill_l(11, yf, 0, 23, yf, 5, mat))
+            # 9F, 10F, 11F: Upper rectangular tower crown (matches floor_10, floor_11 & satellite!)
+            cmds.append(fill_p(5, yf, 19, 50, yf, 48, mat))
+            cmds.append(fill_p(0, yf, 30, 5, yf, 48, mat))
 
-        # Accent floor tiles in corridors & lobbies (matching VR Tour panoramas)
+        # Signature checkerboard accent floor tiles
         if fid in ("1F", "2F", "7F", "11F"):
-            for lx in range(19, 50, 4):
-                cmds.append(set_l(lx, yf, 32, "minecraft:gray_concrete" if lx % 8 == 0 else "minecraft:light_gray_concrete"))
-            for lz in range(8, 36, 4):
-                cmds.append(set_l(20, yf, lz, "minecraft:gray_concrete" if lz % 8 == 0 else "minecraft:light_gray_concrete"))
+            for px in range(19, 50, 4):
+                cmds.append(set_p(px, yf, 32, "minecraft:gray_concrete" if px % 8 == 0 else "minecraft:light_gray_concrete"))
+            for pz in range(20, 36, 4):
+                cmds.append(set_p(20, yf, pz, "minecraft:gray_concrete" if pz % 8 == 0 else "minecraft:light_gray_concrete"))
 
-        # Corridor ceiling lights (N-S & E-W corridors)
-        for lz in range(6, 36, 5):
-            cmds.append(set_l(20, yc - 1, lz, "minecraft:sea_lantern"))
-        for lx in range(14, 50, 5):
-            cmds.append(set_l(lx, yc - 1, 32, "minecraft:sea_lantern"))
+        # Corridor ceiling downlights
+        z_top = 20 if fid in ("9F", "10F", "11F") else 6
+        for pz in range(z_top, 36, 5):
+            cmds.append(set_p(20, yc - 1, pz, "minecraft:sea_lantern"))
+        for px in range(14, 50, 5):
+            cmds.append(set_p(px, yc - 1, 32, "minecraft:sea_lantern"))
 
-    # --- 3 Passenger Elevators (lx=15..18, lz=36..48) + Fireman's Elevator (lx=22..26, lz=39..48) ---
-    cmds.append(fill_l(15, -5, 36, 18, 58, 48, "minecraft:light_gray_concrete", "hollow"))
-    cmds.append(fill_l(22, -5, 39, 26, 58, 48, "minecraft:light_gray_concrete", "hollow"))
+    # --- 3 Passenger Elevators (px=15..18, pz=36..48) + Fireman's Elevator (px=22..26, pz=39..48) ---
+    cmds.append(fill_p(15, -5, 36, 18, 58, 48, "minecraft:light_gray_concrete", "hollow"))
+    cmds.append(fill_p(22, -5, 39, 26, 58, 48, "minecraft:light_gray_concrete", "hollow"))
 
     for idx, fl in enumerate(floors):
         if fl["id"] == "RF":
@@ -157,256 +163,236 @@ def gen_slabs_and_core(spec: dict) -> list[str]:
         yc = fl["y_ceiling"]
         fid = fl["id"]
 
-        # 3 Elevator openings facing East (lx=18) into Elevator Lobby (lx=19..21)
         for ez in (38, 42, 46):
-            cmds.append(fill_l(18, yf + 1, ez, 18, yf + 3, ez, "minecraft:air"))
-            cmds.append(fill_l(17, yf + 1, ez, 17, yf + 3, ez, "minecraft:iron_block"))
-        # Fireman's elevator door facing North (lz=39)
-        cmds.append(fill_l(24, yf + 1, 39, 24, yf + 3, 39, "minecraft:air"))
-        cmds.append(fill_l(24, yf + 1, 40, 24, yf + 3, 40, "minecraft:iron_block"))
+            cmds.append(fill_p(18, yf + 1, ez, 18, yf + 3, ez, "minecraft:air"))
+            cmds.append(fill_p(17, yf + 1, ez, 17, yf + 3, ez, "minecraft:iron_block"))
+        cmds.append(fill_p(24, yf + 1, 39, 24, yf + 3, 39, "minecraft:air"))
+        cmds.append(fill_p(24, yf + 1, 40, 24, yf + 3, 40, "minecraft:iron_block"))
 
         if fid != "B1":
-            # Authentic Glass-Walled Elevator Lobby (Lift.jpg & 7thFloor.jpg) at lx=19..21, lz=35..46
-            cmds.append(fill_l(19, yc - 1, 35, 21, yc - 1, 46, "minecraft:blue_terracotta"))
-            cmds.append(fill_l(19, yc - 1, 35, 21, yc - 1, 36, "minecraft:stripped_oak_wood"))
-            # Glass double-door front at lz=35
-            cmds.append(fill_l(19, yf + 1, 35, 21, yc - 1, 35, "minecraft:white_stained_glass"))
-            cmds.append(fill_l(20, yf + 1, 35, 21, yf + 3, 35, "minecraft:air"))
-            cmds.append(set_l(20, yc - 1, 40, "minecraft:sea_lantern"))
-            # 4-color recycling bins near lobby
-            cmds.append(set_l(22, yf + 1, 36, "minecraft:yellow_concrete"))
-            cmds.append(set_l(22, yf + 1, 37, "minecraft:blue_concrete"))
-            cmds.append(set_l(23, yf + 1, 36, "minecraft:green_concrete"))
-            cmds.append(set_l(23, yf + 1, 37, "minecraft:red_concrete"))
+            # Glass-Walled Elevator Lobby (Lift.jpg & 7thFloor.jpg)
+            cmds.append(fill_p(19, yc - 1, 35, 21, yc - 1, 46, "minecraft:blue_terracotta"))
+            cmds.append(fill_p(19, yc - 1, 35, 21, yc - 1, 36, "minecraft:stripped_oak_wood"))
+            cmds.append(fill_p(19, yf + 1, 35, 21, yc - 1, 35, "minecraft:white_stained_glass"))
+            cmds.append(fill_p(20, yf + 1, 35, 21, yf + 3, 35, "minecraft:air"))
+            cmds.append(set_p(20, yc - 1, 40, "minecraft:sea_lantern"))
+            cmds.append(set_p(22, yf + 1, 36, "minecraft:yellow_concrete"))
+            cmds.append(set_p(22, yf + 1, 37, "minecraft:blue_concrete"))
+            cmds.append(set_p(23, yf + 1, 36, "minecraft:green_concrete"))
+            cmds.append(set_p(23, yf + 1, 37, "minecraft:red_concrete"))
 
-        # Yellow Star Floor Sign right at Elevator Lobby (lx=19, lz=36)
-        cmds.append(sign_l(19, yf + 2, 37, "east", f"[ {fid} ]", fl["name"][:15], "/trigger", "if_floor set 1..11"))
+        cmds.append(sign_p(19, yf + 2, 37, "east", f"[ {fid} ]", fl["name"][:15], "/trigger", "if_floor set 1..11"))
 
-        # --- Walkable Main Staircase (lx=9..14, lz=35..48) ---
+        # Walkable Main Staircase (px=9..14, pz=35..48)
         if idx < len(floors) - 2:
             next_yf = floors[idx + 1]["y_floor"]
             height = next_yf - yf
-            cmds.append(fill_l(9, next_yf, 36, 13, next_yf, 44, "minecraft:air"))
-            cmds.append(fill_l(9, yf + 1, 35, 14, next_yf, 35, "minecraft:white_concrete"))
-            cmds.append(fill_l(9, yf + 1, 35, 11, yf + 3, 35, "minecraft:air"))  # entrance from corridor
+            cmds.append(fill_p(9, next_yf, 36, 13, next_yf, 44, "minecraft:air"))
+            cmds.append(fill_p(9, yf + 1, 35, 14, next_yf, 35, "minecraft:white_concrete"))
+            cmds.append(fill_p(9, yf + 1, 35, 11, yf + 3, 35, "minecraft:air"))
             for s in range(height):
                 sz = 37 + min(s, 6)
-                cmds.append(fill_l(9, yf + 1 + s, sz, 13, yf + 1 + s, sz, "minecraft:smooth_quartz_stairs[facing=south]"))
+                cmds.append(fill_p(9, yf + 1 + s, sz, 13, yf + 1 + s, sz, "minecraft:smooth_quartz_stairs[facing=south]"))
 
-            # --- NNW Fire Exit Staircase (lx=12..18, lz=0..4) ---
-            cmds.append(fill_l(12, next_yf, 1, 17, next_yf, 3, "minecraft:air"))
-            for s in range(height):
-                sx = 17 - min(s, 5)
-                cmds.append(fill_l(sx, yf + 1 + s, 1, sx, yf + 1 + s, 3, "minecraft:stone_brick_stairs[facing=west]"))
+            # NNW Fire Exit Staircase (px=12..18, pz=0..4) up to 8F (roof level 42)
+            if idx <= 7:
+                cmds.append(fill_p(12, next_yf, 1, 17, next_yf, 3, "minecraft:air"))
+                for s in range(height):
+                    sx = 17 - min(s, 5)
+                    cmds.append(fill_p(sx, yf + 1 + s, 1, sx, yf + 1 + s, 3, "minecraft:stone_brick_stairs[facing=west]"))
 
-            # --- SE Fire Exit Staircase (lx=50..53, lz=35..45) ---
-            cmds.append(fill_l(51, next_yf, 36, 52, next_yf, 43, "minecraft:air"))
+            # SE/East Fire Exit Staircase (px=50..53, pz=35..45)
+            cmds.append(fill_p(51, next_yf, 36, 52, next_yf, 43, "minecraft:air"))
             for s in range(height):
                 sz = 37 + min(s, 6)
-                cmds.append(fill_l(51, yf + 1 + s, sz, 52, yf + 1 + s, sz, "minecraft:stone_brick_stairs[facing=south]"))
+                cmds.append(fill_p(51, yf + 1 + s, sz, 52, yf + 1 + s, sz, "minecraft:stone_brick_stairs[facing=south]"))
 
-    # Enclose NNW & SE Fire Stairwells
-    cmds.append(fill_l(11, -5, 0, 18, 58, 4, "minecraft:light_gray_concrete", "hollow"))
-    for fl in floors:
+    cmds.append(fill_p(11, -5, 0, 18, 41, 4, "minecraft:light_gray_concrete", "hollow"))
+    for idx, fl in enumerate(floors):
         if fl["id"] == "RF":
             continue
         yf = fl["y_floor"]
-        cmds.append(fill_l(18, yf + 1, 2, 18, yf + 2, 3, "minecraft:air"))  # NNW exit door to corridor
-        cmds.append(fill_l(50, yf + 1, 32, 50, yf + 2, 33, "minecraft:air"))  # SE exit door
+        if idx <= 7:
+            cmds.append(fill_p(18, yf + 1, 2, 18, yf + 2, 3, "minecraft:air"))
+        cmds.append(fill_p(50, yf + 1, 32, 50, yf + 2, 33, "minecraft:air"))
     return cmds
 
 
 def gen_podium_and_arch() -> list[str]:
     cmds = [
-        "# 04 - Curved North/NE Podium (1F-5F) & 5-Ribbed Sweeping C-Shaped Canopy Arch",
-        # North Entrance Terrace & Canopy Pillars (lx=21..52, lz=-5..4)
-        fill_l(22, 0, -4, 52, 0, 4, "minecraft:smooth_sandstone"),
-        # Cobalt Blue Entrance Core Wall on NE side (seen in Front.jpg & SMO.jpg!)
-        fill_l(47, 0, 1, 52, 11, 4, "minecraft:blue_concrete"),
+        "# 04 - Curved East Podium (1F-5F) & 6-Ribbed Sweeping South-East C-Arch (c_arch_closeup.jpg)",
+        fill_p(22, 0, -4, 52, 0, 4, "minecraft:smooth_sandstone"),
+        # Cobalt Blue Entrance Core Wall on South-East side (c_arch_closeup.jpg!)
+        fill_p(47, 0, 1, 52, 11, 4, "minecraft:blue_concrete"),
+        # Basement ventilation louvers under SE gray shear wall (c_arch_closeup.jpg)
+        fill_p(52, 0, 5, 52, 1, 18, "minecraft:blackstone_wall"),
 
-        # Left (East) cluster of 6 slender white pillars under oculus skylight (Front.jpg)
-        fill_l(46, 0, -4, 46, 21, -4, "minecraft:quartz_pillar"),
-        fill_l(48, 0, -5, 48, 21, -5, "minecraft:quartz_pillar"),
-        fill_l(50, 0, -4, 50, 21, -4, "minecraft:quartz_pillar"),
-        fill_l(47, 0, -2, 47, 21, -2, "minecraft:quartz_pillar"),
-        fill_l(49, 0, -2, 49, 21, -2, "minecraft:quartz_pillar"),
-        # Right (West) tall white pillar
-        fill_l(23, 0, -3, 23, 21, -3, "minecraft:quartz_pillar"),
+        # 6 Slender White Columns under Oculus Skylight (Front.jpg & c_arch_closeup.jpg)
+        fill_p(46, 0, -4, 46, 21, -4, "minecraft:quartz_pillar"),
+        fill_p(48, 0, -5, 48, 21, -5, "minecraft:quartz_pillar"),
+        fill_p(50, 0, -4, 50, 21, -4, "minecraft:quartz_pillar"),
+        fill_p(47, 0, -2, 47, 21, -2, "minecraft:quartz_pillar"),
+        fill_p(49, 0, -2, 49, 21, -2, "minecraft:quartz_pillar"),
+        fill_p(23, 0, -3, 23, 21, -3, "minecraft:quartz_pillar"),
 
-        # Podium Upper Facade Box on North face (lx=24..50, lz=1..2, Y=12..21)
-        fill_l(24, 12, 1, 50, 21, 1, "minecraft:light_gray_concrete"),
-        fill_l(24, 15, 1, 50, 15, 1, "minecraft:polished_andesite"),
-        fill_l(24, 18, 1, 50, 18, 1, "minecraft:polished_andesite"),
-        fill_l(24, 12, 1, 31, 13, 1, "minecraft:air"),  # angled underside on West
-        fill_l(27, 16, 1, 32, 16, 1, "minecraft:blue_concrete"),
-        fill_l(40, 17, 1, 46, 17, 1, "minecraft:blue_concrete"),
-        fill_l(34, 15, 1, 39, 15, 1, "minecraft:light_blue_stained_glass"),
-        fill_l(28, 19, 1, 33, 19, 1, "minecraft:light_blue_stained_glass"),
+        # Podium Upper Facade Box facing East (+X) toward Fueang Fa Rd (px=24..50, pz=1, Y=12..21)
+        fill_p(24, 12, 1, 50, 21, 1, "minecraft:light_gray_concrete"),
+        fill_p(24, 15, 1, 50, 15, 1, "minecraft:polished_andesite"),
+        fill_p(24, 18, 1, 50, 18, 1, "minecraft:polished_andesite"),
+        fill_p(24, 12, 1, 31, 13, 1, "minecraft:air"),
+        fill_p(27, 16, 1, 32, 16, 1, "minecraft:blue_concrete"),
+        fill_p(40, 17, 1, 46, 17, 1, "minecraft:blue_concrete"),
+        fill_p(34, 15, 1, 39, 15, 1, "minecraft:light_blue_stained_glass"),
+        fill_p(28, 19, 1, 33, 19, 1, "minecraft:light_blue_stained_glass"),
     ]
 
-    # Sweeping Curved North Canopy Roof (Y=22..23, lx=21..53, lz=-6..6)
-    for lx in range(21, 54):
-        lz_min = -6 if lx <= 42 else round(-6 + (lx - 42) * 0.5)
-        cmds.append(fill_l(lx, 22, lz_min, lx, 22, 5, "minecraft:smooth_quartz"))
-        cmds.append(fill_l(lx, 23, lz_min, lx, 23, 5, "minecraft:light_gray_concrete"))
+    # Sweeping Curved East Canopy Roof (Y=22..23)
+    for px in range(21, 54):
+        pz_min = -6 if px <= 42 else round(-6 + (px - 42) * 0.5)
+        cmds.append(fill_p(px, 22, pz_min, px, 22, 5, "minecraft:smooth_quartz"))
+        cmds.append(fill_p(px, 23, pz_min, px, 23, 5, "minecraft:light_gray_concrete"))
 
-    # Oculus cutout above 6 pillars
-    cmds.append(fill_l(47, 22, -4, 49, 23, -2, "minecraft:air"))
+    # Oculus Skylight Cutout
+    cmds.append(fill_p(47, 22, -4, 49, 23, -2, "minecraft:air"))
 
-    # 5 Ribbed Silver C-Arch Fins curving down on East/NE side (lx=46..54)
-    fin_lzs = [-3, -1, 1, 3, 5]
+    # 6 Parallel Ribbed Silver C-Arch Fins curving down on South-East side (c_arch_closeup.jpg!)
+    fin_pzs = [-5, -3, -1, 1, 3, 5]
     seen_pts = set()
     for deg in range(-70, 195, 2):
         rad = math.radians(deg)
-        clx = round(47 + 7.5 * math.sin(rad))
+        cpx = round(47 + 7.5 * math.sin(rad))
         cy = round(14.5 + 8.0 * math.cos(rad))
-        for clz in fin_lzs:
+        for cpz in fin_pzs:
             for dz in (0, 1):
-                pt = (clx, cy, clz + dz)
+                pt = (cpx, cy, cpz + dz)
                 if pt not in seen_pts:
                     seen_pts.add(pt)
                     mat = "minecraft:smooth_quartz" if dz == 0 else "minecraft:light_gray_concrete"
-                    cmds.append(set_l(clx, cy, clz + dz, mat))
+                    cmds.append(set_p(cpx, cy, cpz + dz, mat))
 
-    # Podium Front Sign (facing North -Z -> yaw=180)
-    cmds.append(text_l(38.0, 18.5, 0.3, "คณะวิทยาการสารสนเทศ\nFACULTY OF INFORMATICS", 180.0, 1.35))
+    # Podium Front Sign facing East (+X -> mc_yaw = -90)
+    cmds.append(text_p(38.0, 18.5, 0.2, "คณะวิทยาการสารสนเทศ\nFACULTY OF INFORMATICS", 180.0, 1.35))
     return cmds
 
 
 def gen_facade_shell() -> list[str]:
     cmds = [
-        "# 05 - v3.0 Exterior Tower Shell Aligned to Floor Plans (N=-Z, E=+X, S=+Z, W=-X)",
-        # West Facade (lx=0, lz=19..48 & lx=5, lz=6..18)
-        fill_l(0, 1, 19, 0, 58, 48, "minecraft:light_gray_concrete", "keep"),
-        fill_l(5, 1, 6, 5, 58, 18, "minecraft:light_gray_concrete", "keep"),
-        *[fill_l(5, y + 1, 8, 5, y + 3, 17, "minecraft:cyan_stained_glass") for y in (12, 17, 22, 27, 32, 37, 42, 47, 52)],
+        "# 05 - v3.0 Exterior Tower Shell (True Satellite Orientation: 9F-11F Rectangular Crown)",
+        # West Facade (pz=48, mc_x=-24)
+        fill_p(5, 1, 48, 50, 58, 48, "minecraft:light_gray_concrete", "keep"),
+        *[fill_p(25, y + 1, 48, 48, y + 3, 48, "minecraft:cyan_stained_glass") for y in (12, 17, 22, 27, 32, 37, 42, 47, 52)],
 
-        # South Back Spine Facade (lz=48, lx=0..53)
-        fill_l(0, 1, 48, 53, 58, 48, "minecraft:light_gray_concrete", "keep"),
-        *[fill_l(25, y + 1, 48, 48, y + 3, 48, "minecraft:cyan_stained_glass") for y in (12, 17, 22, 27, 32, 37, 42, 47, 52)],
+        # North Facade: 1F-8F NW Wing (px=5, pz=6..18) + Restrooms (px=0, pz=19..48) + 9F-11F North Wall (px=5, pz=19..29)
+        fill_p(0, 1, 19, 0, 41, 48, "minecraft:light_gray_concrete", "keep"),
+        fill_p(0, 42, 30, 0, 58, 48, "minecraft:light_gray_concrete", "keep"),
+        fill_p(5, 1, 6, 5, 41, 18, "minecraft:light_gray_concrete", "keep"),
+        fill_p(5, 42, 19, 5, 58, 29, "minecraft:light_gray_concrete", "keep"),
+        *[fill_p(5, y + 1, 8, 5, y + 3, 17, "minecraft:cyan_stained_glass") for y in (12, 17, 22, 27, 32, 37)],
+        *[fill_p(5, y + 1, 20, 5, y + 3, 28, "minecraft:cyan_stained_glass") for y in (42, 47, 52)],
 
-        # East Facade facing Fueang Fa Road (lx=53 up to 5F/6F on North half; lx=53 on lz=19..48 up to 11F)
-        fill_l(53, 1, 19, 53, 58, 48, "minecraft:light_gray_concrete", "keep"),
-        *[fill_l(53, y + 1, 21, 53, y + 3, 46, "minecraft:light_blue_stained_glass") for y in (12, 17, 22, 27, 32, 37, 42, 47, 52)],
-        # Dark horizontal window mullions & Cobalt Blue vertical stripes on East corners
-        fill_l(53, 0, 47, 54, 58, 48, "minecraft:blue_concrete"),
-        fill_l(51, 0, 3, 52, 26, 4, "minecraft:blue_concrete"),
+        # South Facade (px=53 for 1F-8F, px=50 for 9F-11F) + SE Shear Wall & Cobalt Blue Corner (c_arch_closeup.jpg)
+        fill_p(53, 1, 19, 53, 41, 48, "minecraft:light_gray_concrete", "keep"),
+        fill_p(50, 42, 19, 50, 58, 48, "minecraft:light_gray_concrete", "keep"),
+        *[fill_p(53, y + 1, 21, 53, y + 3, 46, "minecraft:light_blue_stained_glass") for y in (12, 17, 22, 27, 32, 37)],
+        *[fill_p(50, y + 1, 21, 50, y + 3, 46, "minecraft:light_blue_stained_glass") for y in (42, 47, 52)],
+        # Dark louver screen along South-East shear wall
+        *[fill_p(54, y, 22, 54, y, 36, "minecraft:deepslate_brick_wall") for y in range(13, 41, 2)],
+        # Cobalt Blue vertical stripes on South-West & South-East corners
+        fill_p(53, 0, 47, 54, 41, 48, "minecraft:blue_concrete"),
+        fill_p(50, 42, 47, 51, 58, 48, "minecraft:blue_concrete"),
+        fill_p(51, 0, 3, 52, 26, 4, "minecraft:blue_concrete"),
 
-        # North Tower Facade (above 6F-11F step-back at lz=19, lx=24..53, and NW wing at lz=6, lx=5..23)
-        fill_l(5, 1, 6, 23, 58, 6, "minecraft:light_gray_concrete", "keep"),
-        *[fill_l(7, y + 1, 6, 17, y + 3, 6, "minecraft:light_blue_stained_glass") for y in (12, 17, 22, 27, 32, 37, 42, 47, 52)],
-        fill_l(24, 32, 19, 53, 58, 19, "minecraft:light_blue_stained_glass", "keep"),
-        *[fill_l(x, 32, 19, x, 58, 19, "minecraft:gray_concrete") for x in range(24, 54, 5)],
-        # Cobalt blue strip on NW corner & NE stepped-back corner
-        fill_l(4, 0, 6, 5, 58, 7, "minecraft:blue_concrete"),
-        fill_l(23, 32, 18, 24, 58, 19, "minecraft:blue_concrete"),
+        # East Facade facing Fueang Fa Road (1F-8F NW pz=6, 6F-11F main East wall pz=19)
+        fill_p(5, 1, 6, 23, 41, 6, "minecraft:light_gray_concrete", "keep"),
+        *[fill_p(7, y + 1, 6, 17, y + 3, 6, "minecraft:light_blue_stained_glass") for y in (12, 17, 22, 27, 32, 37)],
+        fill_p(24, 32, 19, 53, 41, 19, "minecraft:light_blue_stained_glass", "keep"),
+        fill_p(5, 42, 19, 50, 58, 19, "minecraft:light_blue_stained_glass", "keep"),
+        *[fill_p(px, 32, 19, px, 58, 19, "minecraft:gray_concrete") for px in range(24, 51, 5)],
+        fill_p(4, 0, 6, 5, 41, 7, "minecraft:blue_concrete"),
+        fill_p(4, 42, 18, 5, 58, 19, "minecraft:blue_concrete"),
 
-        # Protruding 3-storey glass box at 6F-8F overlooking step-back terrace (lx=21..27, lz=14..20, Y=27..41)
-        fill_l(21, 27, 14, 27, 41, 20, "minecraft:light_blue_stained_glass", "hollow"),
-        fill_l(21, 32, 14, 27, 32, 20, "minecraft:white_concrete"),
-        fill_l(21, 37, 14, 27, 37, 20, "minecraft:white_concrete"),
+        # Protruding 3-storey glass box at 6F-8F (px=21..27, pz=14..20)
+        fill_p(21, 27, 14, 27, 41, 20, "minecraft:light_blue_stained_glass", "hollow"),
+        fill_p(21, 32, 14, 27, 32, 20, "minecraft:white_concrete"),
+        fill_p(21, 37, 14, 27, 37, 20, "minecraft:white_concrete"),
 
-        # White projecting floor ledges along North & East tower faces
-        *[fill_l(5, y, 5, 24, y, 5, "minecraft:smooth_quartz") for y in (12, 17, 22, 27, 32, 37, 42, 47, 52)],
-        *[fill_l(24, y, 18, 54, y, 18, "minecraft:smooth_quartz") for y in (32, 37, 42, 47, 52)],
-        *[fill_l(54, y, 18, 54, y, 49, "minecraft:smooth_quartz") for y in (12, 17, 22, 27, 32, 37, 42, 47, 52)],
+        # White Projecting Floor Ledges
+        *[fill_p(5, y, 5, 24, y, 5, "minecraft:smooth_quartz") for y in (12, 17, 22, 27, 32, 37)],
+        *[fill_p(24, y, 18, 54, y, 18, "minecraft:smooth_quartz") for y in (32, 37)],
+        *[fill_p(5, y, 18, 51, y, 18, "minecraft:smooth_quartz") for y in (42, 47, 52)],
+        *[fill_p(54, y, 18, 54, y, 49, "minecraft:smooth_quartz") for y in (12, 17, 22, 27, 32, 37)],
+        *[fill_p(51, y, 18, 51, y, 49, "minecraft:smooth_quartz") for y in (42, 47, 52)],
     ]
     return cmds
 
 
 def gen_roof_and_solar() -> list[str]:
     cmds = [
-        "# 06 - v3.0 Roof Overhang, Attic Band, 3D Faculty Sign & 3 Solar Panel Arrays",
-        fill_l(0, 59, 19, 53, 59, 48, "minecraft:gray_concrete"),
-        fill_l(5, 59, 6, 23, 59, 18, "minecraft:gray_concrete"),
-        # Light-gray attic facade band on North & East faces (Y=59..61)
-        fill_l(24, 59, 18, 53, 61, 18, "minecraft:light_gray_concrete"),
-        fill_l(54, 59, 18, 54, 61, 48, "minecraft:light_gray_concrete"),
+        "# 06 - v3.0 11F Roof Crown, Attic Band, 3D Signs & True Satellite Solar Panel Layout",
+        fill_p(5, 59, 19, 50, 59, 48, "minecraft:gray_concrete"),
+        fill_p(0, 59, 30, 5, 59, 48, "minecraft:gray_concrete"),
+        # Light-gray attic facade band facing East (+X, pz=18) & South (+Z, px=51)
+        fill_p(5, 59, 18, 50, 61, 18, "minecraft:light_gray_concrete"),
+        fill_p(51, 59, 18, 51, 61, 48, "minecraft:light_gray_concrete"),
         # Overhanging flat roof canopy (Y=63..64)
-        fill_l(-1, 63, 17, 55, 63, 49, "minecraft:light_gray_concrete"),
-        fill_l(4, 63, 4, 25, 63, 17, "minecraft:light_gray_concrete"),
-        fill_l(-1, 64, 17, 55, 64, 49, "minecraft:polished_deepslate"),
-        fill_l(4, 64, 4, 25, 64, 17, "minecraft:polished_deepslate"),
-        # Gold seal & crisp 3D text_display sign facing North (-Z -> yaw=180) and East (+X -> yaw=-90)
-        fill_l(33, 60, 17, 34, 61, 17, "minecraft:gold_block"),
-        text_l(42.0, 60.6, 16.8, "คณะวิทยาการสารสนเทศ\nFACULTY OF INFORMATICS", 180.0, 2.0),
-        text_l(55.2, 60.6, 33.0, "คณะวิทยาการสารสนเทศ\nFACULTY OF INFORMATICS", -90.0, 2.0),
-        # 3 Rows of Solar Panels on 11F roof (matching ESRI z19 satellite!)
-        fill_l(8, 65, 24, 46, 65, 27, "minecraft:daylight_detector"),
-        fill_l(8, 65, 31, 46, 65, 34, "minecraft:daylight_detector"),
-        fill_l(8, 65, 38, 46, 65, 41, "minecraft:daylight_detector"),
+        fill_p(-1, 63, 17, 52, 63, 49, "minecraft:light_gray_concrete"),
+        fill_p(-1, 64, 17, 52, 64, 49, "minecraft:polished_deepslate"),
+        # Gold BUU seal & crisp 3D text_display Faculty Sign facing East (Fueang Fa Rd) & South
+        fill_p(18, 60, 17, 19, 61, 17, "minecraft:gold_block"),
+        text_p(30.0, 60.6, 16.5, "คณะวิทยาการสารสนเทศ\nFACULTY OF INFORMATICS", 180.0, 2.1),
+        text_p(52.2, 60.6, 33.0, "คณะวิทยาการสารสนเทศ\nFACULTY OF INFORMATICS", -90.0, 2.0),
+        # 3 Rows of Solar Panels on North half of 11F Roof (px=8..25) running East-West (matches ESRI z19!)
+        fill_p(8, 65, 22, 11, 65, 44, "minecraft:daylight_detector"),
+        fill_p(14, 65, 22, 17, 65, 44, "minecraft:daylight_detector"),
+        fill_p(20, 65, 22, 23, 65, 44, "minecraft:daylight_detector"),
+        # Ribbed metal roof strips on South half of 11F roof (matches ESRI z19!)
+        *[fill_p(px, 65, 21, px, 65, 45, "minecraft:smooth_quartz_slab") for px in range(28, 49, 2)],
     ]
     return cmds
 
 
 def gen_interiors() -> list[str]:
-    cmds = [
-        "# 07 - v3.0 Exact Floor-Plan Interiors (1F-7F) + Baseline Floors (8F-11F)",
-        *build_all_floors_1_to_7(),
-
-        # --- Baseline Floors 8F-11F (awaiting user's floor_08..11 plans!) ---
-        # 8F (Y=37): Research Labs & Eastern Software Park BUU (IF-8R08)
-        fill_l(23, 38, 34, 49, 41, 48, "minecraft:white_concrete", "hollow"),
-        fill_l(28, 38, 34, 30, 40, 34, "minecraft:air"),
-        sign_l(29, 39, 33, "north", "IF-8R08", "Eastern Software", "Park BUU"),
-
-        # 9F (Y=42): Lecturer Offices (IF-908A..D)
-        *[fill_l(x, 43, 34, x, 46, 48, "minecraft:white_concrete") for x in (28, 35, 42)],
-        sign_l(29, 44, 33, "north", "9F Offices", "IF-908A - D"),
-
-        # 10F (Y=47): Hall of Fame & Conference Rooms (IF-10M56 / IF-10M60)
-        fill_l(23, 48, 19, 49, 51, 30, "minecraft:white_concrete", "hollow"),
-        fill_l(34, 48, 30, 36, 50, 30, "minecraft:air"),
-        fill_l(30, 48, 23, 42, 48, 26, "minecraft:dark_oak_planks"),
-        *[set_l(x, 48, 35, "minecraft:quartz_pillar") for x in (26, 30, 34)],
-        *[set_l(x, 49, 35, "minecraft:gold_block") for x in (26, 30, 34)],
-        sign_l(35, 49, 31, "south", "IF-10M56 / 60", "Conference &", "Hall of Fame"),
-
-        # 11F (Y=52): Exhibition Hall (IF-11M280) + Red Fire Hose Cabinets
-        set_l(22, 53, 31, "minecraft:red_concrete"),
-        set_l(22, 54, 31, "minecraft:red_concrete"),
-        *[fill_l(x, 53, 38, x + 2, 53, 40, "minecraft:blue_concrete") for x in (26, 34, 42)],
-        *[set_l(x + 1, 54, 39, "minecraft:sea_lantern") for x in (26, 34, 42)],
-        sign_l(23, 54, 33, "north", "11F Exhibition", "Hall IF-11M280", "Open House 2026"),
+    return [
+        "# 07 - v3.0 Exact Floor-Plan Interiors (1F-11F)",
+        *build_all_floors(),
     ]
-    return cmds
 
 
 def gen_campus_context() -> list[str]:
     cmds = [
-        "# 09 - v3.0 Surrounding BUU Campus Landmarks (NW Fountain, South Bldg, East Comp Center)",
-        # NW Circular Fountain Plaza (X=-56..-32, Z=-46..-22)
-        fill(-56, -1, -46, -32, -1, -22, "minecraft:light_gray_concrete"),
+        "# 09 - v3.0 Surrounding BUU Campus Landmarks (True Satellite Orientation)",
+        # NW Circular Fountain Plaza (X=-56..-32, Z=-50..-26)
+        fill(-56, -1, -50, -32, -1, -26, "minecraft:light_gray_concrete"),
     ]
     for dx in range(-10, 11):
         for dz in range(-10, 11):
             r = math.hypot(dx, dz)
-            px, pz = -44 + dx, -34 + dz
+            px, pz = -44 + dx, -38 + dz
             if r <= 6.5:
                 cmds.append(setblock(px, -1, pz, "minecraft:water"))
             elif r <= 8.5:
                 cmds.append(setblock(px, 0, pz, "minecraft:smooth_quartz_slab"))
                 cmds.append(setblock(px, -1, pz, "minecraft:smooth_quartz"))
 
-    # South Adjacent 5-Storey Gray/Blue Building (Z = +32..+52, X = -24..+22)
+    # South Adjacent 5-Storey Gray/Blue Building (Z = +34..+54, X = -22..+24)
     cmds.extend([
-        fill(-24, -1, 32, 22, -1, 52, "minecraft:light_gray_concrete"),
-        fill(-24, 0, 32, 22, 24, 52, "minecraft:light_gray_concrete", "hollow"),
-        fill(-4, 1, 32, 6, 23, 32, "minecraft:light_blue_concrete"),
-        *[fill(x, y, 32, x + 2, y + 1, 32, "minecraft:black_stained_glass") for y in (4, 9, 14, 19) for x in range(-20, 18, 8)],
-        fill(-25, 25, 31, 23, 25, 53, "minecraft:gray_concrete"),
+        fill(-22, -1, 34, 24, -1, 54, "minecraft:light_gray_concrete"),
+        fill(-22, 0, 34, 24, 24, 54, "minecraft:light_gray_concrete", "hollow"),
+        fill(-4, 1, 34, 6, 23, 34, "minecraft:light_blue_concrete"),
+        *[fill(x, y, 34, x + 2, y + 1, 34, "minecraft:black_stained_glass") for y in (4, 9, 14, 19) for x in range(-18, 20, 8)],
+        fill(-23, 25, 33, 25, 25, 55, "minecraft:gray_concrete"),
     ])
 
-    # East Across Fueang Fa Rd: Computer Center / Science CL Frontage (X = +46..+66, Z = -28..+24)
+    # East Across Fueang Fa Rd (X = +46..+66): Computer Center & Science CL
     cmds.extend([
-        fill(43, -1, -34, 68, -1, 28, "minecraft:grass_block"),
-        fill(43, -1, -28, 46, -1, 24, "minecraft:light_gray_concrete"),
-        fill(47, 0, -2, 65, 18, 22, "minecraft:white_concrete", "hollow"),
-        *[fill(47, y, 0, 47, y, 20, "minecraft:cyan_stained_glass") for y in (3, 7, 11, 15)],
-        fill(45, 19, -4, 66, 19, 23, "minecraft:cyan_concrete"),
-        fill(47, 0, -28, 65, 16, -6, "minecraft:smooth_sandstone", "hollow"),
-        *[fill(47, y, -25, 47, y, -9, "minecraft:black_stained_glass") for y in (3, 8, 13)],
-        fill(46, 17, -29, 66, 17, -5, "minecraft:gray_concrete"),
+        fill(44, -1, -34, 68, -1, 34, "minecraft:grass_block"),
+        fill(44, -1, -28, 47, -1, 28, "minecraft:light_gray_concrete"),
+        fill(48, 0, -2, 66, 18, 24, "minecraft:white_concrete", "hollow"),
+        *[fill(48, y, 0, 48, y, 22, "minecraft:cyan_stained_glass") for y in (3, 7, 11, 15)],
+        fill(46, 19, -4, 67, 19, 25, "minecraft:cyan_concrete"),
+        fill(48, 0, -28, 66, 16, -6, "minecraft:smooth_sandstone", "hollow"),
+        *[fill(48, y, -25, 48, y, -9, "minecraft:black_stained_glass") for y in (3, 8, 13)],
+        fill(47, 17, -29, 67, 17, -5, "minecraft:gray_concrete"),
     ])
     return cmds
 
@@ -422,7 +408,7 @@ def gen_interactive_openhouse(spec: dict) -> dict[str, list[str]]:
 
     menu_lines = [
         'tellraw @s [{"text":"\\n=== ลิฟต์อาคารคณะวิทยาการสารสนเทศ (IF-BUU 1:1 v3.0) ===","color":"aqua","bold":true}]',
-        'tellraw @s [{"text":"พิมพ์ /trigger if_floor set <เลขชั้น> หรือคลิกชั้นที่ต้องการ:","color":"gray"}]',
+        'tellraw @s [{"text":"พิมพ์ /trigger if_floor set <เลขชั้น> หรือคลิกชั้นที่ต้องการ (แปลนจริงครบ 1F-11F!):","color":"gray"}]',
     ]
 
     tick_cmds = [
@@ -431,20 +417,20 @@ def gen_interactive_openhouse(spec: dict) -> dict[str, list[str]]:
 
     floor_num_map = [
         (0, "B1", -5, "ลานจอดรถใต้ดิน (Basement Car Park)"),
-        (1, "1F", 0, "โถงกิจกรรม / สโมสรนิสิต IF-109 / Co-Working / IF-111..115"),
+        (1, "1F", 0, "โถงกิจกรรม / สโมสร IF-109 / ประตูม้วน IF-104 / IF-111..115"),
         (2, "2F", 6, "ห้องสมุด IF-208 / สำนักงาน IF-210..211 / ผู้บริหาร IF-215..223"),
         (3, "3F", 12, "ห้องคอมฯ IF-3C01..04 / ห้องบรรยาย IF-3M210"),
         (4, "4F", 17, "ห้องคอมฯ IF-4C01..04 / ห้องบรรยาย IF-4M210"),
         (5, "5F", 22, "ห้องบรรยาย IF-5T01..05 / ห้องบรรยาย 2 ชั้น IF-5M210"),
         (6, "6F", 27, "ห้องบรรยาย IF-6T01..05"),
         (7, "7F", 32, "★ Open House Innovation Hub (IF-7T01..05: Vision/DMI/FabLab)"),
-        (8, "8F", 37, "ห้องปฏิบัติการวิจัย / Eastern Software Park BUU"),
+        (8, "8F", 37, "ห้องปฏิบัติการ & Working Space IF-8R01..08"),
         (9, "9F", 42, "ห้องพักอาจารย์ IF-908A..D"),
-        (10, "10F", 47, "ห้องเกียรติยศ (Hall of Fame) / ห้องประชุม"),
-        (11, "11F", 52, "ห้องนิทรรศการ Exhibition Hall (IF-11M280)"),
+        (10, "10F", 47, "ห้องประชุม IF-10M32 / IF-10M60 / IF-1008..1011"),
+        (11, "11F", 52, "ห้องนิทรรศการ Exhibition Hall IF-11M280 & IF-1109"),
     ]
 
-    # Elevator Lobby Star is at local (lx=20, lz=36) -> Minecraft (-7, +12), facing North (yaw=180)
+    # Elevator Lobby Star at (px=20, pz=36) -> (mc_x=-12, mc_z=-7), facing East (+X, yaw=-90) down N-S corridor!
     el_x, el_z = to_mc(20, 36)
 
     for num, code, y_fl, desc in floor_num_map:
@@ -458,7 +444,7 @@ def gen_interactive_openhouse(spec: dict) -> dict[str, list[str]]:
         )
         tick_cmds.append(
             f"execute as @a[scores={{if_floor={score_val}}}] at @e[type=minecraft:marker,tag=if_buu_origin,limit=1] "
-            f"run tp @s ~{el_x} ~{tp_y} ~{el_z} 180 0"
+            f"run tp @s ~{el_x} ~{tp_y} ~{el_z} -90 0"
         )
         tick_cmds.append(
             f'execute as @a[scores={{if_floor={score_val}}}] run title @s actionbar '
@@ -493,7 +479,7 @@ def main():
             "supported_formats": {"min_inclusive": 26, "max_inclusive": 120},
             "min_format": 26,
             "max_format": 120,
-            "description": "IF-BUU 1:1 Craft v3.0 — Floor-Plan Accurate Interiors (1F-7F)",
+            "description": "IF-BUU 1:1 Craft v3.0 — Complete 1F-11F Floor Plans + True Satellite Orientation",
         }
     }
     (DP_ROOT / "pack.mcmeta").write_text(json.dumps(pack_meta, indent=2), encoding="utf-8")
@@ -516,8 +502,8 @@ def main():
 
     clear_cmds = ["# Clear 1:1 building + surrounding campus context before rebuilding"]
     for y_start, y_end in [(-6, 4), (5, 15), (16, 26), (27, 37), (38, 48), (49, 59), (60, 68)]:
-        for x_start, x_end in [(-60, -30), (-29, 0), (1, 30), (31, 68)]:
-            for z_start, z_end in [(-50, -20), (-19, 15), (16, 54)]:
+        for x_start, x_end in [(-60, -30), (-29, 0), (1, 35), (36, 70)]:
+            for z_start, z_end in [(-54, -20), (-19, 18), (19, 58)]:
                 clear_cmds.append(fill(x_start, y_start, z_start, x_end, y_end, z_end, "minecraft:air"))
     clear_cmds.append("kill @e[type=minecraft:marker,tag=if_buu_origin]")
     clear_cmds.append("kill @e[type=minecraft:text_display,tag=if_buu_label]")
@@ -537,11 +523,11 @@ def main():
             "function if_buu:07_interiors",
             "function if_buu:09_campus_context",
             "function if_buu:init_openhouse",
-            'tellraw @a {"text":"[IF-BUU 1:1 v3.0] Built Floor-Plan Accurate 1F-7F + Campus Context!","color":"aqua"}',
+            'tellraw @a {"text":"[IF-BUU 1:1 v3.0] Built complete 1F-11F Faculty of Informatics 1:1!","color":"aqua"}',
         ],
     )
 
-    print(f"Generated v3.0 Floor-Plan Accurate Datapack -> {DP_ROOT}")
+    print(f"Generated v3.0 Complete Datapack -> {DP_ROOT}")
     for f in sorted(FUNC_DIR.glob("*.mcfunction")):
         line_count = len(f.read_text(encoding="utf-8").splitlines())
         print(f"  - if_buu:{f.stem} ({line_count} lines)")

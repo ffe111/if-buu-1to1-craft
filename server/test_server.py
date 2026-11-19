@@ -68,18 +68,19 @@ def main():
             print("\n=== Server Ready! Running integration checks ===")
             send("plugins")
             send("datapack list")
-            send("setworldspawn 4 0 -30")
-            send("forceload add -64 -52 72 56")
+            send("setworldspawn 30 0 5")
+            send("forceload add -64 -56 72 60")
             send("execute positioned 0 0 0 run function if_buu:build_all")
-            send("execute if block 37 -1 0 minecraft:yellow_concrete")
-            send("execute if block 0 65 9 minecraft:daylight_detector")
-            send("execute if block 27 30 24 minecraft:blue_concrete")
-            send("execute if block -17 6 -14 minecraft:green_wool")
-            send("execute if block -16 7 -5 minecraft:bookshelf")
-            send("execute if block 4 13 -16 minecraft:warped_stairs")
-            send("execute if block 16 35 2 minecraft:lightning_rod")
-            send("execute if block 4 34 -2 minecraft:crafter")
-            send("execute if block -44 -1 -34 minecraft:water")
+            send("execute if block 38 -1 0 minecraft:yellow_concrete")
+            send("execute if block -3 65 -17 minecraft:daylight_detector")
+            send("execute if block -24 30 27 minecraft:blue_concrete")
+            send("execute if block 14 6 -17 minecraft:green_wool")
+            send("execute if block 5 7 -16 minecraft:bookshelf")
+            send("execute if block 16 13 4 minecraft:warped_stairs")
+            send("execute if block -2 35 16 minecraft:lightning_rod")
+            send("execute if block 12 38 -17 minecraft:quartz_slab")
+            send("execute if block 0 53 -5 minecraft:red_concrete")
+            send("execute if block -44 -1 -38 minecraft:water")
             send("execute if entity @e[type=minecraft:text_display,tag=if_buu_label]")
             send("scoreboard objectives list")
             send("save-all")
@@ -104,10 +105,10 @@ def main():
 
     errors = [l for l in lines if "ERROR" in l]
     passed = sum(1 for l in lines if "Test passed" in l)
-    print(f"Summary: block_tests_passed={passed}/10, errors={len(errors)}")
+    print(f"Summary: block_tests_passed={passed}/11, errors={len(errors)}")
     for e in errors[:10]:
         print("  ERR:", e)
-    sys.exit(0 if (rc == 0 and passed == 10 and len(errors) == 0) else 1)
+    sys.exit(0 if (rc == 0 and passed == 11 and len(errors) == 0) else 1)
 
 
 if __name__ == "__main__":

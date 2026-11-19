@@ -1,79 +1,92 @@
-# 05 - v3.0 Exterior Tower Shell Aligned to Floor Plans (N=-Z, E=+X, S=+Z, W=-X)
-fill ~-27 ~1 ~-5 ~-27 ~58 ~24 minecraft:light_gray_concrete keep
-fill ~-22 ~1 ~-18 ~-22 ~58 ~-6 minecraft:light_gray_concrete keep
-fill ~-22 ~13 ~-16 ~-22 ~15 ~-7 minecraft:cyan_stained_glass
-fill ~-22 ~18 ~-16 ~-22 ~20 ~-7 minecraft:cyan_stained_glass
-fill ~-22 ~23 ~-16 ~-22 ~25 ~-7 minecraft:cyan_stained_glass
-fill ~-22 ~28 ~-16 ~-22 ~30 ~-7 minecraft:cyan_stained_glass
-fill ~-22 ~33 ~-16 ~-22 ~35 ~-7 minecraft:cyan_stained_glass
-fill ~-22 ~38 ~-16 ~-22 ~40 ~-7 minecraft:cyan_stained_glass
-fill ~-22 ~43 ~-16 ~-22 ~45 ~-7 minecraft:cyan_stained_glass
-fill ~-22 ~48 ~-16 ~-22 ~50 ~-7 minecraft:cyan_stained_glass
-fill ~-22 ~53 ~-16 ~-22 ~55 ~-7 minecraft:cyan_stained_glass
-fill ~-27 ~1 ~24 ~26 ~58 ~24 minecraft:light_gray_concrete keep
-fill ~-2 ~13 ~24 ~21 ~15 ~24 minecraft:cyan_stained_glass
-fill ~-2 ~18 ~24 ~21 ~20 ~24 minecraft:cyan_stained_glass
-fill ~-2 ~23 ~24 ~21 ~25 ~24 minecraft:cyan_stained_glass
-fill ~-2 ~28 ~24 ~21 ~30 ~24 minecraft:cyan_stained_glass
-fill ~-2 ~33 ~24 ~21 ~35 ~24 minecraft:cyan_stained_glass
-fill ~-2 ~38 ~24 ~21 ~40 ~24 minecraft:cyan_stained_glass
-fill ~-2 ~43 ~24 ~21 ~45 ~24 minecraft:cyan_stained_glass
-fill ~-2 ~48 ~24 ~21 ~50 ~24 minecraft:cyan_stained_glass
-fill ~-2 ~53 ~24 ~21 ~55 ~24 minecraft:cyan_stained_glass
-fill ~26 ~1 ~-5 ~26 ~58 ~24 minecraft:light_gray_concrete keep
-fill ~26 ~13 ~-3 ~26 ~15 ~22 minecraft:light_blue_stained_glass
-fill ~26 ~18 ~-3 ~26 ~20 ~22 minecraft:light_blue_stained_glass
-fill ~26 ~23 ~-3 ~26 ~25 ~22 minecraft:light_blue_stained_glass
-fill ~26 ~28 ~-3 ~26 ~30 ~22 minecraft:light_blue_stained_glass
-fill ~26 ~33 ~-3 ~26 ~35 ~22 minecraft:light_blue_stained_glass
-fill ~26 ~38 ~-3 ~26 ~40 ~22 minecraft:light_blue_stained_glass
-fill ~26 ~43 ~-3 ~26 ~45 ~22 minecraft:light_blue_stained_glass
-fill ~26 ~48 ~-3 ~26 ~50 ~22 minecraft:light_blue_stained_glass
-fill ~26 ~53 ~-3 ~26 ~55 ~22 minecraft:light_blue_stained_glass
-fill ~26 ~0 ~23 ~27 ~58 ~24 minecraft:blue_concrete
-fill ~24 ~0 ~-21 ~25 ~26 ~-20 minecraft:blue_concrete
-fill ~-22 ~1 ~-18 ~-4 ~58 ~-18 minecraft:light_gray_concrete keep
-fill ~-20 ~13 ~-18 ~-10 ~15 ~-18 minecraft:light_blue_stained_glass
-fill ~-20 ~18 ~-18 ~-10 ~20 ~-18 minecraft:light_blue_stained_glass
-fill ~-20 ~23 ~-18 ~-10 ~25 ~-18 minecraft:light_blue_stained_glass
-fill ~-20 ~28 ~-18 ~-10 ~30 ~-18 minecraft:light_blue_stained_glass
-fill ~-20 ~33 ~-18 ~-10 ~35 ~-18 minecraft:light_blue_stained_glass
-fill ~-20 ~38 ~-18 ~-10 ~40 ~-18 minecraft:light_blue_stained_glass
-fill ~-20 ~43 ~-18 ~-10 ~45 ~-18 minecraft:light_blue_stained_glass
-fill ~-20 ~48 ~-18 ~-10 ~50 ~-18 minecraft:light_blue_stained_glass
-fill ~-20 ~53 ~-18 ~-10 ~55 ~-18 minecraft:light_blue_stained_glass
-fill ~-3 ~32 ~-5 ~26 ~58 ~-5 minecraft:light_blue_stained_glass keep
-fill ~-3 ~32 ~-5 ~-3 ~58 ~-5 minecraft:gray_concrete
-fill ~2 ~32 ~-5 ~2 ~58 ~-5 minecraft:gray_concrete
-fill ~7 ~32 ~-5 ~7 ~58 ~-5 minecraft:gray_concrete
-fill ~12 ~32 ~-5 ~12 ~58 ~-5 minecraft:gray_concrete
-fill ~17 ~32 ~-5 ~17 ~58 ~-5 minecraft:gray_concrete
-fill ~22 ~32 ~-5 ~22 ~58 ~-5 minecraft:gray_concrete
-fill ~-23 ~0 ~-18 ~-22 ~58 ~-17 minecraft:blue_concrete
-fill ~-4 ~32 ~-6 ~-3 ~58 ~-5 minecraft:blue_concrete
-fill ~-6 ~27 ~-10 ~0 ~41 ~-4 minecraft:light_blue_stained_glass hollow
-fill ~-6 ~32 ~-10 ~0 ~32 ~-4 minecraft:white_concrete
-fill ~-6 ~37 ~-10 ~0 ~37 ~-4 minecraft:white_concrete
-fill ~-22 ~12 ~-19 ~-3 ~12 ~-19 minecraft:smooth_quartz
-fill ~-22 ~17 ~-19 ~-3 ~17 ~-19 minecraft:smooth_quartz
-fill ~-22 ~22 ~-19 ~-3 ~22 ~-19 minecraft:smooth_quartz
-fill ~-22 ~27 ~-19 ~-3 ~27 ~-19 minecraft:smooth_quartz
-fill ~-22 ~32 ~-19 ~-3 ~32 ~-19 minecraft:smooth_quartz
-fill ~-22 ~37 ~-19 ~-3 ~37 ~-19 minecraft:smooth_quartz
-fill ~-22 ~42 ~-19 ~-3 ~42 ~-19 minecraft:smooth_quartz
-fill ~-22 ~47 ~-19 ~-3 ~47 ~-19 minecraft:smooth_quartz
-fill ~-22 ~52 ~-19 ~-3 ~52 ~-19 minecraft:smooth_quartz
-fill ~-3 ~32 ~-6 ~27 ~32 ~-6 minecraft:smooth_quartz
-fill ~-3 ~37 ~-6 ~27 ~37 ~-6 minecraft:smooth_quartz
-fill ~-3 ~42 ~-6 ~27 ~42 ~-6 minecraft:smooth_quartz
-fill ~-3 ~47 ~-6 ~27 ~47 ~-6 minecraft:smooth_quartz
-fill ~-3 ~52 ~-6 ~27 ~52 ~-6 minecraft:smooth_quartz
-fill ~27 ~12 ~-6 ~27 ~12 ~25 minecraft:smooth_quartz
-fill ~27 ~17 ~-6 ~27 ~17 ~25 minecraft:smooth_quartz
-fill ~27 ~22 ~-6 ~27 ~22 ~25 minecraft:smooth_quartz
-fill ~27 ~27 ~-6 ~27 ~27 ~25 minecraft:smooth_quartz
-fill ~27 ~32 ~-6 ~27 ~32 ~25 minecraft:smooth_quartz
-fill ~27 ~37 ~-6 ~27 ~37 ~25 minecraft:smooth_quartz
-fill ~27 ~42 ~-6 ~27 ~42 ~25 minecraft:smooth_quartz
-fill ~27 ~47 ~-6 ~27 ~47 ~25 minecraft:smooth_quartz
-fill ~27 ~52 ~-6 ~27 ~52 ~25 minecraft:smooth_quartz
+# 05 - v3.0 Exterior Tower Shell (True Satellite Orientation: 9F-11F Rectangular Crown)
+fill ~-24 ~1 ~-22 ~-24 ~58 ~23 minecraft:light_gray_concrete keep
+fill ~-24 ~13 ~-2 ~-24 ~15 ~21 minecraft:cyan_stained_glass
+fill ~-24 ~18 ~-2 ~-24 ~20 ~21 minecraft:cyan_stained_glass
+fill ~-24 ~23 ~-2 ~-24 ~25 ~21 minecraft:cyan_stained_glass
+fill ~-24 ~28 ~-2 ~-24 ~30 ~21 minecraft:cyan_stained_glass
+fill ~-24 ~33 ~-2 ~-24 ~35 ~21 minecraft:cyan_stained_glass
+fill ~-24 ~38 ~-2 ~-24 ~40 ~21 minecraft:cyan_stained_glass
+fill ~-24 ~43 ~-2 ~-24 ~45 ~21 minecraft:cyan_stained_glass
+fill ~-24 ~48 ~-2 ~-24 ~50 ~21 minecraft:cyan_stained_glass
+fill ~-24 ~53 ~-2 ~-24 ~55 ~21 minecraft:cyan_stained_glass
+fill ~-24 ~1 ~-27 ~5 ~41 ~-27 minecraft:light_gray_concrete keep
+fill ~-24 ~42 ~-27 ~-6 ~58 ~-27 minecraft:light_gray_concrete keep
+fill ~6 ~1 ~-22 ~18 ~41 ~-22 minecraft:light_gray_concrete keep
+fill ~-5 ~42 ~-22 ~5 ~58 ~-22 minecraft:light_gray_concrete keep
+fill ~7 ~13 ~-22 ~16 ~15 ~-22 minecraft:cyan_stained_glass
+fill ~7 ~18 ~-22 ~16 ~20 ~-22 minecraft:cyan_stained_glass
+fill ~7 ~23 ~-22 ~16 ~25 ~-22 minecraft:cyan_stained_glass
+fill ~7 ~28 ~-22 ~16 ~30 ~-22 minecraft:cyan_stained_glass
+fill ~7 ~33 ~-22 ~16 ~35 ~-22 minecraft:cyan_stained_glass
+fill ~7 ~38 ~-22 ~16 ~40 ~-22 minecraft:cyan_stained_glass
+fill ~-4 ~43 ~-22 ~4 ~45 ~-22 minecraft:cyan_stained_glass
+fill ~-4 ~48 ~-22 ~4 ~50 ~-22 minecraft:cyan_stained_glass
+fill ~-4 ~53 ~-22 ~4 ~55 ~-22 minecraft:cyan_stained_glass
+fill ~-24 ~1 ~26 ~5 ~41 ~26 minecraft:light_gray_concrete keep
+fill ~-24 ~42 ~23 ~5 ~58 ~23 minecraft:light_gray_concrete keep
+fill ~-22 ~13 ~26 ~3 ~15 ~26 minecraft:light_blue_stained_glass
+fill ~-22 ~18 ~26 ~3 ~20 ~26 minecraft:light_blue_stained_glass
+fill ~-22 ~23 ~26 ~3 ~25 ~26 minecraft:light_blue_stained_glass
+fill ~-22 ~28 ~26 ~3 ~30 ~26 minecraft:light_blue_stained_glass
+fill ~-22 ~33 ~26 ~3 ~35 ~26 minecraft:light_blue_stained_glass
+fill ~-22 ~38 ~26 ~3 ~40 ~26 minecraft:light_blue_stained_glass
+fill ~-22 ~43 ~23 ~3 ~45 ~23 minecraft:light_blue_stained_glass
+fill ~-22 ~48 ~23 ~3 ~50 ~23 minecraft:light_blue_stained_glass
+fill ~-22 ~53 ~23 ~3 ~55 ~23 minecraft:light_blue_stained_glass
+fill ~-12 ~13 ~27 ~2 ~13 ~27 minecraft:deepslate_brick_wall
+fill ~-12 ~15 ~27 ~2 ~15 ~27 minecraft:deepslate_brick_wall
+fill ~-12 ~17 ~27 ~2 ~17 ~27 minecraft:deepslate_brick_wall
+fill ~-12 ~19 ~27 ~2 ~19 ~27 minecraft:deepslate_brick_wall
+fill ~-12 ~21 ~27 ~2 ~21 ~27 minecraft:deepslate_brick_wall
+fill ~-12 ~23 ~27 ~2 ~23 ~27 minecraft:deepslate_brick_wall
+fill ~-12 ~25 ~27 ~2 ~25 ~27 minecraft:deepslate_brick_wall
+fill ~-12 ~27 ~27 ~2 ~27 ~27 minecraft:deepslate_brick_wall
+fill ~-12 ~29 ~27 ~2 ~29 ~27 minecraft:deepslate_brick_wall
+fill ~-12 ~31 ~27 ~2 ~31 ~27 minecraft:deepslate_brick_wall
+fill ~-12 ~33 ~27 ~2 ~33 ~27 minecraft:deepslate_brick_wall
+fill ~-12 ~35 ~27 ~2 ~35 ~27 minecraft:deepslate_brick_wall
+fill ~-12 ~37 ~27 ~2 ~37 ~27 minecraft:deepslate_brick_wall
+fill ~-12 ~39 ~27 ~2 ~39 ~27 minecraft:deepslate_brick_wall
+fill ~-24 ~0 ~26 ~-23 ~41 ~27 minecraft:blue_concrete
+fill ~-24 ~42 ~23 ~-23 ~58 ~24 minecraft:blue_concrete
+fill ~20 ~0 ~24 ~21 ~26 ~25 minecraft:blue_concrete
+fill ~18 ~1 ~-22 ~18 ~41 ~-4 minecraft:light_gray_concrete keep
+fill ~18 ~13 ~-20 ~18 ~15 ~-10 minecraft:light_blue_stained_glass
+fill ~18 ~18 ~-20 ~18 ~20 ~-10 minecraft:light_blue_stained_glass
+fill ~18 ~23 ~-20 ~18 ~25 ~-10 minecraft:light_blue_stained_glass
+fill ~18 ~28 ~-20 ~18 ~30 ~-10 minecraft:light_blue_stained_glass
+fill ~18 ~33 ~-20 ~18 ~35 ~-10 minecraft:light_blue_stained_glass
+fill ~18 ~38 ~-20 ~18 ~40 ~-10 minecraft:light_blue_stained_glass
+fill ~5 ~32 ~-3 ~5 ~41 ~26 minecraft:light_blue_stained_glass keep
+fill ~5 ~42 ~-22 ~5 ~58 ~23 minecraft:light_blue_stained_glass keep
+fill ~5 ~32 ~-3 ~5 ~58 ~-3 minecraft:gray_concrete
+fill ~5 ~32 ~2 ~5 ~58 ~2 minecraft:gray_concrete
+fill ~5 ~32 ~7 ~5 ~58 ~7 minecraft:gray_concrete
+fill ~5 ~32 ~12 ~5 ~58 ~12 minecraft:gray_concrete
+fill ~5 ~32 ~17 ~5 ~58 ~17 minecraft:gray_concrete
+fill ~5 ~32 ~22 ~5 ~58 ~22 minecraft:gray_concrete
+fill ~17 ~0 ~-23 ~18 ~41 ~-22 minecraft:blue_concrete
+fill ~5 ~42 ~-23 ~6 ~58 ~-22 minecraft:blue_concrete
+fill ~4 ~27 ~-6 ~10 ~41 ~0 minecraft:light_blue_stained_glass hollow
+fill ~4 ~32 ~-6 ~10 ~32 ~0 minecraft:white_concrete
+fill ~4 ~37 ~-6 ~10 ~37 ~0 minecraft:white_concrete
+fill ~19 ~12 ~-22 ~19 ~12 ~-3 minecraft:smooth_quartz
+fill ~19 ~17 ~-22 ~19 ~17 ~-3 minecraft:smooth_quartz
+fill ~19 ~22 ~-22 ~19 ~22 ~-3 minecraft:smooth_quartz
+fill ~19 ~27 ~-22 ~19 ~27 ~-3 minecraft:smooth_quartz
+fill ~19 ~32 ~-22 ~19 ~32 ~-3 minecraft:smooth_quartz
+fill ~19 ~37 ~-22 ~19 ~37 ~-3 minecraft:smooth_quartz
+fill ~6 ~32 ~-3 ~6 ~32 ~27 minecraft:smooth_quartz
+fill ~6 ~37 ~-3 ~6 ~37 ~27 minecraft:smooth_quartz
+fill ~6 ~42 ~-22 ~6 ~42 ~24 minecraft:smooth_quartz
+fill ~6 ~47 ~-22 ~6 ~47 ~24 minecraft:smooth_quartz
+fill ~6 ~52 ~-22 ~6 ~52 ~24 minecraft:smooth_quartz
+fill ~-25 ~12 ~27 ~6 ~12 ~27 minecraft:smooth_quartz
+fill ~-25 ~17 ~27 ~6 ~17 ~27 minecraft:smooth_quartz
+fill ~-25 ~22 ~27 ~6 ~22 ~27 minecraft:smooth_quartz
+fill ~-25 ~27 ~27 ~6 ~27 ~27 minecraft:smooth_quartz
+fill ~-25 ~32 ~27 ~6 ~32 ~27 minecraft:smooth_quartz
+fill ~-25 ~37 ~27 ~6 ~37 ~27 minecraft:smooth_quartz
+fill ~-25 ~42 ~24 ~6 ~42 ~24 minecraft:smooth_quartz
+fill ~-25 ~47 ~24 ~6 ~47 ~24 minecraft:smooth_quartz
+fill ~-25 ~52 ~24 ~6 ~52 ~24 minecraft:smooth_quartz
